@@ -1,0 +1,19 @@
+@font-face {
+  font-family: 'BebasNeue';
+  src: url('../../fonts/BebasNeue-Regular.otf') format('opentype');
+}
+
+$skyblue: #b3cde0;
+$darkblue: #011F4B;
+$mediumblue: #03396c;
+$offblue: #325C7B;
+$white: #EAEAEA;
+
+$bebasneue: 'BebasNeue', sans-serif;
+$opensans: 'Open Sans', sans-serif;
+
+@mixin fontStyle($sizeValue, $fontFamily) {
+    font-size: $sizeValue * 1px;
+    font-size: ($sizeValue/10) * 1rem;
+    font-family: $fontFamily;
+}
