@@ -1,3 +1,15 @@
 html {
     font-size: 62.5%;
+    font-family: $opensans;
+}
+
+a {
+  text-decoration: none;
+}
+
+h1 {
+  @include fontStyle(48, $bebasneue);
+  color: $white;
+  padding: 0;
+  margin: 20px 0;
 }

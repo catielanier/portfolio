@@ -136,21 +136,36 @@ legend, button::-moz-focus-inner, input::-moz-focus-inner {
   src: url("../../fonts/BebasNeue-Regular.otf") format("opentype"); }
 
 html {
-  font-size: 62.5%; }
+  font-size: 62.5%;
+  font-family: "Open Sans", sans-serif; }
+
+a {
+  text-decoration: none; }
+
+h1 {
+  font-size: 48px;
+  font-size: 4.8rem;
+  font-family: "BebasNeue", sans-serif;
+  color: #EAEAEA;
+  padding: 0;
+  margin: 20px 0; }
 
 body {
   max-width: 1600px;
-  width: 100%; }
+  width: 100%;
+  margin: 0 auto;
+  background: #EAEAEA; }
 
 header {
   background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.5))), url("../../img/torontobg.jpg");
   background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../../img/torontobg.jpg");
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: center; }
+  background-position: top center; }
   header .wrapper {
-    width: 80%;
-    margin: 0 auto; }
+    width: 70%;
+    margin: 0 auto;
+    padding-bottom: 195px; }
   header .logo-box {
     width: 195px;
     height: 195px;
@@ -164,3 +179,46 @@ header {
       font-size: 25px;
       font-size: 2.5rem;
       font-family: "BebasNeue", sans-serif; }
+  header .header-grid {
+    display: grid;
+    grid-template-columns: repeat(6, 195px);
+    grid-template-rows: repeat(3, 195px); }
+    header .header-grid .box {
+      width: 100%;
+      height: 100%;
+      text-align: center;
+      -webkit-transition: all 0.5s ease;
+      transition: all 0.5s ease; }
+      header .header-grid .box p {
+        font-size: 1.8rem; }
+      header .header-grid .box img {
+        width: 100%;
+        height: 100%; }
+      header .header-grid .box .icon {
+        margin-top: 30%;
+        width: 25%;
+        height: auto; }
+    header .header-grid .box1 {
+      grid-column: 1 / span 4;
+      text-align: right;
+      padding-right: 30px; }
+      header .header-grid .box1 p {
+        color: white; }
+    header .header-grid .box2, header .header-grid .box5, header .header-grid .box12 {
+      background: #03396c; }
+      header .header-grid .box2:hover, header .header-grid .box5:hover, header .header-grid .box12:hover {
+        background: #022c53; }
+    header .header-grid .about-link, header .header-grid .skills-link, header .header-grid .contact-link {
+      color: #b3cde0; }
+    header .header-grid .box6, header .header-grid .box8 {
+      background: #b3cde0; }
+      header .header-grid .box6:hover, header .header-grid .box8:hover {
+        background: #8fb5d1; }
+    header .header-grid .portfolio-link, header .header-grid .blog-link {
+      color: #011F4B; }
+    header .header-grid .box7, header .header-grid .box11 {
+      background: #325C7B; }
+      header .header-grid .box7 p, header .header-grid .box11 p {
+        color: #b3cde0; }
+    header .header-grid .box9 {
+      grid-column: 1 / span 2; }
