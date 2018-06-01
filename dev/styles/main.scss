@@ -10,7 +10,7 @@ body {
 }
 
 header {
-    background: linear-gradient(to bottom, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('../../img/torontobg.jpg');
+    background: linear-gradient(to bottom, rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('../../img/torontobg.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: top center;
@@ -81,6 +81,8 @@ header {
             
 
             &:hover {
+                z-index: 10;
+                box-shadow: 0px 0px 10px 3px $white;
                 background: darken($mediumblue, 5);
             }
         }
@@ -93,6 +95,8 @@ header {
             background: $skyblue;
 
             &:hover {
+                z-index: 10;
+                box-shadow: 0px 0px 10px 3px $white;
                 background: darken($skyblue, 10);
             }
         }
@@ -112,6 +116,71 @@ header {
         .box9 {
             grid-column: 1 / span 2;
         }
+    }
+}
+
+.nav-wrapper {
+    background: $darkblue;
+    border-top: 1px solid $white;
+    border-bottom: 1px solid $white;
+    box-shadow: 0px 3px 2px 0px rgba(0,0,0,0.75);
+
+    nav {
+        width: 70%;
+        margin: 0 auto;
+
+        ul {
+            margin: 0;
+            display: flex;
+            justify-content: space-between;
+
+            li {
+                margin-top: 5px;
+                list-style-type: none;
+                @include fontStyle(18, $opensans);
+                
+                &:first-of-type {
+                    color: $skyblue;
+                    @include fontStyle(48, $bebasneue);
+                }
+
+                img {
+                    margin-top: 12.5px;
+                    width: 30px;
+                }
+
+                a {
+                    color: $skyblue;
+
+                    &:hover {
+                        border-bottom: 1px solid $skyblue;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.about-section {
+    margin: 0 auto;
+    margin-top: 100px;
+    display: flex;
+    justify-content: flex-start;
+    width: 70%;
+    padding-bottom: 100px;
+    border-bottom: 1px solid $darkblue;
+
+    &__image {
+        width: 33.3%;
+
+        img {
+            width: 100%;
+        }
+    }
+
+    &__description {
+        width: 66.7%;
+        margin-left: 5%;
     }
 }
 
