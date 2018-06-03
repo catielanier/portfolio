@@ -167,6 +167,10 @@ section {
     margin-top: 100px;
     padding-bottom: 100px;
     border-bottom: 1px solid $darkblue;
+
+    &:last-of-type {
+        border-bottom: none;
+    }
 }
 
 .about-section {
@@ -195,7 +199,7 @@ section {
     }
 
     p {
-        font-size: 22px;
+        font-size: 2.5rem;
     }
 
     &__grid {
@@ -295,6 +299,46 @@ section {
     &-wrapper {
         display: flex;
         justify-content: flex-start;
+        text-align: left;
+
+        h3 {
+            @include fontStyle(30, $bebasneue);
+        }
+
+        p {
+            font-size: 1.8rem;
+            margin-top: 5px;
+            margin-bottom: 5px;
+        }
+
+        img {
+            margin-top: 20px;
+            width: 50px;
+            display: block;
+            float: left;
+        }
+
+        div {
+            width: 50%;
+        }
     }
 }
+
+footer {
+    background: $darkblue;
+    color: $white;
+    padding: 10px 0;
+    p {
+        @include fontStyle(14, $opensans);
+        margin: 0;
+    }
+
+    .footer-wrapper {
+        width: 70%;
+        margin: 0 auto;
+
+
+    }
+}
+
 @import 'media';
