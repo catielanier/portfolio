@@ -242,11 +242,44 @@ section {
 
         img {
             width: 100%;
+            display: block;
         }
 
-        &__box5 {
+        &__box-big {
             grid-column-start: 2;
             grid-row: 1 / span 3;
+        }
+
+        &__box {
+            overflow: hidden;
+            position: relative;
+            width: 195px;
+            height: 195px;
+
+            .portfolio-slider {
+                transition: 0.6s all ease;
+            }
+
+            .portfolio-title {
+                width: 195px;
+                height: 195px;
+                text-align: center;
+                background: $darkblue;
+                color: $skyblue;
+                position: absolute;
+                top: 0;
+                left: 195px;
+
+                h3 {
+                    font-size: 1.8rem;
+                }
+
+                img {
+                    width: 30%;
+                    padding-top: 45px;
+                    margin: 0 auto;
+                }
+            }
         }
     }
 }
@@ -258,5 +291,10 @@ section {
 
 .contact-section {
     @extend .skills-section;
+
+    &-wrapper {
+        display: flex;
+        justify-content: flex-start;
+    }
 }
 @import 'media';
