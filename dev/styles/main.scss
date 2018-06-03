@@ -317,9 +317,61 @@ section {
             display: block;
             float: left;
         }
+    }
 
-        div {
-            width: 50%;
+
+    &__info {
+        width: 45%;
+    }
+
+    &__send-email {
+        width: 55%;
+    }
+    form {
+        input[type=text] {
+            height: 50px;
+            width: 280px;
+            margin-right: 10px;
+            margin-bottom: 10px;
+        }
+
+        input[type=email] {
+            height: 50px;
+            width: 280px;
+            margin-bottom: 10px;
+        }
+
+        textarea {
+            width: 360px;
+            height: 90px;
+            resize: none;
+            margin-right: 10px;
+        }
+
+        input, textarea {
+            background: #ccc;
+            border: none;
+            color: $mediumblue;
+            @include fontStyle(14, $opensans);
+            padding-left: 10px;
+
+            &::placeholder {
+                color: #222;
+            }
+        }
+
+        input[type=submit] {
+            width: 200px;
+            height: 90px;
+            background: $mediumblue;
+            color: $white;
+            @include fontStyle(18, $opensans);
+            transition: 0.5s all ease;
+
+            &:hover {
+                background: $skyblue;
+                color: $mediumblue;
+            }
         }
     }
 }

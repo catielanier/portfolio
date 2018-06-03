@@ -380,8 +380,60 @@ section {
     width: 50px;
     display: block;
     float: left; }
-  .contact-section-wrapper div {
-    width: 50%; }
+
+.contact-section__info {
+  width: 45%; }
+
+.contact-section__send-email {
+  width: 55%; }
+
+.contact-section form input[type=text] {
+  height: 50px;
+  width: 280px;
+  margin-right: 10px;
+  margin-bottom: 10px; }
+
+.contact-section form input[type=email] {
+  height: 50px;
+  width: 280px;
+  margin-bottom: 10px; }
+
+.contact-section form textarea {
+  width: 360px;
+  height: 90px;
+  resize: none;
+  margin-right: 10px; }
+
+.contact-section form input, .contact-section form textarea {
+  background: #ccc;
+  border: none;
+  color: #03396c;
+  font-size: 14px;
+  font-size: 1.4rem;
+  font-family: "Open Sans", sans-serif;
+  padding-left: 10px; }
+  .contact-section form input::-webkit-input-placeholder, .contact-section form textarea::-webkit-input-placeholder {
+    color: #222; }
+  .contact-section form input:-ms-input-placeholder, .contact-section form textarea:-ms-input-placeholder {
+    color: #222; }
+  .contact-section form input::-ms-input-placeholder, .contact-section form textarea::-ms-input-placeholder {
+    color: #222; }
+  .contact-section form input::placeholder, .contact-section form textarea::placeholder {
+    color: #222; }
+
+.contact-section form input[type=submit] {
+  width: 200px;
+  height: 90px;
+  background: #03396c;
+  color: #EAEAEA;
+  font-size: 18px;
+  font-size: 1.8rem;
+  font-family: "Open Sans", sans-serif;
+  -webkit-transition: 0.5s all ease;
+  transition: 0.5s all ease; }
+  .contact-section form input[type=submit]:hover {
+    background: #b3cde0;
+    color: #03396c; }
 
 footer {
   background: #011F4B;
