@@ -365,6 +365,12 @@ section {
     }
 }
 
+.portfolio-first-screen img {
+    width: 10%;
+    margin-left: 20px;
+    margin-top: 50px;
+}
+
 .portfolio-first-screen, .portfolio-notez, .portfolio-bikeshare, .portfolio-twitchfinder {
     width: 100%;
     height: 100%;
@@ -502,11 +508,12 @@ section {
             height: 90px;
             background: $mediumblue;
             color: $white;
-            @include fontStyle(18, $opensans);
+            @include fontStyle(24, $opensans);
+            border: 1px solid $mediumblue;
             transition: 0.5s all ease;
 
             &:hover {
-                background: $skyblue;
+                background: $white;
                 color: $mediumblue;
             }
         }

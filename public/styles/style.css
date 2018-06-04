@@ -419,6 +419,11 @@ section {
           padding-top: 45px;
           margin: 0 auto; }
 
+.portfolio-first-screen img {
+  width: 10%;
+  margin-left: 20px;
+  margin-top: 50px; }
+
 .portfolio-first-screen, .portfolio-notez, .portfolio-bikeshare, .portfolio-twitchfinder {
   width: 100%;
   height: 100%;
@@ -527,13 +532,14 @@ section {
     height: 90px;
     background: #03396c;
     color: #EAEAEA;
-    font-size: 18px;
-    font-size: 1.8rem;
+    font-size: 24px;
+    font-size: 2.4rem;
     font-family: "Open Sans", sans-serif;
+    border: 1px solid #03396c;
     -webkit-transition: 0.5s all ease;
     transition: 0.5s all ease; }
     .contact-section form input[type=submit]:hover {
-      background: #b3cde0;
+      background: #EAEAEA;
       color: #03396c; }
 
 footer {
