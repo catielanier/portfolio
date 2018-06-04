@@ -7,6 +7,7 @@ var app = {};
 app.init = function () {
     app.smoothScroll();
     app.portfolioExampleSlider();
+    app.portfolioClickSlider();
 };
 
 // Smooth Scrolling
@@ -45,13 +46,40 @@ app.smoothScroll = function () {
     });
 };
 
+// Set the portfolio previews to slide on hover.
+
 app.portfolioExampleSlider = function () {
     $('.portfolio-section__grid__box').on('mouseover', '.portfolio-slider', function () {
         $(this).css('transform', 'translateX(-100%)');
     });
 
+    // Roll them back when you leave the container.
+
     $('.portfolio-section__grid__box').on('mouseleave', '.portfolio-slider', function () {
         $(this).css('transform', 'translateX(0)');
+    });
+};
+
+// Set the portfolio description to slide in on click.
+
+app.portfolioClickSlider = function () {
+    $('.portfolio-clicker').on('click', function (e) {
+        e.preventDefault();
+
+        // Grab and create the class.
+        var portfolioName = $(this).attr('id');
+        var $portfolioClass = '.portfolio-' + portfolioName;
+
+        // Remove the class of the previous piece clicked, and send it back to the left.
+        $('.show').removeClass('show').css('transform', 'translateX(0)');
+
+        // Check to see if the initial state is still viewable, and slide it to the left if it is.
+        if (!$('.portfolio-first-screen').css('transform', 'translateX(-100%)')) {
+            $('.portfolio-first-screen').css('transform', 'translateX(-100%)');
+        }
+
+        // Move the clicked piece to the right.
+        $($portfolioClass).addClass('show').css('transform', 'translateX(100%)');
     });
 };
 

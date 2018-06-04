@@ -219,7 +219,8 @@ header {
     header .header-grid .box1 {
       grid-column: 1 / span 4;
       text-align: right;
-      padding-right: 30px; }
+      padding-right: 30px;
+      text-shadow: 0px 0px 8px #222; }
       header .header-grid .box1 p {
         color: white; }
     header .header-grid .box2, header .header-grid .box5, header .header-grid .box13 {
@@ -231,9 +232,9 @@ header {
         background: #022c53; }
     header .header-grid .about-link, header .header-grid .skills-link, header .header-grid .contact-link {
       color: #b3cde0; }
-    header .header-grid .box6, header .header-grid .box9 {
+    header .header-grid .box6 {
       background: #b3cde0; }
-      header .header-grid .box6:hover, header .header-grid .box9:hover {
+      header .header-grid .box6:hover {
         z-index: 10;
         -webkit-box-shadow: 0px 0px 10px 3px #EAEAEA;
                 box-shadow: 0px 0px 10px 3px #EAEAEA;
@@ -248,6 +249,11 @@ header {
       grid-column: 1 / span 2; }
 
 .nav-wrapper {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  z-index: 30;
+  display: block;
   background: #011F4B;
   border-top: 1px solid #EAEAEA;
   border-bottom: 1px solid #EAEAEA;
@@ -285,41 +291,53 @@ header {
           .nav-wrapper nav ul li a:hover {
             border-bottom: 2px solid #b3cde0; }
 
+main {
+  position: relative; }
+
 section {
-  margin: 0 auto;
-  width: 70%;
-  margin-top: 100px;
-  padding-bottom: 100px;
-  border-bottom: 1px solid #011F4B; }
-  section:last-of-type {
-    border-bottom: none; }
+  width: 100%; }
+  section h2 img {
+    width: 5.5%; }
 
 .about-section {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start; }
+  background: #325C7B;
+  color: #EAEAEA; }
+  .about-section__container {
+    margin: 0 auto;
+    width: 70%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start; }
   .about-section__image {
     width: 33.3%; }
     .about-section__image img {
-      width: 100%; }
+      width: 100%;
+      display: block; }
   .about-section__description {
     width: 66.7%;
     margin-left: 5%; }
 
 .skills-section, .portfolio-section, .blog-section, .contact-section {
-  text-align: center; }
+  margin-bottom: 50px; }
+  .skills-section__container {
+    margin: 0 auto;
+    width: 70%; }
   .skills-section h2, .portfolio-section h2, .blog-section h2, .contact-section h2 {
+    padding-top: 15px;
     margin-bottom: 5px; }
+    .skills-section h2 img, .portfolio-section h2 img, .blog-section h2 img, .contact-section h2 img {
+      width: 3.5%; }
   .skills-section p, .portfolio-section p, .blog-section p, .contact-section p {
     font-size: 2.5rem; }
   .skills-section__grid {
     display: grid;
     grid-template-columns: repeat(4, 25%);
     grid-template-rows: repeat(3, 1fr);
-    margin-top: 60px; }
+    margin-top: 60px;
+    text-align: center; }
     .skills-section__grid img {
       width: 40%; }
       .skills-section__grid img.gulp-image {
@@ -335,123 +353,174 @@ section {
     .skills-section__grid p {
       font-size: 18px; }
 
-.portfolio-section p {
-  font-size: 20px; }
-
-.portfolio-section__grid {
-  display: grid;
-  grid-template-columns: 1fr 4.5fr;
-  grid-template-rows: repeat(3, 1fr);
-  border: 2px solid #03396c; }
-  .portfolio-section__grid img {
-    width: 100%;
-    display: block; }
-  .portfolio-section__grid__box-big {
-    grid-column-start: 2;
-    grid-row: 1 / span 3;
-    text-align: left;
-    padding-left: 20px; }
-  .portfolio-section__grid__box {
-    overflow: hidden;
-    position: relative;
-    width: 195px;
-    height: 195px;
-    z-index: 20; }
-    .portfolio-section__grid__box .portfolio-slider {
-      -webkit-transition: 0.6s all ease;
-      transition: 0.6s all ease; }
-    .portfolio-section__grid__box .portfolio-title {
+.portfolio-section {
+  background: #325C7B;
+  color: #EAEAEA;
+  padding-top: 40px;
+  padding-bottom: 50px; }
+  .portfolio-section__container {
+    width: 70%;
+    margin: 0 auto; }
+  .portfolio-section h2 {
+    margin-top: 0;
+    margin-bottom: 40px; }
+  .portfolio-section p {
+    font-size: 20px; }
+  .portfolio-section__grid {
+    display: grid;
+    grid-template-columns: 1fr 4.5fr;
+    grid-template-rows: repeat(3, 1fr); }
+    .portfolio-section__grid img {
+      width: 100%;
+      display: block; }
+    .portfolio-section__grid__box-big {
+      grid-column-start: 2;
+      grid-row: 1 / span 3;
+      text-align: left;
+      padding-left: 20px;
+      overflow: hidden;
+      position: relative; }
+    .portfolio-section__grid__box {
+      overflow: hidden;
+      position: relative;
       width: 195px;
       height: 195px;
-      text-align: center;
-      background: #011F4B;
-      color: #b3cde0;
-      position: absolute;
-      top: 0;
-      left: 195px; }
-      .portfolio-section__grid__box .portfolio-title h3 {
-        font-size: 1.8rem; }
-      .portfolio-section__grid__box .portfolio-title img {
-        width: 30%;
-        padding-top: 45px;
-        margin: 0 auto; }
+      z-index: 20; }
+      .portfolio-section__grid__box .portfolio-slider {
+        -webkit-transition: 0.6s all ease;
+        transition: 0.6s all ease; }
+      .portfolio-section__grid__box .portfolio-title {
+        width: 195px;
+        height: 195px;
+        text-align: center;
+        background: #011F4B;
+        color: #b3cde0;
+        position: absolute;
+        top: 0;
+        left: 195px; }
+        .portfolio-section__grid__box .portfolio-title h3 {
+          font-size: 1.8rem; }
+        .portfolio-section__grid__box .portfolio-title img {
+          width: 30%;
+          padding-top: 45px;
+          margin: 0 auto; }
 
-.contact-section-wrapper {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
-  text-align: left; }
-  .contact-section-wrapper h3 {
-    font-size: 30px;
-    font-size: 3rem;
+.portfolio-first-screen, .portfolio-notez, .portfolio-bikeshare, .portfolio-twitchfinder {
+  width: 100%;
+  height: 100%;
+  -webkit-transition: 0.6s all ease;
+  transition: 0.6s all ease; }
+
+.portfolio-notez, .portfolio-bikeshare, .portfolio-twitchfinder {
+  z-index: 10;
+  position: absolute;
+  top: 0;
+  right: 100%;
+  background: #325C7B;
+  padding-left: 20px; }
+  .portfolio-notez h3, .portfolio-bikeshare h3, .portfolio-twitchfinder h3 {
+    font-size: 36px;
+    font-size: 3.6rem;
     font-family: "BebasNeue", sans-serif; }
-  .contact-section-wrapper p {
+  .portfolio-notez a, .portfolio-bikeshare a, .portfolio-twitchfinder a {
+    color: #325C7B;
+    -webkit-transition: 0.6s all ease;
+    transition: 0.6s all ease; }
+    .portfolio-notez a:hover, .portfolio-bikeshare a:hover, .portfolio-twitchfinder a:hover {
+      color: #EAEAEA; }
+    .portfolio-notez a .button, .portfolio-bikeshare a .button, .portfolio-twitchfinder a .button {
+      width: 100px;
+      height: 100px;
+      background: #EAEAEA;
+      border: 1px #EAEAEA solid;
+      -webkit-transition: 0.6s all ease;
+      transition: 0.6s all ease;
+      text-align: center;
+      float: left;
+      margin-right: 10px; }
+      .portfolio-notez a .button h4, .portfolio-bikeshare a .button h4, .portfolio-twitchfinder a .button h4 {
+        font-size: 2.5rem;
+        padding-top: 15px;
+        margin: 0; }
+      .portfolio-notez a .button p, .portfolio-bikeshare a .button p, .portfolio-twitchfinder a .button p {
+        font-size: 1.4rem; }
+      .portfolio-notez a .button:hover, .portfolio-bikeshare a .button:hover, .portfolio-twitchfinder a .button:hover {
+        background: #325C7B; }
+
+.contact-section {
+  margin-bottom: 50px; }
+  .contact-section__container {
+    width: 70%;
+    margin: 0 auto; }
+  .contact-section-wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    text-align: left; }
+    .contact-section-wrapper h3 {
+      font-size: 30px;
+      font-size: 3rem;
+      font-family: "BebasNeue", sans-serif; }
+    .contact-section-wrapper p {
+      font-size: 1.8rem;
+      margin-top: 5px;
+      margin-bottom: 5px; }
+    .contact-section-wrapper img {
+      margin-top: 20px;
+      width: 50px;
+      display: block;
+      float: left; }
+  .contact-section__info {
+    width: 45%; }
+  .contact-section__send-email {
+    width: 55%; }
+  .contact-section form input[type=text] {
+    height: 50px;
+    width: 280px;
+    margin-right: 10px;
+    margin-bottom: 10px; }
+  .contact-section form input[type=email] {
+    height: 50px;
+    width: 280px;
+    margin-bottom: 10px; }
+  .contact-section form textarea {
+    width: 360px;
+    height: 90px;
+    resize: none;
+    margin-right: 10px;
+    padding-top: 10px; }
+  .contact-section form input, .contact-section form textarea {
+    background: #ccc;
+    border: none;
+    color: #03396c;
+    font-size: 14px;
+    font-size: 1.4rem;
+    font-family: "Open Sans", sans-serif;
+    padding-left: 10px; }
+    .contact-section form input::-webkit-input-placeholder, .contact-section form textarea::-webkit-input-placeholder {
+      color: #222; }
+    .contact-section form input:-ms-input-placeholder, .contact-section form textarea:-ms-input-placeholder {
+      color: #222; }
+    .contact-section form input::-ms-input-placeholder, .contact-section form textarea::-ms-input-placeholder {
+      color: #222; }
+    .contact-section form input::placeholder, .contact-section form textarea::placeholder {
+      color: #222; }
+  .contact-section form input[type=submit] {
+    width: 200px;
+    height: 90px;
+    background: #03396c;
+    color: #EAEAEA;
+    font-size: 18px;
     font-size: 1.8rem;
-    margin-top: 5px;
-    margin-bottom: 5px; }
-  .contact-section-wrapper img {
-    margin-top: 20px;
-    width: 50px;
-    display: block;
-    float: left; }
-
-.contact-section__info {
-  width: 45%; }
-
-.contact-section__send-email {
-  width: 55%; }
-
-.contact-section form input[type=text] {
-  height: 50px;
-  width: 280px;
-  margin-right: 10px;
-  margin-bottom: 10px; }
-
-.contact-section form input[type=email] {
-  height: 50px;
-  width: 280px;
-  margin-bottom: 10px; }
-
-.contact-section form textarea {
-  width: 360px;
-  height: 90px;
-  resize: none;
-  margin-right: 10px;
-  padding-top: 10px; }
-
-.contact-section form input, .contact-section form textarea {
-  background: #ccc;
-  border: none;
-  color: #03396c;
-  font-size: 14px;
-  font-size: 1.4rem;
-  font-family: "Open Sans", sans-serif;
-  padding-left: 10px; }
-  .contact-section form input::-webkit-input-placeholder, .contact-section form textarea::-webkit-input-placeholder {
-    color: #222; }
-  .contact-section form input:-ms-input-placeholder, .contact-section form textarea:-ms-input-placeholder {
-    color: #222; }
-  .contact-section form input::-ms-input-placeholder, .contact-section form textarea::-ms-input-placeholder {
-    color: #222; }
-  .contact-section form input::placeholder, .contact-section form textarea::placeholder {
-    color: #222; }
-
-.contact-section form input[type=submit] {
-  width: 200px;
-  height: 90px;
-  background: #03396c;
-  color: #EAEAEA;
-  font-size: 18px;
-  font-size: 1.8rem;
-  font-family: "Open Sans", sans-serif;
-  -webkit-transition: 0.5s all ease;
-  transition: 0.5s all ease; }
-  .contact-section form input[type=submit]:hover {
-    background: #b3cde0;
-    color: #03396c; }
+    font-family: "Open Sans", sans-serif;
+    -webkit-transition: 0.5s all ease;
+    transition: 0.5s all ease; }
+    .contact-section form input[type=submit]:hover {
+      background: #b3cde0;
+      color: #03396c; }
 
 footer {
   background: #011F4B;
@@ -464,4 +533,18 @@ footer {
     margin: 0; }
   footer .footer-wrapper {
     width: 70%;
-    margin: 0 auto; }
+    margin: 0 auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start; }
+    footer .footer-wrapper img {
+      width: 10%;
+      float: right; }
+    footer .footer-wrapper .footer-copyright {
+      padding-top: 5px;
+      width: 95%; }
+    footer .footer-wrapper .footer-image {
+      padding-left: 30%; }
