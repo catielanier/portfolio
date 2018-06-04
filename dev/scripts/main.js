@@ -50,7 +50,6 @@ app.smoothScroll = () => {
 
 app.portfolioExampleSlider = () => {
     $(`.portfolio-section__grid__box`).on(`mouseover`, `.portfolio-slider`, function() {
-        console.log(`hover`);
         $(this).css(`transform`, `translateX(-100%)`);
     });
 
