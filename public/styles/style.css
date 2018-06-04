@@ -293,6 +293,20 @@ header {
 
 main {
   position: relative; }
+  main .top-link {
+    width: 70px;
+    height: 70px;
+    background: #011F4B;
+    color: #b3cde0;
+    text-align: center; }
+    main .top-link img {
+      margin-top: 5px;
+      width: 50%; }
+    main .top-link p {
+      font-size: 18px;
+      font-size: 1.8rem;
+      font-family: "BebasNeue", sans-serif;
+      margin: 0; }
 
 section {
   width: 100%; }

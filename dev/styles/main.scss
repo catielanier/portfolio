@@ -177,6 +177,24 @@ header {
 
 main {
     position: relative;
+
+    .top-link {
+        width: 70px;
+        height: 70px;
+        background: $darkblue;
+        color: $skyblue;
+        text-align: center;
+
+        img {
+            margin-top: 5px;
+            width: 50%;
+        }
+
+        p {
+            @include fontStyle(18, $bebasneue);
+            margin: 0;
+        }
+    }
 }
 
 section {

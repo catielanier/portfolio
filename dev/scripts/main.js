@@ -6,6 +6,21 @@ app.init = () => {
     app.smoothScroll();
     app.portfolioExampleSlider();
     app.portfolioClickSlider();
+    app.displayTopButton();
+}
+
+app.displayTopButton = () => {
+    window.onscroll = function() {
+        scrollFunction();
+    };
+
+    function scrollFunction() {
+        if (document.body.scrollTop > 400 || document.documentElement.scrollTop > 400) {
+            $(".top-link").css('display', 'block').css('position', 'fixed').css('bottom', '75px').css('right', '10%');
+        } else {
+            $(".top-link").css('display', 'none');
+        }
+    }
 }
 
 // Smooth Scrolling
