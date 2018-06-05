@@ -9,16 +9,20 @@ app.init = () => {
     app.displayTopButton();
 }
 
-app.displayTopButton = () => {
-    window.onscroll = function() {
-        scrollFunction();
-    };
+const windowWidth = $(window).width();
 
-    function scrollFunction() {
-        if (document.body.scrollTop > 400 || document.documentElement.scrollTop > 400) {
-            $(".top-link").css('display', 'block').css('position', 'fixed').css('bottom', '75px').css('right', '10%');
-        } else {
-            $(".top-link").css('display', 'none');
+app.displayTopButton = () => {
+    if (windowWidth > 414) {
+        window.onscroll = function() {
+            scrollFunction();
+        };
+    
+        function scrollFunction() {
+            if (document.body.scrollTop > 400 || document.documentElement.scrollTop > 400) {
+                $(".top-link").css('display', 'block').css('position', 'fixed').css('bottom', '75px').css('right', '10%');
+            } else {
+                $(".top-link").css('display', 'none');
+            }
         }
     }
 }
@@ -67,15 +71,17 @@ app.smoothScroll = () => {
 // Set the portfolio previews to slide on hover.
 
 app.portfolioExampleSlider = () => {
-    $(`.portfolio-section__grid__box`).on(`mouseover`, `.portfolio-slider`, function() {
-        $(this).css(`transform`, `translateX(-100%)`);
-    });
-
-    // Roll them back when you leave the container.
-
-    $(`.portfolio-section__grid__box`).on(`mouseleave`, `.portfolio-slider`, function() {
-        $(this).css(`transform`, `translateX(0)`);
-    });
+    if (windowWidth > 414) {
+        $(`.portfolio-section__grid__box`).on(`mouseover`, `.portfolio-slider`, function() {
+            $(this).css(`transform`, `translateX(-100%)`);
+        });
+    
+        // Roll them back when you leave the container.
+    
+        $(`.portfolio-section__grid__box`).on(`mouseleave`, `.portfolio-slider`, function() {
+            $(this).css(`transform`, `translateX(0)`);
+        });
+    }
 }
 
 // Set the portfolio description to slide in on click.
@@ -88,16 +94,30 @@ app.portfolioClickSlider = () => {
         const portfolioName = $(this).attr(`id`);
         const $portfolioClass = `.portfolio-${portfolioName}`;
 
-        // Remove the class of the previous piece clicked, and send it back to the left.
-        $(`.show`).removeClass(`show`).css('transform', `translateX(0)`);
-
-        // Check to see if the initial state is still viewable, and slide it to the left if it is.
-        if (!$(`.portfolio-first-screen`).css('transform', 'translateX(-100%)')) {
-            $(`.portfolio-first-screen`).css('transform', 'translateX(-100%)');
+        //  Check to see if the viewport is larger than mobile. if it is, the item should slide from the left.
+        if (windowWidth > 414) {
+            // Remove the class of the previous piece clicked, and send it back to the left.
+            $(`.show`).removeClass(`show`).css('transform', `translateX(0)`);
+    
+            // Check to see if the initial state is still viewable, and slide it to the left if it is.
+            if (!$(`.portfolio-first-screen`).css('transform', 'translateX(-100%)')) {
+                $(`.portfolio-first-screen`).css('transform', 'translateX(-100%)');
+            }
+    
+            // Move the clicked piece to the right.
+            $($portfolioClass).addClass(`show`).css('transform', 'translateX(100%)');
+        // If it is mobile, then the item should slide from the top.
+        } else {
+            $(`.show`)
+                .removeClass(`show`)
+                .css("transform", `translateY(0)`);
+            if (!$(`.portfolio-first-screen`).css("transform", "translateY(-250%)")) {
+                $(`.portfolio-first-screen`).css("transform", "translateY(-250%)");
+            }
+            $($portfolioClass)
+                .addClass(`show`)
+                .css("transform", "translateY(250%)");
         }
-
-        // Move the clicked piece to the right.
-        $($portfolioClass).addClass(`show`).css('transform', 'translateX(100%)');
     });
 }
 

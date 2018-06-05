@@ -314,7 +314,6 @@ section {
         display: grid;
         grid-template-columns: 1fr 4.5fr;
         grid-template-rows: repeat(3, 1fr);
-        // border: 2px solid $mediumblue;
 
         img {
             width: 100%;
@@ -424,11 +423,6 @@ section {
     }
 }
 
-
-.blog-section {
-    @extend .skills-section;
-}
-
 .contact-section {
     @extend .skills-section;
     margin-bottom: 50px;
@@ -442,10 +436,6 @@ section {
         display: flex;
         justify-content: flex-start;
         text-align: left;
-
-        h3 {
-            @include fontStyle(30, $bebasneue);
-        }
 
         p {
             font-size: 1.8rem;
@@ -469,6 +459,7 @@ section {
     &__send-email {
         width: 55%;
     }
+    
     form {
         input[type=text] {
             height: 50px;
