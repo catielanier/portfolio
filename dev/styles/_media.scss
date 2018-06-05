@@ -1,4 +1,4 @@
-// Mobile phone portrait
+// Responsive for iPhone+ variants.
 
 @media (max-width: 414px) {
     header {
@@ -40,7 +40,7 @@
             right: 20px;
             width: 40px;
             height: 40px;
-            z-index: 50;
+            z-index: 1000;
 
             img {
                 width: 40%;
@@ -151,6 +151,18 @@
         }
     }
 
+    .portfolio-first-screen img {
+        margin-top: 20px;
+
+        &.leftArrow {
+            display: none;
+        }
+
+        &.upArrow {
+            display: inline-block;
+        }
+    }
+
     .portfolio-notez, .portfolio-bikeshare, .portfolio-twitchfinder {
         top: -250%;
         right: 0;
@@ -247,6 +259,96 @@
             width: 100%;
             margin-right: -50px;
             padding-top: 0;
+        }
+    }
+}
+
+// Responsive design for iPhone starting with 6.
+
+@media (max-width: 375px) {
+    .nav-wrapper {
+        nav {
+            ul {
+                li {
+                    margin-left: -15px;
+                    &:first-of-type {
+                        margin-left: -30px;
+                    }
+                    &:last-child {
+                        margin-left: 5px;
+                    }
+                }
+            }
+        }
+    }
+
+    .about-section {
+        &__image {
+            margin-top: 55px;
+        }
+    }
+
+    .portfolio-section {
+        &__grid {
+            grid-template-rows: 1fr 2.5fr;
+        }
+    }
+
+    .contact-section {
+        &-wrapper {
+            p {
+                font-size: 1.1rem;
+            }
+        }
+        form {
+            input[type=text] {
+                width: 90px;
+                margin-right: 5px;
+                margin-bottom: 5px;
+            }
+
+            input[type=email] {
+                width: 90px;
+                margin-bottom: 5px;
+            }
+
+            textarea {
+                width: 190px;
+            }
+
+            input[type=submit] {
+                width: 140px;
+            }
+        }
+    }
+}
+
+// Responsive design for Samsung Galaxy Phones.
+
+@media (max-width: 360px) {
+    .contact-section {
+        form {
+            input[type=text], input[type=email] {
+                width: 85px;
+            }
+
+            textarea {
+                width: 180px;
+            }
+
+            input[type=text], input[type=email], textarea {
+                font-size: 1.1rem;
+            }
+
+            input[type=submit] {
+                width: 130px;
+            }
+        }
+    }
+
+    footer {
+        .footer-copyright {
+            margin-right: -60px;
         }
     }
 }

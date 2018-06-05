@@ -423,6 +423,8 @@ section {
   width: 10%;
   margin-left: 20px;
   margin-top: 50px; }
+  .portfolio-first-screen img.upArrow {
+    display: none; }
 
 .portfolio-first-screen, .portfolio-notez, .portfolio-bikeshare, .portfolio-twitchfinder {
   width: 100%;
@@ -593,7 +595,7 @@ footer {
     right: 20px;
     width: 40px;
     height: 40px;
-    z-index: 50; }
+    z-index: 1000; }
     main .top-link img {
       width: 40%; }
     main .top-link p {
@@ -649,6 +651,12 @@ footer {
           height: 100%; }
           .portfolio-section__grid__box .portfolio-title h3 {
             font-size: 1rem; }
+  .portfolio-first-screen img {
+    margin-top: 20px; }
+    .portfolio-first-screen img.leftArrow {
+      display: none; }
+    .portfolio-first-screen img.upArrow {
+      display: inline-block; }
   .portfolio-notez, .portfolio-bikeshare, .portfolio-twitchfinder {
     top: -250%;
     right: 0;
@@ -702,3 +710,40 @@ footer {
       width: 100%;
       margin-right: -50px;
       padding-top: 0; } }
+
+@media (max-width: 375px) {
+  .nav-wrapper nav ul li {
+    margin-left: -15px; }
+    .nav-wrapper nav ul li:first-of-type {
+      margin-left: -30px; }
+    .nav-wrapper nav ul li:last-child {
+      margin-left: 5px; }
+  .about-section__image {
+    margin-top: 55px; }
+  .portfolio-section__grid {
+    grid-template-rows: 1fr 2.5fr; }
+  .contact-section-wrapper p {
+    font-size: 1.1rem; }
+  .contact-section form input[type=text] {
+    width: 90px;
+    margin-right: 5px;
+    margin-bottom: 5px; }
+  .contact-section form input[type=email] {
+    width: 90px;
+    margin-bottom: 5px; }
+  .contact-section form textarea {
+    width: 190px; }
+  .contact-section form input[type=submit] {
+    width: 140px; } }
+
+@media (max-width: 360px) {
+  .contact-section form input[type=text], .contact-section form input[type=email] {
+    width: 85px; }
+  .contact-section form textarea {
+    width: 180px; }
+  .contact-section form input[type=text], .contact-section form input[type=email], .contact-section form textarea {
+    font-size: 1.1rem; }
+  .contact-section form input[type=submit] {
+    width: 130px; }
+  footer .footer-copyright {
+    margin-right: -60px; } }

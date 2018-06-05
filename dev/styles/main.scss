@@ -368,6 +368,10 @@ section {
     width: 10%;
     margin-left: 20px;
     margin-top: 50px;
+
+    &.upArrow {
+        display: none;
+    }
 }
 
 .portfolio-first-screen, .portfolio-notez, .portfolio-bikeshare, .portfolio-twitchfinder {
@@ -459,7 +463,7 @@ section {
     &__send-email {
         width: 55%;
     }
-    
+
     form {
         input[type=text] {
             height: 50px;
