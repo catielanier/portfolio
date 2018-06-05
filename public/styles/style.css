@@ -769,3 +769,19 @@ footer {
     width: 130px; }
   footer .footer-copyright {
     margin-right: -60px; } }
+
+@media (max-width: 320px) {
+  .nav-wrapper nav ul li {
+    font-size: 1rem; }
+  .about-section__image {
+    margin-top: 80px; }
+  .portfolio-section__grid {
+    grid-template-rows: 1fr 3fr; }
+  .contact-section form textarea {
+    width: 155px; }
+  .contact-section form input[type=text], .contact-section form input[type=email] {
+    width: 155px; }
+  .contact-section form input[type=submit] {
+    width: 110px; }
+  footer .footer-copyright {
+    margin-right: -100px; } }

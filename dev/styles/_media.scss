@@ -409,3 +409,50 @@
         }
     }
 }
+
+// Responsive design for iPhone 5 and lower.
+
+@media (max-width: 320px) {
+    .nav-wrapper {
+        nav {
+            ul {
+                li {
+                    font-size: 1rem;
+                }
+            }
+        }
+    }
+
+    .about-section {
+        &__image {
+            margin-top: 80px;
+        }
+    }
+
+    .portfolio-section {
+        &__grid {
+            grid-template-rows: 1fr 3fr;
+        }
+    }
+
+    .contact-section {
+        form {
+            textarea {
+                width: 155px;
+            }
+            input[type=text], input[type=email] {
+                width: 155px;
+            }
+
+            input[type=submit] {
+                width: 110px;
+            }
+        }
+    }
+
+    footer {
+        .footer-copyright {
+            margin-right: -100px;
+        }
+    }
+}
