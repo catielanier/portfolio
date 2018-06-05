@@ -263,6 +263,58 @@
     }
 }
 
+// Responsive design for Google Nexus 4.
+
+@media (max-width: 384px) {
+    .nav-wrapper {
+        nav {
+            ul {
+                li {
+                    margin-left: -15px;
+                    &:first-of-type {
+                        margin-left: -30px;
+                    }
+                    &:last-child {
+                        margin-left: 5px;
+                    }
+                }
+            }
+        }
+    }
+    
+    .about-section {
+        &__image {
+            margin-top: 45px;
+        }
+    }
+
+    .portfolio-section {
+        &__grid {
+            grid-template-rows: 1fr 2.4fr;
+        }
+    }
+
+    .contact-section {
+        form {
+            input[type=text], input[type=email] {
+                width: 90px;
+            }
+
+            input, textarea {
+                font-size: 1.1rem;
+            }
+
+            textarea {
+                width: 193px;
+            }
+
+            input[type=submit] {
+                width: 145px;
+            }
+        }
+    }
+}
+
 // Responsive design for iPhone starting with 6.
 
 @media (max-width: 375px) {
@@ -326,6 +378,11 @@
 // Responsive design for Samsung Galaxy Phones.
 
 @media (max-width: 360px) {
+    .about-section {
+        &__image {
+            margin-top: 60px;
+        }
+    }
     .contact-section {
         form {
             input[type=text], input[type=email] {
