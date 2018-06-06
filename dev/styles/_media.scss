@@ -224,10 +224,7 @@
 
         &__image {
             width: 40%;
-
-            img {
-                margin-top: 30px;
-            }
+            margin-top: 30px;
         }
 
         &__description {
@@ -293,6 +290,8 @@
         }
 
         .header-grid {
+            margin: 0;
+            padding: 0;
             grid-template-columns: repeat(4, 103.5px);
             grid-template-rows: 103.5px;
 
@@ -340,10 +339,12 @@
             ul {
                 justify-content: flex-start;
                 align-items: center;
+                padding-left: 45px;
 
                 li {
-                    font-size: 1.2rem;
+                    font-size: 1.0rem;
                     padding-bottom: 10px;
+                    margin-right: 0;
 
                     &:first-of-type {
                         font-size: 1.4rem;
@@ -605,6 +606,7 @@
 
 @media (max-width: 384px) {
     header {
+        height: auto;
         .header-grid {
             grid-template-columns: repeat(4, 96px);
             grid-template-rows: 96px;
@@ -672,6 +674,8 @@
 @media (max-width: 375px) {
     header {
         .header-grid {
+            margin: 0;
+            padding: 0;
             grid-template-columns: repeat(4, 93.75px);
             grid-template-rows: 93.75px;
         }
@@ -738,9 +742,31 @@
 
 @media (max-width: 360px) {
     header {
+        height: auto;
+
         .header-grid {
+            margin: 0;
+            padding: 0;
             grid-template-columns: repeat(4, 90px);
             grid-template-rows: 90px;
+        }
+    }
+
+    .nav-wrapper {
+        nav {
+            ul {
+                li {
+
+                    margin-left: 15px;
+                    &:first-of-type {
+                        margin-left: -35px;
+                    }
+
+                    &:last-child {
+                        margin-left: 15px;
+                    }
+                }
+            }
         }
     }
 
@@ -771,7 +797,7 @@
 
     footer {
         .footer-copyright {
-            margin-right: -60px;
+            margin-right: -300px;
         }
     }
 }
@@ -783,6 +809,8 @@
         .header-grid {
             grid-template-columns: repeat(4, 80px);
             grid-template-rows: 80px;
+            margin: 0;
+            padding: 0;
             .box0 {   
                 h2 {
                     font-size: 1.4rem;
@@ -803,6 +831,10 @@
             ul {
                 li {
                     font-size: 1rem;
+
+                    &:first-of-type {
+                        margin-left: -35px;
+                    }
                 }
             }
         }
