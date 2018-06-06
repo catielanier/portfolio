@@ -29,7 +29,7 @@ header {
         padding-bottom: 195px;
     }
 
-    .logo-box {
+    .logo-box, .box0 {
         width: 195px;
         height: 195px;
         background: $skyblue;
@@ -64,7 +64,6 @@ header {
 
             img {
                 width: 100%;
-                height: 100%;
             }
 
             .icon {
@@ -72,6 +71,10 @@ header {
                 width: 25%;
                 height: auto;
             }
+        }
+
+        .box0 {
+            display: none;
         }
 
         .box1 {
@@ -184,6 +187,7 @@ main {
         background: $darkblue;
         color: $skyblue;
         text-align: center;
+        z-index: 100;
 
         img {
             margin-top: 5px;
@@ -511,6 +515,10 @@ section {
                 background: $white;
                 color: $mediumblue;
             }
+        }
+
+        input {
+            border-radius: 0;
         }
     }
 }

@@ -1,8 +1,335 @@
+// Resize-specific breakpoint.
+
+@media (max-width: 1502px) {
+    .contact-section {
+        form {
+            input[type=text], input[type=email] {
+                width: 250px;
+            }
+            textarea {
+                width: 300px;
+            }
+        }
+    }
+}
+
+@media (max-width: 1400px) {
+    header {
+        height: 100vh;
+
+        .logo-box, .box0 {
+            width: 150px;
+            height: 150px;
+
+            h2 {
+                font-size: 2rem;
+            }
+        }
+
+        .header-grid {
+            margin-left: 150px;
+            margin-top: 75px;
+            grid-template-columns: repeat(6, 150px);
+            grid-template-rows: repeat(3, 150px);
+
+            .box {
+                p {
+                    font-size: 1.5rem;
+                }
+            }
+        }
+    }
+}
+
+// Netbook specific breakpoint.
+
+@media (max-width: 1280px) {
+    header {
+        .header-grid {
+            margin-left: 0;
+            margin-top: 0;
+        }
+    }
+
+    .contact-section {
+        form {
+            input[type=text], input[type=email] {
+                width: 200px;
+            }
+
+            textarea {
+                width: 240px;
+            }
+
+            input[type=submit] {
+                width: 160px;
+            }
+        }
+    }
+}
+
+// Responsive for iPads in landscape. 
+
+@media (max-width: 1024px) {
+    header {
+        .logo-box {
+            width: 120px;
+            height: 120px;
+
+            img {
+                margin-top: 10px;
+            }
+        }
+
+        .header-grid {
+            margin-top: 120px;
+            grid-template-columns: repeat(6, 120px);
+            grid-template-rows: repeat(3, 120px);
+            margin-left: 30px;
+
+            .box1 {
+                h1 {
+                    font-size: 3rem;
+                }
+            }
+
+            .box {
+                .icon {
+                    margin-top: 30px;
+                }
+            }
+        }
+    }
+
+    section {
+        h2 img {
+            width: 9%;
+        }
+    }
+
+    .skills-section {
+        h2 {
+            img {
+                width: 6%;
+            }
+        }
+    }
+
+    .contact-section {
+        form {
+            input[type=text], input[type=email] {
+                width: 170px;
+            }
+            textarea {
+                width: 350px;
+                margin-bottom: 10px;
+            }
+            input[type=submit] {
+                width: 350px;
+            }
+        }
+    }
+}
+
+// Responsive for iPad in portrait.
+
+@media (max-width: 768px) {
+    header {
+        .logo-box {
+            width: 195px;
+            height: 195px;
+
+            img {
+                margin-top: 20px;
+            }
+
+            h2 {
+                font-size: 2.5rem;
+            }
+        }
+        
+        height: 100vh;
+        background-position: left;
+
+        .wrapper {
+            padding-bottom: 0;
+        }
+
+        .header-grid {
+            margin-top: 140px;
+            grid-template-columns: repeat(4, 120px);
+            grid-template-rows: repeat(4, 120px);
+
+            .box1 {
+                grid-column: 1 / span 3;
+            }
+
+            .box12 {
+                grid-row: 3;
+                grid-column: 4;
+            }
+
+            .box4 {
+                grid-row: 2;
+                grid-column: 3;
+            }
+
+            .box5 {
+                grid-row: 2;
+                grid-column: 2;
+            }
+
+            .box10 {
+                grid-column: 1;
+            }
+        }
+    }
+
+    .nav-wrapper {
+        nav {
+            width: 90%;
+
+            ul {
+                padding-left: 15px;
+                align-items: center;
+
+                li {
+                    margin-bottom: 10px;
+                    margin-right: 50px;
+                    font-size: 1.5rem;
+
+                    img {
+                        width: 15px;
+                    }
+
+                    &:first-of-type {
+                        font-size: 3rem;
+                        margin-bottom: 0;
+                    }
+                }
+            }
+        }
+    }
+
+    section {
+        h2 img {
+            width: 10%;
+        }
+    }
+
+    .about-section {
+        &__container {
+            width: 90%;
+        }
+
+        &__image {
+            width: 40%;
+
+            img {
+                margin-top: 30px;
+            }
+        }
+
+        &__description {
+            width: 60%;
+        }
+    }
+
+    .skills-section {
+        &__container {
+            width: 90%;
+        }
+
+        h2 {
+            img {
+                width: 7.5%;
+            }
+        }
+    }
+
+    .portfolio-section {
+        &__container {
+            width: 90%;
+        }
+    }
+
+    .contact-section {
+        &__container {
+            width: 90%;
+        }
+
+        form {
+            input[type=text], input[type=email] {
+                width: 350px;
+            }
+
+            textarea {
+                height: 69px;
+            }
+
+            input[type=submit] {
+                width: 250px;
+                height: 70px;
+            }
+        }
+    }
+}
+
 // Responsive for iPhone+ variants.
 
 @media (max-width: 414px) {
     header {
-        display: none;
+        height: auto;
+        background-image: none;
+        background: $white;
+
+        .wrapper {
+            width: 100%;
+            padding-bottom: 0;
+        }
+
+        .logo-box {
+            display: none;
+        }
+
+        .header-grid {
+            grid-template-columns: repeat(4, 103.5px);
+            grid-template-rows: 103.5px;
+
+            .box0 {
+                display: block;
+                width: 100%;
+                height: auto;
+
+                img {
+                    width: 30%;
+                    margin-top: 15px;
+                }
+
+                h2 {
+                    font-size: 1.6rem;
+                    margin-bottom: 0;
+                }
+            }
+
+            .box1, .box2, .box3, .box4, .box5, .box6, .box10, .box11, .box12, .box13, .box14, a {
+                display: none;
+            }
+
+            .box {
+                p {
+                    font-size: 1.5rem;
+                }
+            }
+
+            .box8 {
+                .icon {
+                    margin-top: 20px;
+                }
+            }
+        }
+
+
     }
 
     .nav-wrapper {
@@ -263,9 +590,34 @@
     }
 }
 
+// Responsive design for Google Nexus 6
+
+@media (max-width: 412px) {
+    header {
+        .header-grid {
+            grid-template-columns: repeat(4, 103px);
+            grid-template-rows: 103px;
+        }
+    }
+}
+
 // Responsive design for Google Nexus 4.
 
 @media (max-width: 384px) {
+    header {
+        .header-grid {
+            grid-template-columns: repeat(4, 96px);
+            grid-template-rows: 96px;
+
+            .box8 {
+                .icon {
+                    margin-top: 17.5px;
+                }
+            }
+        }
+
+    }
+
     .nav-wrapper {
         nav {
             ul {
@@ -318,6 +670,13 @@
 // Responsive design for iPhone starting with 6.
 
 @media (max-width: 375px) {
+    header {
+        .header-grid {
+            grid-template-columns: repeat(4, 93.75px);
+            grid-template-rows: 93.75px;
+        }
+    }
+
     .nav-wrapper {
         nav {
             ul {
@@ -378,6 +737,13 @@
 // Responsive design for Samsung Galaxy Phones.
 
 @media (max-width: 360px) {
+    header {
+        .header-grid {
+            grid-template-columns: repeat(4, 90px);
+            grid-template-rows: 90px;
+        }
+    }
+
     .about-section {
         &__image {
             margin-top: 60px;
@@ -413,6 +779,25 @@
 // Responsive design for iPhone 5 and lower.
 
 @media (max-width: 320px) {
+    header {
+        .header-grid {
+            grid-template-columns: repeat(4, 80px);
+            grid-template-rows: 80px;
+            .box0 {   
+                h2 {
+                    font-size: 1.4rem;
+                }
+            }
+
+            .box8 {
+                p {
+                    font-size: 1.2rem;
+                    margin-top: 10px;
+                }
+            }
+        }
+
+    }
     .nav-wrapper {
         nav {
             ul {
