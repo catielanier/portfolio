@@ -1,6 +1,19 @@
-'use strict';
+"use strict";
 
 var app = {};
+
+var allowedKeys = {
+    37: "left",
+    38: "up",
+    39: "right",
+    40: "down",
+    65: "a",
+    66: "b"
+};
+
+var konamiCode = ["up", "up", "down", "down", "left", "right", "left", "right", "b", "a"];
+
+var konamiCodePosition = 0;
 
 // Compile all the functions to load.
 
@@ -9,6 +22,31 @@ app.init = function () {
     app.portfolioExampleSlider();
     app.portfolioClickSlider();
     app.displayTopButton();
+    app.konamiCodeActivator();
+};
+
+app.konamiCodeActivator = function () {
+    document.addEventListener('keydown', function (e) {
+        var key = allowedKeys[e.keyCode];
+        var requiredKey = konamiCode[konamiCodePosition];
+
+        if (key === requiredKey) {
+            konamiCodePosition++;
+
+            if (konamiCodePosition === konamiCode.length) {
+                app.activateEasterEgg();
+                konamiCodePosition = 0;
+            }
+        } else {
+            konamiCodePosition = 0;
+        }
+    });
+};
+
+app.activateEasterEgg = function () {
+    var audio = new Audio('../../media/easteregg.mp3');
+    audio.play();
+    console.log('cheater');
 };
 
 var windowWidth = $(window).width();
@@ -69,14 +107,14 @@ app.smoothScroll = function () {
 
 app.portfolioExampleSlider = function () {
     if (windowWidth > 414) {
-        $('.portfolio-section__grid__box').on('mouseover', '.portfolio-slider', function () {
-            $(this).css('transform', 'translateX(-100%)');
+        $(".portfolio-section__grid__box").on("mouseover", ".portfolio-slider", function () {
+            $(this).css("transform", "translateX(-100%)");
         });
 
         // Roll them back when you leave the container.
 
-        $('.portfolio-section__grid__box').on('mouseleave', '.portfolio-slider', function () {
-            $(this).css('transform', 'translateX(0)');
+        $(".portfolio-section__grid__box").on("mouseleave", ".portfolio-slider", function () {
+            $(this).css("transform", "translateX(0)");
         });
     }
 };
@@ -84,32 +122,32 @@ app.portfolioExampleSlider = function () {
 // Set the portfolio description to slide in on click.
 
 app.portfolioClickSlider = function () {
-    $('.portfolio-clicker').on('click', function (e) {
+    $(".portfolio-clicker").on("click", function (e) {
         e.preventDefault();
 
         // Grab and create the class.
-        var portfolioName = $(this).attr('id');
-        var $portfolioClass = '.portfolio-' + portfolioName;
+        var portfolioName = $(this).attr("id");
+        var $portfolioClass = ".portfolio-" + portfolioName;
 
         //  Check to see if the viewport is larger than mobile. if it is, the item should slide from the left.
         if (windowWidth > 414) {
             // Remove the class of the previous piece clicked, and send it back to the left.
-            $('.show').removeClass('show').css('transform', 'translateX(0)');
+            $(".show").removeClass("show").css('transform', "translateX(0)");
 
             // Check to see if the initial state is still viewable, and slide it to the left if it is.
-            if (!$('.portfolio-first-screen').css('transform', 'translateX(-100%)')) {
-                $('.portfolio-first-screen').css('transform', 'translateX(-100%)');
+            if (!$(".portfolio-first-screen").css('transform', 'translateX(-100%)')) {
+                $(".portfolio-first-screen").css('transform', 'translateX(-100%)');
             }
 
             // Move the clicked piece to the right.
-            $($portfolioClass).addClass('show').css('transform', 'translateX(100%)');
+            $($portfolioClass).addClass("show").css('transform', 'translateX(100%)');
             // If it is mobile, then the item should slide from the top.
         } else {
-            $('.show').removeClass('show').css("transform", 'translateY(0)');
-            if (!$('.portfolio-first-screen').css("transform", "translateY(-250%)")) {
-                $('.portfolio-first-screen').css("transform", "translateY(-250%)");
+            $(".show").removeClass("show").css("transform", "translateY(0)");
+            if (!$(".portfolio-first-screen").css("transform", "translateY(-250%)")) {
+                $(".portfolio-first-screen").css("transform", "translateY(-250%)");
             }
-            $($portfolioClass).addClass('show').css("transform", "translateY(250%)");
+            $($portfolioClass).addClass("show").css("transform", "translateY(250%)");
         }
     });
 };
