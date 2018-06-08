@@ -22,6 +22,7 @@ header {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: top center;
+    height: 100vh;
 
     .wrapper {
         width: 70%;
@@ -207,6 +208,13 @@ section {
     h2 img {
         width: 5.5%;
     }
+}
+
+.destination {
+    position:absolute;
+    z-index:-1;
+    left:0;
+    margin-top:-64px;
 }
 
 .about-section {  

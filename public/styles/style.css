@@ -179,7 +179,8 @@ header {
   background: linear-gradient(to bottom, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("../../img/torontobg.jpg");
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: top center; }
+  background-position: top center;
+  height: 100vh; }
   header .wrapper {
     width: 70%;
     margin: 0 auto;
@@ -314,6 +315,12 @@ section {
   width: 100%; }
   section h2 img {
     width: 5.5%; }
+
+.destination {
+  position: absolute;
+  z-index: -1;
+  left: 0;
+  margin-top: -64px; }
 
 .about-section {
   background: #325C7B;
