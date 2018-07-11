@@ -21,6 +21,22 @@ header {
     background-repeat: no-repeat;
     background-position: top center;
     height: 100vh;
+    position: relative;
+
+    .language-select {
+        position: absolute;
+        top: 3%;
+        right: 12.5%;
+
+        select {
+            background: $skyblue;
+            border-radius: 0;
+            border: none;
+            color: $darkblue;
+            padding: 5px 10px;
+            text-align: center;
+        }
+    }
 
     .wrapper {
         width: 70%;
@@ -155,7 +171,7 @@ header {
             li {
                 margin-top: 5px;
                 list-style-type: none;
-                @include fontStyle(18, $opensans);
+                @include fontStyle(30, $opensans);
                 
                 &:first-of-type {
                     color: $skyblue;

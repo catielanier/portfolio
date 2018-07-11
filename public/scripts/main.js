@@ -18,6 +18,7 @@ var konamiCodePosition = 0;
 // Compile all the functions to load.
 
 app.init = function () {
+    app.changeLanguage();
     app.smoothScroll();
     app.portfolioExampleSlider();
     app.portfolioClickSlider();
@@ -40,6 +41,18 @@ app.konamiCodeActivator = function () {
             }
         } else {
             konamiCodePosition = 0;
+        }
+    });
+};
+
+app.changeLanguage = function () {
+    var $language = $("#language");
+    $language.on("change", function () {
+        var language = $language.val();
+        if (language === "en") {
+            window.location.href = "../";
+        } else {
+            window.location.href = language + "/";
         }
     });
 };

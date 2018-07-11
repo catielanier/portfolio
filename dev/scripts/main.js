@@ -27,6 +27,7 @@ let konamiCodePosition = 0;
 // Compile all the functions to load.
 
 app.init = () => {
+    app.changeLanguage();
     app.smoothScroll();
     app.portfolioExampleSlider();
     app.portfolioClickSlider();
@@ -49,6 +50,18 @@ app.konamiCodeActivator = () => {
             }
         } else {
             konamiCodePosition = 0;
+        }
+    });
+}
+
+app.changeLanguage = () => {
+    const $language = $(`#language`);
+    $language.on(`change`, () => {
+        const language = $language.val();
+        if (language === `en`) {
+            window.location.href = `../`;
+        } else {
+            window.location.href = `${language}/`;
         }
     });
 }

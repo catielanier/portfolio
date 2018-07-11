@@ -177,7 +177,19 @@ body {
 header {
   background-repeat: no-repeat;
   background-position: top center;
-  height: 100vh; }
+  height: 100vh;
+  position: relative; }
+  header .language-select {
+    position: absolute;
+    top: 3%;
+    right: 12.5%; }
+    header .language-select select {
+      background: #b3cde0;
+      border-radius: 0;
+      border: none;
+      color: #011F4B;
+      padding: 5px 10px;
+      text-align: center; }
   header .wrapper {
     width: 70%;
     margin: 0 auto;
@@ -276,8 +288,8 @@ header {
       .nav-wrapper nav ul li {
         margin-top: 5px;
         list-style-type: none;
-        font-size: 18px;
-        font-size: 1.8rem;
+        font-size: 30px;
+        font-size: 3rem;
         font-family: "Open Sans", sans-serif; }
         .nav-wrapper nav ul li:first-of-type {
           color: #b3cde0;
