@@ -32,6 +32,7 @@ app.init = () => {
     app.portfolioClickSlider();
     app.displayTopButton();
     app.konamiCodeActivator();
+    app.chooseCity();
 }
 
 app.konamiCodeActivator = () => {
@@ -42,7 +43,7 @@ app.konamiCodeActivator = () => {
         if (key === requiredKey) {
             konamiCodePosition++;
     
-            if (konamiCodePosition === konamiCode.length) {
+            if (konamiCodePosition === konamiCode.length()) {
                 app.activateEasterEgg();
                 konamiCodePosition = 0;
             }
@@ -55,7 +56,19 @@ app.konamiCodeActivator = () => {
 app.activateEasterEgg = () => {
     const audio = new Audio('../../media/easteregg.mp3');
     audio.play();
-    console.log('cheater');
+}
+
+app.chooseCity = () => {
+    const cities = ["toronto", "stlouis", "seoul", "qingdao"];
+    const randomCity = cities[Math.floor(Math.random() * cities.length)];
+    app.changeHero(randomCity);
+}
+
+app.changeHero = (city) => {
+    const $header = $(`header`);
+    $header
+        .css(`background`, `linear-gradient(to bottom, rgba(1,31,75,0.7), rgba(1,31,75,0.7)), url('../../img/${city}bg.jpg')`)
+        .css(`background-size`, `cover`);
 }
 
 const windowWidth = $(window).width();
