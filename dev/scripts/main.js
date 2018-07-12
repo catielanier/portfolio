@@ -61,7 +61,7 @@ app.changeLanguage = () => {
         if (language === `en`) {
             window.location.href = `../`;
         } else {
-            window.location.href = `${language}/`;
+            window.location.href = `../${language}/`;
         }
     });
 }

@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="kr">
 	<head>
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<meta http-equiv="X-UA-Compatible" content="ie=edge">
-		<title>Corey Lanier [creative web development]</title>
+		<title>코리 러니어 [창조적인 웹 개발]</title>
 		<link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png">
 		<link rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.png">
 		<link rel="apple-touch-icon" sizes="72x72" href="/apple-icon-72x72.png">
@@ -13,7 +13,7 @@
 		<link rel="apple-touch-icon" sizes="120x120" href="/apple-icon-120x120.png">
 		<link rel="apple-touch-icon" sizes="144x144" href="/apple-icon-144x144.png">
 		<link rel="apple-touch-icon" sizes="152x152" href="/apple-icon-152x152.png">
-		<link rel="apple-touch-icon" sizes="180x180" href="/apple-icon-180x180.png">
+		<link rel="apple러니어-touch-icon" sizes="180x180" href="/apple-icon-180x180.png">
 		<link rel="icon" type="image/png" sizes="192x192" href="/android-icon-192x192.png">
 		<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
 		<link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
@@ -22,7 +22,7 @@
 		<meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
 		<meta name="theme-color" content="#ffffff">
 		<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
-		<link rel="stylesheet" href="public/styles/style.css">
+		<link rel="stylesheet" href="../public/styles/style.css">
 		<script defer src='https://use.fontawesome.com/releases/v5.0.6/js/all.js'></script>
 	</head>
 	<body>
@@ -31,64 +31,71 @@
 		<a href="#main-content" id="jumpTo"><div class="jumpTo"></div></a>
 
 		<header id="top">
+			<div class="language-select">
+				<select name="language" id="language">
+					<option value="kr">한국어</option>
+					<option value="en">English</option>
+					<option value="zh-cn">中文（简体）</option>
+				</select>
+			</div>
 			<div class="wrapper">
 				<div class="box logo-box">
-					<img src="img/ltian.png" alt="l天">
-					<h2>[lTian Code]</h2>
+					<img src="../img/ltian.png" alt="l天">
+					<h2>[l티엔 코드]</h2>
 				</div>
 				<div class="header-grid">
 					<div class="box box0">
-						<img src="img/ltian.png" alt="l天">
-						<h2>[lTian Code]</h2>
+						<img src="../img/ltian.png" alt="l天">
+						<h2>[l티엔 코드]</h2>
 					</div>
 					<div class="box box1">
-						<h1>Corey Lanier</h1>
-						<p>Web Developer</p>
+						<h1>코리 러니어</h1>
+						<p>웹 개발자</p>
 					</div>
 					<a href="#about" class="header-link about-link">
 						<div class="box box2">
-							<img src="img/about.svg" class="icon" alt="About">
-							<p>About</p>
+							<img src="../img/about.svg" class="icon" alt="About">
+							<p>대해서</p>
 						</div>
 					</a>
 					<div class="box box3">
-						<img src="img/laptop.jpg" alt="Laptop">
+						<img src="../img/laptop.jpg" alt="Laptop">
 					</div>
-					<div class="box box4"><img src="img/smartphone.jpg" alt="Smartphone"></div>
+					<div class="box box4"><img src="../img/smartphone.jpg" alt="Smartphone"></div>
 					<a href="#skills" class="header-link skills-link">
 						<div class="box box5">
-							<img src="img/skills.svg" alt="Skills" class="icon">
-							<p>Skills</p>
+							<img src="../img/skills.svg" alt="Skills" class="icon">
+							<p>기술</p>
 						</div>
 					</a>
 					<div class="box box8">
-						<img src="img/create.png" alt="Create" class="icon">
-						<p>Create</p>
+						<img src="../img/create.png" alt="Create" class="icon">
+						<p>창조하다</p>
 					</div>
 					<div class="box box7">
-						<img src="img/code.jpg" alt="Code">
+						<img src="../img/code.jpg" alt="Code">
 					</div>
 					<a href="#portfolio" class="header-link portfolio-link">
 						<div class="box box6">
-							<img src="img/portfolio.svg" alt="Portfolio" class="icon">
-							<p>Portfolio</p>
+							<img src="../img/portfolio.svg" alt="Portfolio" class="icon">
+							<p>포트폴리오</p>
 						</div>
 					</a>
 					<div class="box box9">
-						<img src="img/joystick.jpg" alt="Joystick">
+						<img src="../img/joystick.jpg" alt="Joystick">
 					</div>
 					<div class="box box10"></div>
 					<div class="box box11">
-						<img src="img/design.jpg" alt="Design">
+						<img src="../img/design.jpg" alt="Design">
 					</div>
 					<div class="box box12">
-						<img src="img/inspire.png" alt="Inspire" class="icon">
-						<p>Inspire</p>
+						<img src="../img/inspire.png" alt="Inspire" class="icon">
+						<p>고무하다</p>
 					</div>
 					<a href="#contact" class="header-link contact-link">
 						<div class="box box13">
-							<img src="img/contact.svg" alt="Contact" class="icon">
-							<p>Contact</p>
+							<img src="../img/contact.svg" alt="Contact" class="icon">
+							<p>연락하다</p>
 						</div>
 					</a>
 					<div class="box box14"></div>
@@ -98,89 +105,87 @@
 		<div class="nav-wrapper" id="main-content">
 			<nav>
 				<ul>
-					<li>[lTian Code]</li>
-					<li><a href="#about"><img src="img/about.svg" alt="About"> <span>About</span></a></li>
-					<li><a href="#skills"><img src="img/skills.svg" alt="Skills"> <span>Skills</span></a></li>
-					<li><a href="#portfolio"><img src="img/portfolio-light.svg" alt="Portfolio"> <span>Portfolio</span></a></li>
-					<li><a href="#contact"><img src="img/contact.svg" alt="Contact"> <span>Contact</span></a></li>
+					<li>[l티엔 코드]</li>
+					<li><a href="#about"><img src="../img/about.svg" alt="About"> <span>대해서</span></a></li>
+					<li><a href="#skills"><img src="../img/skills.svg" alt="Skills"> <span>기술</span></a></li>
+					<li><a href="#portfolio"><img src="../img/portfolio-light.svg" alt="Portfolio"> <span>포트폴리오</span></a></li>
+					<li><a href="#contact"><img src="../img/contact.svg" alt="Contact"> <span>연락하다</span></a></li>
 				</ul>
 			</nav>
 		</div>
 		<main>
 			<a href="#top">
 				<div class="top-link">
-					<img src="img/top.png" alt="">
-					<p>[Top]</p>
+					<img src="../img/top.png" alt="">
+					<p>[상단]</p>
 				</div>
 			</a>
 			<div class="destination" id="about"></div>
 			<section class="about-section">
 				<div class="about-section__container">
 					<div class="about-section__image">
-						<img src="img/corey.jpg" alt="Corey Lanier">
+						<img src="../img/corey.jpg" alt="Corey Lanier">
 					</div>
 					<div class="about-section__description">
-						<h2><img src="img/about.png" alt="About"> About Me</h2>
-						<p>Hello, my name is Corey Lanier, and I am an American trilingual (English, Mandarin, Korean) web developer based in Toronto. I am a graduate of HackerYou's Web Development Immersive with a passion for competitive gaming, food, and writing.</p>
-						<p>Before starting
-						my career in tech, I lived in China and South Korea for 5 years teaching English as a Second Language. Alongside knowledge
-						and skills, I bring curiosity, enthusiasm, and a whole lot of care to everything I do.</p>
+						<h2><img src="../img/about.png" alt="About"> 저에 대해서</h2>
+						<p>여러분 안녕하세요! 제 이름은 코리 러니어입니다. 저는 캐나다 토론토에 거주하는 3개 국어 (영어, 중국어, 한국어) 웹 개발자입니다. 저는 해커유의 몰입 형 웹 개발 졸업생입니다. 경쟁 게임, 음식 및 글쓰기에 대한 열정이 있습니다.</p>
+						<p>기술 분야에서 경력을 시작하기 전에 저는 중국과 한국에서 5년 동안 영어를 가르쳤습니다. 지식과 기술과 함께, 나는 호기심, 열정, 그리고 내가하는 모든 일에 많은 관심을 가지고 있습니다.</p>
 					</div>
 				</div>
 			</section>
 			<div class="destination" id="skills"></div>
 			<section class="skills-section">
 				<div class="skills-section__container">
-					<h2><img src="img/skills.png" alt="Skills"> My Skills</h2>
-					<p>I have amazing proficiency in all of the below areas of expertise.</p>
+					<h2><img src="../img/skills.png" alt="Skills"> 제 기술들</h2>
+					<p>저는 아래의 전문 분야 모두에서 놀라운 숙련도를 가지고 있습니다.</p>
 					<div class="skills-section__grid">
 						<div class="skills-section__grid__box skills-section__grid__box1">
-							<img src="img/html5.svg" alt="HTML 5">
+							<img src="../img/html5.svg" alt="HTML 5">
 							<p class="skill-title">HTML 5</p>
 						</div>
 						<div class="skills-section__grid__box skills-section__grid__box2">
-							<img src="img/css3.png" alt="CSS 3">
+							<img src="../img/css3.png" alt="CSS 3">
 							<p class="skill-title">CSS 3</p>
 						</div>
 						<div class="skills-section__grid__box skills-section__grid__box3">
-							<img src="img/javascript.svg" alt="Javascript">
-							<p class="skill-title">Javascript ES6</p>
+							<img src="../img/javascript.svg" alt="Javascript">
+							<p class="skill-title">자바스크립트 ES6</p>
 						</div>
 						<div class="skills-section__grid__box skills-section__grid__box4">
-							<img src="img/jquery.png" alt="jQuery">
+							<img src="../img/jquery.png" alt="jQuery">
 							<p class="skill-title">jQuery</p>
 						</div>
 						<div class="skills-section__grid__box skills-section__grid__box5">
-							<img src="img/react.png" alt="React">
-							<p class="skill-title">React</p>
+							<img src="../img/react.png" alt="React">
+							<p class="skill-title">리액트</p>
 						</div>
 						<div class="skills-section__grid__box skills-section__grid__box6">
-							<img src="img/gulp.svg" alt="Gulp" class="gulp-image">
-							<p class="skill-title">Gulp</p>
+							<img src="../img/gulp.svg" alt="Gulp" class="gulp-image">
+							<p class="skill-title">걸프</p>
 						</div>
 						<div class="skills-section__grid__box skills-section__grid__box7">
-							<img src="img/sass.svg" alt="Sass" class="sass-image">
-							<p class="skill-title">Sass</p>
+							<img src="../img/sass.svg" alt="Sass" class="sass-image">
+							<p class="skill-title">새스</p>
 						</div>
 						<div class="skills-section__grid__box skills-section__grid__box8">
-							<img src="img/firebase.svg" alt="Firebase" class="firebase-image">
-							<p class="skill-title">Firebase</p>
+							<img src="../img/firebase.svg" alt="Firebase" class="firebase-image">
+							<p class="skill-title">파이어베이스</p>
 						</div>
 						<div class="skills-section__grid__box skills-section__grid__box9">
-							<img src="img/git.svg" alt="Git/Github">
-							<p class="skill-title">Git/Github</p>
+							<img src="../img/git.svg" alt="Git/Github">
+							<p class="skill-title">깃/깃허브</p>
 						</div>
 						<div class="skills-section__grid__box skills-section__grid__box10">
-							<img src="img/windows.svg" alt="Windows">
+							<img src="../img/windows.svg" alt="Windows">
 							<p class="skill-title">Windows</p>
 						</div>
 						<div class="skills-section__grid__box skills-section__grid__box11">
-							<img src="img/apple.svg" alt="Apple" class="osx-image">
+							<img src="../img/apple.svg" alt="Apple" class="osx-image">
 							<p class="skill-title">OSX</p>
 						</div>
 						<div class="skills-section__grid__box skills-section__grid__box12">
-							<img src="img/linux.svg" alt="Linux" class="linux-image">
-							<p class="skill-title">Linux</p>
+							<img src="../img/linux.svg" alt="Linux" class="linux-image">
+							<p class="skill-title">리눅스</p>
 						</div>
 					</div>
 				</div>
@@ -188,17 +193,17 @@
 			<div class="destination" id="portfolio"></div>
 			<section class="portfolio-section">
 				<div class="portfolio-section__container">
-					<h2><img src="img/portfolio.png" alt="Portfolio"> My Portfolio</h2>
+					<h2><img src="../img/portfolio.png" alt="Portfolio"> 제 포트폴리오</h2>
 					<div class="portfolio-section__grid">
 						<a href="" id="notez" class="portfolio-clicker">
 							<div class="portfolio-section__grid__box portfolio-section__grid__box1">
 								<div class="portfolio-slider">
 									<div class="portfolio-image">
-										<img src="img/notez.jpg" alt="">
+										<img src="../img/notez.jpg" alt="">
 									</div>
 									<div class="portfolio-title">
-										<img src="img/more.svg" alt="">
-										<h3>Complex <br>Note App</h3>
+										<img src="../img/more.svg" alt="">
+										<h3>복잡한 메모 앱</h3>
 									</div>
 								</div>
 							</div>
@@ -207,11 +212,11 @@
 							<div class="portfolio-section__grid__box portfolio-section__grid__box2">
 								<div class="portfolio-slider">
 									<div class="portfolio-image">
-										<img src="img/bikeshare.jpg" alt="">
+										<img src="../img/bikeshare.jpg" alt="">
 									</div>
 									<div class="portfolio-title">
-										<img src="img/more.svg" alt="">
-										<h3>Bikeshare App</h3>
+										<img src="../img/more.svg" alt="">
+										<h3>공개 자전거 앱</h3>
 									</div>
 								</div>
 							</div>
@@ -220,53 +225,53 @@
 							<div class="portfolio-section__grid__box portfolio-section__grid__box3">
 								<div class="portfolio-slider">
 									<div class="portfolio-image">
-										<img src="img/twitchfinder.jpg" alt="">
+										<img src="../img/twitchfinder.jpg" alt="">
 									</div>
 									<div class="portfolio-title">
-										<img src="img/more.svg" alt="">
-										<h3>Twitch Finder</h3>
+										<img src="../img/more.svg" alt="">
+										<h3>트위치 스트림 파인더</h3>
 									</div>
 								</div>
 							</div>
 						</a>
 						<!-- <div class="portfolio-section__grid__box portfolio-section__grid__box4">
-							<img src="img/" alt="">
+							<img src="../img/" alt="">
 						</div> -->
 						<div class="portfolio-section__grid__box-big">
 							<div class="portfolio-first-screen">
-								<img src="img/leftarrow.svg" class="leftArrow"> <img src="img/uparrow.svg" class="upArrow">
-								<p>Please click an image for more info.</p>
+								<img src="../img/leftarrow.svg" class="leftArrow"> <img src="../img/uparrow.svg" class="upArrow">
+								<p>자세한 내용은 이미지를 클릭하십시오.</p>
 							</div>
 							<div class="portfolio-notez">
-								<h3>Complex Note App</h3>
-								<p>This note app is designed for the storage and retrieval of notes meant for specific scenarios, such as matchups within competitive gaming. You are also able to further filter the notes based on specified data, so as to make them easier to read.</p>
-								<p>This app was built using HTML, CSS, Javascript and jQuery. The data is pulled from a prototype database made in Google Sheets, using the Tabletop.js library.</p>
+								<h3>복잡한 메모 앱</h3>
+								<p>이 노트 앱은 경쟁 게임 내에서의 대전과 같은 특정 시나리오를위한 노트 저장 및 검색 용으로 설계되었습니다. 또한 더 쉽게 읽을 수 있도록 지정된 데이터를 기반으로 메모를 추가로 필터링 할 수 있습니다.</p>
+								<p>이 앱 응용 프로그램은 HTML, CSS, 자바스크립트 및 jQuery를 사용하여 작성되었습니다. 데이터는 Tabletop.js 라이브러리를 사용하여 Google 스프레드 시트에서 만든 프로토 타입 데이터베이스에서 가져옵니다.</p>
 								<div class="link-container">
 									<a href="http://coreylanier.com/fgcnotes" target="_blank">
 										<div class="button">
 											<h4><i class="fas fa-eye"></i></h4>
-											<p>Preview</p>
+											<p>실시간 미리보기</p>
 										</div>
 									</a>
 									<a href="http://github.com/MissingPersonFGC/fgcnotes" target="_blank">
 										<div class="button">
 											<h4><i class="fab fa-github"></i></h4>
-											<p>Source Code</p>
+											<p>소스 코드</p>
 										</div>
 									</a>
 								</div>
 							</div>
 							<div class="portfolio-bikeshare">
-								<h3>Bikeshare App</h3>
-								<p>This bikeshare was tailored with mobile usage in mind, and searches for available bikes as well as empty slots to dock your rented bike in. It also finds the closest dock to your location and gives real-time directions to it.</p>
-								<p>This app was made in HTML, CSS, Javascript and jQuery. The data is pulled from the Citybikes API and displayed on the screen using the Google Maps library.</p>
+								<h3>공개 자전거 앱</h3>
+								<p>이 공용 자전거 앱은 모바일 사용법을 염두에두고 맞춤화 된 자전거로 빈 자전거 슬롯을 비롯하여 사용할 수있는 자전거를 검색하여 대여 한 자전거를 도킹합니다. 또한 가장 가까운 위치의 독을 찾아 실시간 길 찾기를 제공합니다.</p>
+								<p>이 응용 프로그램은 HTML, CSS, 자바스크립트 및 jQuery로 만들어졌습니다. 데이터는 Citybikes API에서 가져 와서 Google지도 라이브러리를 사용하여 화면에 표시됩니다.</p>
 								<div class="link-container">
 									<a href="https://coreylanier.com/bikeshare" target="_blank">
 										<div class="button">
 											<h4>
 												<i class="fas fa-eye"></i>
 											</h4>
-											<p>Preview</p>
+											<p>실시간 미리보기</p>
 										</div>
 									</a>
 									<a href="https://github.com/MissingPersonFGC/citybikes_app_corey_alan_project4" target="_blank">
@@ -274,22 +279,22 @@
 											<h4>
 												<i class="fab fa-github"></i>
 											</h4>
-											<p>Source Code</p>
+											<p>소스 코드</p>
 										</div>
 									</a>
 								</div>
 							</div>
 							<div class="portfolio-twitchfinder">
-								<h3>Twitch Finder</h3>
-								<p>This app is able to find available live streams on the Twitch service, and list them on your page by most popular streamer. If you click on any stream, it will pull up their stream live within the app. It is a great example of showing real-time information for social media services.</p>
-								<p>It was created using React and CSS. It also utilizes the Twitch API with Oauth, and works Twitch's limitations on API calls per minute.</p>
+								<h3>트위치 스트림 파인더</h3>
+								<p>이 앱은 트위치 서비스에서 사용 가능한 라이브 스트림을 찾고 가장 인기있는 스트 리머별로 페이지에 나열 할 수 있습니다. 스트림을 클릭하면 앱 내에서 실시간 스트리밍을 시작합니다. 소셜 미디어 서비스에 대한 실시간 정보를 보여주는 훌륭한 예입니다.</p>
+								<p>그것은 리액트와 CSS를 사용하여 만들어졌습니다. 또한 Oauth와 함께 트위치 API를 사용하고 분당 API 호출에 대한 트위치의 제한을 작동합니다.</p>
 								<div class="link-container">
 									<a href="http://coreylanier.com/twitchfinder" target="_blank">
 										<div class="button">
 											<h4>
 												<i class="fas fa-eye"></i>
 											</h4>
-											<p>Preview</p>
+											<p>실시간 미리보기</p>
 										</div>
 									</a>
 									<a href="https://github.com/MissingPersonFGC/twitch_app_project5" target="_blank">
@@ -297,7 +302,7 @@
 											<h4>
 												<i class="fab fa-github"></i>
 											</h4>
-											<p>Source Code</p>
+											<p>소스 코드</p>
 										</div>
 									</a>
 								</div>
@@ -309,24 +314,25 @@
 			<div class="destination" id="contact"></div>
 			<section class="contact-section">
 				<div class="contact-section__container">
-					<h2><img src="img/contact.png" alt="Contact"> Contact Me</h2>
-					<p>Let's create internet masterpieces together! If you want to hire or commission me for work, please contact me in one of the ways below.</p>
+					<h2><img src="../img/contact.png" alt="Contact"> 저에게 연락하다</h2>
+					<p>함께 인터넷 걸작을 만들어 봅시다! 일을 위해 나를 고용하거나 위임하고 싶다면, 아래의 방법 중 하나를 통해 저에게 연락하십시오.</p>
 					<div class="contact-section-wrapper">
 						<div class="contact-section__info">
-							<p>Email: iam@coreylanier.com</p>
-							<a href="http://facebook.com/missingpersonfgc" target="_blank"><img src="img/facebook.svg" alt="Facebook"></a>
-							<a href="http://twitter.com/JTMMissingPersn" target="_blank"><img src="img/twitter.png" alt="Twitter"></a>
-							<a href="http://instagram.com/missingpersonfgc" target="_blank"><img src="img/instagram.png" alt="Instagram"></a>
-							<a href="https://www.linkedin.com/in/corey-lanier-74906689/" target="_blank"><img src="img/linkedin.png" alt="Linkedin"></a>
-							<a href="http://github.com/MissingPersonFGC"><img src="img/github.png" alt="Github"></a>
+							<p>이메일: iam@coreylanier.com</p>
+							<p>카카오톡: brawndo84</p>
+							<a href="http://facebook.com/missingpersonfgc" target="_blank"><img src="../img/facebook.svg" alt="Facebook"></a>
+							<a href="http://twitter.com/JTMMissingPersn" target="_blank"><img src="../img/twitter.png" alt="Twitter"></a>
+							<a href="http://instagram.com/missingpersonfgc" target="_blank"><img src="../img/instagram.png" alt="Instagram"></a>
+							<a href="https://www.linkedin.com/in/corey-lanier-74906689/" target="_blank"><img src="../img/linkedin.png" alt="Linkedin"></a>
+							<a href="http://github.com/MissingPersonFGC"><img src="../img/github.png" alt="Github"></a>
 						</div>
 						<div class="contact-section__send-email">
 							<div class="contact-section__send-email__form">
 								<form action="http://www.focuspocus.io/magic/iam@coreylanier.com" method="POST">
-									<input type="text" name="Full Name" id="fullName" placeholder="Your Name">
-									<input type="email" name="email" id="email" placeholder="Email Address">
-									<textarea name="comments" id="comments" cols="30" rows="10" placeholder="Message"></textarea>
-									<input type="submit" value="Send Email">
+									<input type="text" name="Full Name" id="fullName" placeholder="당신 이름">
+									<input type="email" name="email" id="email" placeholder="이메일 주소">
+									<textarea name="comments" id="comments" cols="30" rows="10" placeholder="메세지"></textarea>
+									<input type="submit" value="이메일을 보내다">
 								</form>
 							</div>
 						</div>
@@ -337,14 +343,14 @@
 		<footer>
 			<div class="footer-wrapper">
 				<div class="footer-copyright">
-					<p>© 2018 Corey Lanier, all rights reserved.</p>
+					<p>© 2018 코리 러니어, 판권 소유.</p>
 				</div>
 				<div class="footer-logo">
-					<img src="img/ltianbottom.png" alt="l天">
+					<img src="../img/ltianbottom.png" alt="l天">
 				</div>
 			</div>
 		</footer>
 		<script src='https://code.jquery.com/jquery-3.2.1.min.js' integrity='sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4='crossorigin='anonymous'></script>
-		<script src="public/scripts/main.js"></script>
+		<script src="../public/scripts/main.js"></script>
 	</body>
 </html>
