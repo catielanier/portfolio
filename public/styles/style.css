@@ -387,6 +387,11 @@ section {
         width: 32.5%; }
       .skills-section__grid img.linux-image {
         width: 33%; }
+    .skills-section__grid__box13 {
+      grid-column: 2;
+      text-align: center; }
+      .skills-section__grid__box13 img {
+        width: 50%; }
     .skills-section__grid p {
       font-size: 18px; }
 
@@ -527,10 +532,10 @@ section {
     width: 280px;
     margin-bottom: 10px; }
   .contact-section form textarea {
-    width: 360px;
-    height: 90px;
+    width: 570px;
+    height: 300px;
     resize: none;
-    margin-right: 10px;
+    margin-bottom: 10px;
     padding-top: 10px; }
   .contact-section form input, .contact-section form textarea {
     background: #ccc;
@@ -549,7 +554,7 @@ section {
     .contact-section form input::placeholder, .contact-section form textarea::placeholder {
       color: #222; }
   .contact-section form input[type=submit] {
-    width: 200px;
+    width: 570px;
     height: 90px;
     background: #03396c;
     color: #EAEAEA;

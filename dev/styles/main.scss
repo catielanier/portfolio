@@ -290,6 +290,7 @@ section {
         margin-top: 60px;
         text-align: center;
 
+
         img {
             width: 40%;
 
@@ -310,6 +311,15 @@ section {
 
             &.linux-image {
                 width: 33%;
+            }
+        }
+
+        &__box13 {
+            grid-column: 2;
+            text-align: center;
+
+            img {
+                width: 50%;
             }
         }
 
@@ -509,10 +519,10 @@ section {
         }
 
         textarea {
-            width: 360px;
-            height: 90px;
+            width: 570px;
+            height: 300px;
             resize: none;
-            margin-right: 10px;
+            margin-bottom: 10px;
             padding-top: 10px;
         }
 
@@ -529,7 +539,7 @@ section {
         }
 
         input[type=submit] {
-            width: 200px;
+            width: 570px;
             height: 90px;
             background: $mediumblue;
             color: $white;
