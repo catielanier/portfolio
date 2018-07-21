@@ -387,11 +387,14 @@ section {
         width: 32.5%; }
       .skills-section__grid img.linux-image {
         width: 33%; }
-    .skills-section__grid__box13 {
-      grid-column: 2;
-      text-align: center; }
-      .skills-section__grid__box13 img {
-        width: 50%; }
+    .skills-section__grid__box13 img {
+      width: 50%; }
+    .skills-section__grid__box14 img {
+      width: 38%; }
+    .skills-section__grid__box15 img {
+      width: 43%; }
+    .skills-section__grid__box16 img {
+      width: 43.5%; }
     .skills-section__grid p {
       font-size: 18px; }
 
