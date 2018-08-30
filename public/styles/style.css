@@ -358,7 +358,8 @@ section {
     margin-left: 5%; }
 
 .skills-section, .portfolio-section, .contact-section {
-  margin-bottom: 50px; }
+  margin-bottom: 50px;
+  height: 120vh; }
   .skills-section__container {
     margin: 0 auto;
     width: 70%; }
@@ -372,9 +373,10 @@ section {
   .skills-section__grid {
     display: grid;
     grid-template-columns: repeat(4, 25%);
-    grid-template-rows: repeat(3, 1fr);
+    grid-template-rows: repeat(5, 1fr);
     margin-top: 60px;
-    text-align: center; }
+    text-align: center;
+    height: 70vh; }
     .skills-section__grid img {
       width: 40%; }
       .skills-section__grid img.gulp-image {

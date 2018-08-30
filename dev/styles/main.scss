@@ -264,6 +264,7 @@ section {
 
 .skills-section {
     margin-bottom: 50px;
+    height: 120vh;
 
     &__container {
         margin: 0 auto;
@@ -286,9 +287,10 @@ section {
     &__grid {
         display: grid;
         grid-template-columns: repeat(4, 25%);
-        grid-template-rows: repeat(3, 1fr);
+        grid-template-rows: repeat(5, 1fr);
         margin-top: 60px;
         text-align: center;
+        height: 70vh;
 
 
         img {
