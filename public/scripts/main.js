@@ -63,7 +63,7 @@ app.activateEasterEgg = function () {
 };
 
 app.chooseCity = function () {
-    var cities = ["toronto", "stlouis", "seoul", "qingdao"];
+    var cities = ["toronto", "stlouis", "seoul", "qingdao", "tokyo", "fukuoka"];
     var randomCity = cities[Math.floor(Math.random() * cities.length)];
     app.changeHero(randomCity);
 };

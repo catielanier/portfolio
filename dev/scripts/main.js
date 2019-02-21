@@ -72,7 +72,7 @@ app.activateEasterEgg = () => {
 }
 
 app.chooseCity = () => {
-    const cities = ["toronto", "stlouis", "seoul", "qingdao"];
+    const cities = ["toronto", "stlouis", "seoul", "qingdao", "tokyo", "fukuoka"];
     const randomCity = cities[Math.floor(Math.random() * cities.length)];
     app.changeHero(randomCity);
 }
