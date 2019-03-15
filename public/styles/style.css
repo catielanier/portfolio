@@ -373,8 +373,8 @@ section {
     font-size: 2.5rem; }
   .skills-section__grid {
     display: grid;
-    grid-template-columns: repeat(6, 1fr);
-    grid-template-rows: repeat(3, 1fr);
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(4, 1fr);
     margin-top: 60px;
     text-align: center; }
     .skills-section__grid img {
@@ -397,6 +397,10 @@ section {
       width: 43%; }
     .skills-section__grid__box16 img {
       width: 43.5%; }
+    .skills-section__grid__box20 img {
+      margin-top: 30px; }
+    .skills-section__grid__box20 p {
+      margin-top: 35px; }
     .skills-section__grid p {
       font-size: 18px; }
 

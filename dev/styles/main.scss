@@ -287,8 +287,8 @@ section {
 
     &__grid {
         display: grid;
-        grid-template-columns: repeat(6, 1fr);
-        grid-template-rows: repeat(3, 1fr);
+        grid-template-columns: repeat(5, 1fr);
+        grid-template-rows: repeat(4, 1fr);
         margin-top: 60px;
         text-align: center;
 
@@ -332,6 +332,14 @@ section {
 
         &__box16 img {
             width: 43.5%;
+        }
+
+        &__box20 img {
+            margin-top: 30px;
+        }
+
+        &__box20 p {
+            margin-top: 35px;
         }
 
         p {
