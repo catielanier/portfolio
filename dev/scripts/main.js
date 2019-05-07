@@ -34,6 +34,7 @@ app.init = () => {
     app.displayTopButton();
     app.konamiCodeActivator();
     app.chooseCity();
+    app.disableForm();
 }
 
 app.konamiCodeActivator = () => {
@@ -192,6 +193,17 @@ app.portfolioClickSlider = () => {
             $($portfolioClass)
                 .addClass(`show`)
                 .css("transform", "translateY(250%)");
+        }
+    });
+}
+
+// Disable the form if there are numbers within the name field, to prevent these trash emails with no body from sending.
+
+app.disableForm = () => {
+    const re = /^[A-Za-z]+$/;
+    $(`#fullName`).on('change', function(e) {
+        if(!re.test($(`#fullName`).val())) {
+            $(`input[type=submit]`).prop('disabled');
         }
     });
 }
