@@ -504,59 +504,6 @@ section {
             }
         }
     }
-
-    &__grid {
-        display: grid;
-        grid-template-columns: 1fr 4.5fr;
-        grid-template-rows: repeat(3, 1fr);
-
-        img {
-            width: 100%;
-            display: block;
-        }
-
-        &__box-big {
-            grid-column-start: 2;
-            grid-row: 1 / span 3;
-            text-align: left;
-            padding-left: 20px;
-            overflow: hidden;
-            position: relative;
-        }
-
-        &__box {
-            overflow: hidden;
-            position: relative;
-            width: 195px;
-            height: 195px;
-            z-index: 20;
-
-            .portfolio-slider {
-                transition: 0.6s all ease;
-            }
-
-            .portfolio-title {
-                width: 195px;
-                height: 195px;
-                text-align: center;
-                background: $darkblue;
-                color: $skyblue;
-                position: absolute;
-                top: 0;
-                left: 195px;
-
-                h3 {
-                    font-size: 1.8rem;
-                }
-
-                img {
-                    width: 30%;
-                    padding-top: 45px;
-                    margin: 0 auto;
-                }
-            }
-        }
-    }
 }
 
 .portfolio-first-screen img {

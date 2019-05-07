@@ -382,18 +382,22 @@
     }
 
     .about-section {
+        padding-top: 10px;
+        padding-bottom: 10px;
         &__container{
             width: 100%;
+            flex-direction: column;
         }
 
         &__image {
-            width: 40%;
-            margin-top: 30px;
+            width: 90%;
+            margin: 0 auto;
+            margin-bottom: 20px;
         }
 
         &__description {
-            width: 60%;
-            margin-left: 2%;
+            width: 80%;
+            margin: 0 auto;
             padding-right: 10px;
 
             h2 {
@@ -429,11 +433,22 @@
         }
 
         &__grid {
+            grid-template-columns: repeat(5, 1fr);
+            grid-template-rows: repeat(5, 1fr);
+            grid-gap: 5px;
 
             margin-top: 30px;
 
             p {
                 font-size: 1rem;
+            }
+
+            &__box20 img {
+                margin-top: 10px;
+            }
+
+            &__box20 p  {
+                margin-top: 15px;
             }
         }
     }
@@ -442,10 +457,10 @@
         background: $offblue;
         color: $white;
         padding-top: 40px;
-        padding-bottom: 50px;
+        padding-bottom: 10px;
     
         &__container {
-            width: 70%;
+            width: 95%;
             margin: 0 auto;
         }
     
@@ -464,7 +479,8 @@
             &__box {
                 display: flex;
                 justify-content: space-between;
-                padding-bottom: 50px;
+                align-items: center;
+                padding-bottom: 20px;
     
                 &--image {
                     width: 45%;
@@ -571,97 +587,7 @@
                 }
             }
         }
-    
-        &__grid {
-            display: grid;
-            grid-template-columns: 1fr 4.5fr;
-            grid-template-rows: repeat(3, 1fr);
-    
-            img {
-                width: 100%;
-                display: block;
-            }
-    
-            &__box-big {
-                grid-column-start: 2;
-                grid-row: 1 / span 3;
-                text-align: left;
-                padding-left: 20px;
-                overflow: hidden;
-                position: relative;
-            }
-    
-            &__box {
-                overflow: hidden;
-                position: relative;
-                width: 195px;
-                height: 195px;
-                z-index: 20;
-    
-                .portfolio-slider {
-                    transition: 0.6s all ease;
-                }
-    
-                .portfolio-title {
-                    width: 195px;
-                    height: 195px;
-                    text-align: center;
-                    background: $darkblue;
-                    color: $skyblue;
-                    position: absolute;
-                    top: 0;
-                    left: 195px;
-    
-                    h3 {
-                        font-size: 1.8rem;
-                    }
-    
-                    img {
-                        width: 30%;
-                        padding-top: 45px;
-                        margin: 0 auto;
-                    }
-                }
-            }
-        }
     }
-
-    .portfolio-section {
-        padding-top: 20px;
-        padding-bottom: 10px;
-
-        h2 {
-            margin-bottom: 20px;
-        }
-        &__container {
-            width: 95%;
-        }
-
-        &__grid {
-            grid-template-columns: repeat(3, 1fr);
-            grid-template-rows: 1fr 2.2fr;
-
-            &__box-big {
-                grid-column: 1 / span 3;
-                grid-row-start: 2;
-            }
-
-            &__box {
-                width: 100%;
-                height: 100%;
-
-                .portfolio-title {
-                    width: 100%;
-                    height: 100%;
-
-                    h3 {
-                        font-size: 1rem;
-                    }
-                }
-            }
-        }
-    }
-
     
 
     .contact-section {
@@ -785,12 +711,6 @@
         }
     }
 
-    .portfolio-section {
-        &__grid {
-            grid-template-rows: 1fr 2.4fr;
-        }
-    }
-
     .contact-section {
         form {
             input[type=text], input[type=email] {
@@ -843,12 +763,6 @@
     .about-section {
         &__image {
             margin-top: 55px;
-        }
-    }
-
-    .portfolio-section {
-        &__grid {
-            grid-template-rows: 1fr 2.5fr;
         }
     }
 
@@ -986,12 +900,6 @@
     .about-section {
         &__image {
             margin-top: 80px;
-        }
-    }
-
-    .portfolio-section {
-        &__grid {
-            grid-template-rows: 1fr 3fr;
         }
     }
 
