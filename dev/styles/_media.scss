@@ -301,13 +301,8 @@
                 height: auto;
 
                 img {
-                    width: 30%;
-                    margin-top: 15px;
-                }
-
-                h2 {
-                    font-size: 1.6rem;
-                    margin-bottom: 0;
+                    width: 90%;
+                    margin-top: 5px;
                 }
             }
 
@@ -444,6 +439,194 @@
     }
 
     .portfolio-section {
+        background: $offblue;
+        color: $white;
+        padding-top: 40px;
+        padding-bottom: 50px;
+    
+        &__container {
+            width: 70%;
+            margin: 0 auto;
+        }
+    
+        &__grid-new__box--description > p {
+            display: none;
+        }
+    
+        &__grid-new {
+            margin: 0 auto;
+            width: 85%;
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-rows: repeat(5, 1fr);
+            grid-gap: 20px;
+    
+            &__box {
+                display: flex;
+                justify-content: space-between;
+                padding-bottom: 50px;
+    
+                &--image {
+                    width: 45%;
+                    margin-top: 5%;
+                    padding-left: 3%;
+    
+                    img {
+                        width: 100%;
+                    }
+                }
+    
+                &--description {
+                    width: 55%;
+                    padding-right: 5%;
+                }
+    
+                h3 {
+                    @include fontStyle(30, $bebasneue);
+                    margin-bottom: 0;
+                    padding-bottom: 0;
+                }
+    
+                h4 {
+                    margin-top: 0;
+    
+                    @include fontStyle(14, $opensans);
+                }
+    
+                p {
+                    @include fontStyle(18, $opensans);
+                }
+    
+                a {
+                    color: $offblue;
+                    transition: 0.6s all ease;
+            
+                    &:hover {
+                        color: $white;
+                    }
+            
+                    .button {
+                        width: 60px;
+                        height: 60px;
+                        background: $white;
+                        border: 1px $white solid;
+                        transition: 0.6s all ease;
+                        text-align: center;
+                        float: left;
+                        margin-right: 10px;
+            
+                        h4 {
+                            font-size: 2.5rem;
+                            padding-top: 5px;
+                            margin: 0;
+                        }
+            
+                        p {
+                            font-size: 0.9rem;
+                            margin-top: -3px;
+                        }
+            
+                        &:hover {
+                            background: $offblue;
+                        }
+                    }
+                }
+            }
+    
+            &__box1, &__box3, &__box5 {
+                background: $darkblue;
+                color: $skyblue;
+    
+                a {
+                    color: $darkblue;
+    
+                    .button {
+                        background: $skyblue;
+                        border: 1px solid $skyblue;
+    
+                        &:hover {
+                            background: $darkblue;
+                            color: $skyblue;
+                        }
+                    }
+                }
+            }
+    
+            &__box2, &__box4 {
+                background: $skyblue;
+                color: $darkblue;
+    
+                a {
+                   color: $skyblue; 
+    
+                    .button {
+                        background: $darkblue;
+                        border: 1px solid $darkblue;
+    
+                        &:hover {
+                            background: $skyblue;
+                            color: $darkblue;
+                        }
+                    }
+                }
+            }
+        }
+    
+        &__grid {
+            display: grid;
+            grid-template-columns: 1fr 4.5fr;
+            grid-template-rows: repeat(3, 1fr);
+    
+            img {
+                width: 100%;
+                display: block;
+            }
+    
+            &__box-big {
+                grid-column-start: 2;
+                grid-row: 1 / span 3;
+                text-align: left;
+                padding-left: 20px;
+                overflow: hidden;
+                position: relative;
+            }
+    
+            &__box {
+                overflow: hidden;
+                position: relative;
+                width: 195px;
+                height: 195px;
+                z-index: 20;
+    
+                .portfolio-slider {
+                    transition: 0.6s all ease;
+                }
+    
+                .portfolio-title {
+                    width: 195px;
+                    height: 195px;
+                    text-align: center;
+                    background: $darkblue;
+                    color: $skyblue;
+                    position: absolute;
+                    top: 0;
+                    left: 195px;
+    
+                    h3 {
+                        font-size: 1.8rem;
+                    }
+    
+                    img {
+                        width: 30%;
+                        padding-top: 45px;
+                        margin: 0 auto;
+                    }
+                }
+            }
+        }
+    }
+
+    .portfolio-section {
         padding-top: 20px;
         padding-bottom: 10px;
 
@@ -479,47 +662,7 @@
         }
     }
 
-    .portfolio-first-screen img {
-        margin-top: 20px;
-
-        &.leftArrow {
-            display: none;
-        }
-
-        &.upArrow {
-            display: inline-block;
-        }
-    }
-
-    .portfolio-notez, .portfolio-bikeshare, .portfolio-twitchfinder {
-        top: -250%;
-        right: 0;
-        padding-left: 5px;
-
-        h3 {
-            font-size: 1.8rem;
-        }
-
-        p {
-            font-size: 1.2rem;
-        }
-
-        a {
-            .button {
-                width: 60px;
-                height: 60px;
-
-                h4 {
-                    font-size: 1.8rem;
-                    padding-top: 5px;
-                }
-                
-                p {
-                    font-size: 0.9rem;
-                }
-            }
-        }
-    }
+    
 
     .contact-section {
         margin-bottom: 15px;
