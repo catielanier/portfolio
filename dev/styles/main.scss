@@ -289,12 +289,12 @@ section {
         display: grid;
         grid-template-columns: repeat(6, 1fr);
         grid-template-rows: repeat(4, 1fr);
-        grid-gap: 20px;
+        grid-gap: 10px;
         margin-top: 60px;
         text-align: center;
 
         div {
-            padding-top: 10%;
+            padding-top: 5%;
             z-index: 1;
             position: relative;
             overflow: hidden;
@@ -326,60 +326,11 @@ section {
 
 
         img {
-            width: 40%;
-
-            &.gulp-image {
-                width: 16%;
-            }
-            &.sass-image {
-                width: 48%;
-            }
-
-            &.firebase-image {
-                width: 27%;
-            }
-
-            &.osx-image {
-                width: 32.5%;
-            }
-
-            &.linux-image {
-                width: 33%;
-            }
-        }
-
-        &__box13 {
-            img {
-                width: 50%;
-            }
-        }
-
-        &__box14 img {
-            width: 38%;
-        }
-
-        &__box15 img {
-            width: 43%;
-        }
-
-        &__box16 img {
-            width: 43.5%;
-        }
-
-        &__box20 img {
-            margin-top: 20px;
-        }
-
-        &__box20 p {
-            margin-top: 35px;
+            height: 6.5rem;
         }
 
         p {
             font-size: 18px;
-        }
-
-        &__box21 img {
-            margin-top: 5px;
         }
     }
 }

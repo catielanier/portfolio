@@ -375,11 +375,11 @@ section {
     display: grid;
     grid-template-columns: repeat(6, 1fr);
     grid-template-rows: repeat(4, 1fr);
-    grid-gap: 20px;
+    grid-gap: 10px;
     margin-top: 60px;
     text-align: center; }
     .skills-section__grid div {
-      padding-top: 10%;
+      padding-top: 5%;
       z-index: 1;
       position: relative;
       overflow: hidden; }
@@ -407,33 +407,9 @@ section {
           -webkit-transform: translate(50%, 50%) scale(50);
                   transform: translate(50%, 50%) scale(50); }
     .skills-section__grid img {
-      width: 40%; }
-      .skills-section__grid img.gulp-image {
-        width: 16%; }
-      .skills-section__grid img.sass-image {
-        width: 48%; }
-      .skills-section__grid img.firebase-image {
-        width: 27%; }
-      .skills-section__grid img.osx-image {
-        width: 32.5%; }
-      .skills-section__grid img.linux-image {
-        width: 33%; }
-    .skills-section__grid__box13 img {
-      width: 50%; }
-    .skills-section__grid__box14 img {
-      width: 38%; }
-    .skills-section__grid__box15 img {
-      width: 43%; }
-    .skills-section__grid__box16 img {
-      width: 43.5%; }
-    .skills-section__grid__box20 img {
-      margin-top: 20px; }
-    .skills-section__grid__box20 p {
-      margin-top: 35px; }
+      height: 6.5rem; }
     .skills-section__grid p {
       font-size: 18px; }
-    .skills-section__grid__box21 img {
-      margin-top: 5px; }
 
 .portfolio-section {
   background: #325C7B;
