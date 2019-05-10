@@ -294,16 +294,34 @@ section {
         text-align: center;
 
         div {
-            background: linear-gradient(to right, $skyblue 50%, $white 50%);
             padding-top: 10%;
-            background-size: 200% 100%;
-            background-position: right bottom;
-            transition: all 0.5s ease;
+            z-index: 1;
+            position: relative;
+            overflow: hidden;
+
+            &::before {
+                content: '';
+                z-index: -1;
+                position: absolute;
+                bottom: 100%;
+                right: 100%;
+                width: 1em;
+                height: 1em;
+                border-radius: 50%;
+                background-color: $skyblue;
+                transform-origin: center;
+                transform: translate(50%, 50%) scale(0);
+                transition: transform 0.45s ease-in-out;
+            }
 
             &:hover {
-                background-position: left bottom;
-                color: $darkblue;
+                cursor: pointer;
+
+                &::before {
+                    transform: translate(50%, 50%) scale(50);
+                }
             }
+
         }
 
 

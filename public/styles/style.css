@@ -379,16 +379,33 @@ section {
     margin-top: 60px;
     text-align: center; }
     .skills-section__grid div {
-      background: -webkit-gradient(linear, left top, right top, color-stop(50%, #b3cde0), color-stop(50%, #EAEAEA));
-      background: linear-gradient(to right, #b3cde0 50%, #EAEAEA 50%);
       padding-top: 10%;
-      background-size: 200% 100%;
-      background-position: right bottom;
-      -webkit-transition: all 0.5s ease;
-      transition: all 0.5s ease; }
+      z-index: 1;
+      position: relative;
+      overflow: hidden; }
+      .skills-section__grid div::before {
+        content: '';
+        z-index: -1;
+        position: absolute;
+        bottom: 100%;
+        right: 100%;
+        width: 1em;
+        height: 1em;
+        border-radius: 50%;
+        background-color: #b3cde0;
+        -webkit-transform-origin: center;
+                transform-origin: center;
+        -webkit-transform: translate(50%, 50%) scale(0);
+                transform: translate(50%, 50%) scale(0);
+        -webkit-transition: -webkit-transform 0.45s ease-in-out;
+        transition: -webkit-transform 0.45s ease-in-out;
+        transition: transform 0.45s ease-in-out;
+        transition: transform 0.45s ease-in-out, -webkit-transform 0.45s ease-in-out; }
       .skills-section__grid div:hover {
-        background-position: left bottom;
-        color: #011F4B; }
+        cursor: pointer; }
+        .skills-section__grid div:hover::before {
+          -webkit-transform: translate(50%, 50%) scale(50);
+                  transform: translate(50%, 50%) scale(50); }
     .skills-section__grid img {
       width: 40%; }
       .skills-section__grid img.gulp-image {
