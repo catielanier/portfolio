@@ -316,7 +316,13 @@ main {
     text-align: center;
     z-index: 100;
     -webkit-box-shadow: 3px 3px 2px 0px rgba(0, 0, 0, 0.75);
-            box-shadow: 3px 3px 2px 0px rgba(0, 0, 0, 0.75); }
+            box-shadow: 3px 3px 2px 0px rgba(0, 0, 0, 0.75);
+    -webkit-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out; }
+    main .top-link:hover {
+      z-index: 110;
+      -webkit-transform: scale(1.1);
+              transform: scale(1.1); }
     main .top-link img {
       margin-top: 5px;
       width: 50%; }
