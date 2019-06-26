@@ -498,15 +498,15 @@ section {
           .portfolio-section__grid-new__box1 a .button:hover, .portfolio-section__grid-new__box4 a .button:hover, .portfolio-section__grid-new__box5 a .button:hover {
             background: #011F4B;
             color: #b3cde0; }
-    .portfolio-section__grid-new__box2, .portfolio-section__grid-new__box3 {
+    .portfolio-section__grid-new__box2, .portfolio-section__grid-new__box3, .portfolio-section__grid-new__box6 {
       background: #b3cde0;
       color: #011F4B; }
-      .portfolio-section__grid-new__box2 a, .portfolio-section__grid-new__box3 a {
+      .portfolio-section__grid-new__box2 a, .portfolio-section__grid-new__box3 a, .portfolio-section__grid-new__box6 a {
         color: #b3cde0; }
-        .portfolio-section__grid-new__box2 a .button, .portfolio-section__grid-new__box3 a .button {
+        .portfolio-section__grid-new__box2 a .button, .portfolio-section__grid-new__box3 a .button, .portfolio-section__grid-new__box6 a .button {
           background: #011F4B;
           border: 1px solid #011F4B; }
-          .portfolio-section__grid-new__box2 a .button:hover, .portfolio-section__grid-new__box3 a .button:hover {
+          .portfolio-section__grid-new__box2 a .button:hover, .portfolio-section__grid-new__box3 a .button:hover, .portfolio-section__grid-new__box6 a .button:hover {
             background: #b3cde0;
             color: #011F4B; }
 
@@ -625,10 +625,10 @@ section {
     font-size: 2.4rem;
     font-family: "Open Sans", sans-serif;
     border: 1px solid #03396c;
-    -webkit-transition: 0.5s all ease;
-    transition: 0.5s all ease; }
+    -webkit-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out; }
     .contact-section form input[type=submit]:hover {
-      background: #EAEAEA;
+      background: none;
       color: #03396c; }
   .contact-section form input {
     border-radius: 0; }
@@ -891,7 +891,7 @@ footer {
       grid-gap: 5px;
       margin-top: 30px; }
       .skills-section__grid__box img {
-        height: 2rem; }
+        height: 3rem; }
       .skills-section__grid p {
         font-size: 1rem; }
   .portfolio-section {
@@ -982,15 +982,15 @@ footer {
             .portfolio-section__grid-new__box1 a .button:hover, .portfolio-section__grid-new__box3 a .button:hover, .portfolio-section__grid-new__box5 a .button:hover {
               background: #011F4B;
               color: #b3cde0; }
-      .portfolio-section__grid-new__box2, .portfolio-section__grid-new__box4 {
+      .portfolio-section__grid-new__box2, .portfolio-section__grid-new__box4, .portfolio-section__grid-new__box6 {
         background: #b3cde0;
         color: #011F4B; }
-        .portfolio-section__grid-new__box2 a, .portfolio-section__grid-new__box4 a {
+        .portfolio-section__grid-new__box2 a, .portfolio-section__grid-new__box4 a, .portfolio-section__grid-new__box6 a {
           color: #b3cde0; }
-          .portfolio-section__grid-new__box2 a .button, .portfolio-section__grid-new__box4 a .button {
+          .portfolio-section__grid-new__box2 a .button, .portfolio-section__grid-new__box4 a .button, .portfolio-section__grid-new__box6 a .button {
             background: #011F4B;
             border: 1px solid #011F4B; }
-            .portfolio-section__grid-new__box2 a .button:hover, .portfolio-section__grid-new__box4 a .button:hover {
+            .portfolio-section__grid-new__box2 a .button:hover, .portfolio-section__grid-new__box4 a .button:hover, .portfolio-section__grid-new__box6 a .button:hover {
               background: #b3cde0;
               color: #011F4B; }
   .contact-section {
