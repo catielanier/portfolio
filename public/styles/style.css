@@ -314,7 +314,9 @@ main {
     background: #011F4B;
     color: #b3cde0;
     text-align: center;
-    z-index: 100; }
+    z-index: 100;
+    -webkit-box-shadow: 3px 3px 2px 0px rgba(0, 0, 0, 0.75);
+            box-shadow: 3px 3px 2px 0px rgba(0, 0, 0, 0.75); }
     main .top-link img {
       margin-top: 5px;
       width: 50%; }
@@ -373,8 +375,8 @@ section {
     font-size: 2.5rem; }
   .skills-section__grid {
     display: grid;
-    grid-template-columns: repeat(6, 1fr);
-    grid-template-rows: repeat(4, 1fr);
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(5, 1fr);
     grid-gap: 10px;
     margin-top: 60px;
     text-align: center; }
@@ -389,8 +391,8 @@ section {
         position: absolute;
         bottom: 100%;
         right: 100%;
-        width: 1em;
-        height: 1em;
+        width: 2em;
+        height: 2em;
         border-radius: 50%;
         background-color: #b3cde0;
         -webkit-transform-origin: center;
@@ -438,7 +440,9 @@ section {
       -webkit-box-pack: justify;
           -ms-flex-pack: justify;
               justify-content: space-between;
-      padding-bottom: 50px; }
+      padding-bottom: 50px;
+      -webkit-box-shadow: 3px 3px 2px 0px rgba(0, 0, 0, 0.75);
+              box-shadow: 3px 3px 2px 0px rgba(0, 0, 0, 0.75); }
       .portfolio-section__grid-new__box--image {
         width: 45%;
         margin-top: 5%;

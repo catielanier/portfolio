@@ -206,6 +206,7 @@ main {
         color: $skyblue;
         text-align: center;
         z-index: 100;
+        box-shadow: 3px 3px 2px 0px rgba(0,0,0,0.75);
 
         img {
             margin-top: 5px;
@@ -287,8 +288,8 @@ section {
 
     &__grid {
         display: grid;
-        grid-template-columns: repeat(6, 1fr);
-        grid-template-rows: repeat(4, 1fr);
+        grid-template-columns: repeat(5, 1fr);
+        grid-template-rows: repeat(5, 1fr);
         grid-gap: 10px;
         margin-top: 60px;
         text-align: center;
@@ -305,8 +306,8 @@ section {
                 position: absolute;
                 bottom: 100%;
                 right: 100%;
-                width: 1em;
-                height: 1em;
+                width: 2em;
+                height: 2em;
                 border-radius: 50%;
                 background-color: $skyblue;
                 transform-origin: center;
@@ -368,6 +369,7 @@ section {
             display: flex;
             justify-content: space-between;
             padding-bottom: 50px;
+            box-shadow: 3px 3px 2px 0px rgba(0,0,0,0.75);
 
             &--image {
                 width: 45%;
