@@ -35,6 +35,12 @@ header {
             color: $darkblue;
             padding: 5px 10px;
             text-align: center;
+            font-size: 1.2rem;
+            font-weight: bold;
+
+            option {
+                font-weight: bold;
+            }
         }
     }
 

@@ -189,7 +189,11 @@ header {
       border: none;
       color: #011F4B;
       padding: 5px 10px;
-      text-align: center; }
+      text-align: center;
+      font-size: 1.2rem;
+      font-weight: bold; }
+      header .language-select select option {
+        font-weight: bold; }
   header .wrapper {
     width: 70%;
     margin: 0 auto;
