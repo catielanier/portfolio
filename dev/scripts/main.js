@@ -35,6 +35,7 @@ app.init = () => {
     app.konamiCodeActivator();
     app.chooseCity();
     app.disableForm();
+    AOS.init();
 }
 
 app.konamiCodeActivator = () => {
