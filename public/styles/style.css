@@ -317,6 +317,8 @@ header {
           width: 30px; }
         .nav-wrapper nav ul li a {
           color: #b3cde0; }
+      .nav-wrapper nav ul .title {
+        margin-top: -7px; }
       .nav-wrapper nav ul .menu {
         -webkit-transition: 0.3s all ease-in-out;
         transition: 0.3s all ease-in-out;
