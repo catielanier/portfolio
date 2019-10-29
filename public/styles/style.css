@@ -316,11 +316,19 @@ header {
           margin-top: 12.5px;
           width: 30px; }
         .nav-wrapper nav ul li a {
-          color: #b3cde0;
-          -webkit-transition: 0.5s all ease;
-          transition: 0.5s all ease; }
-          .nav-wrapper nav ul li a:hover {
-            border-bottom: 2px solid #b3cde0; }
+          color: #b3cde0; }
+      .nav-wrapper nav ul .menu {
+        -webkit-transition: 0.3s all ease-in-out;
+        transition: 0.3s all ease-in-out;
+        margin-bottom: 10px; }
+        .nav-wrapper nav ul .menu:hover {
+          margin-bottom: 8px;
+          border-bottom: 2px solid #b3cde0; }
+      .nav-wrapper nav ul .menu div {
+        float: left; }
+        .nav-wrapper nav ul .menu div:last-of-type {
+          margin-top: 5px;
+          margin-left: 10px; }
 
 main {
   position: relative; }

@@ -195,11 +195,23 @@ header {
 
         a {
           color: $skyblue;
-          transition: 0.5s all ease;
+        }
+      }
 
-          &:hover {
-            border-bottom: 2px solid $skyblue;
-          }
+      .menu {
+        transition: 0.3s all ease-in-out;
+        margin-bottom: 10px;
+        &:hover {
+          margin-bottom: 8px;
+          border-bottom: 2px solid $skyblue;
+        }
+      }
+
+      .menu div {
+        float: left;
+        &:last-of-type {
+          margin-top: 5px;
+          margin-left: 10px;
         }
       }
     }
