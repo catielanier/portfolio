@@ -128,7 +128,8 @@ header {
       color: $skyblue;
     }
 
-    .box6 {
+    .box6,
+    .box8 {
       background: $skyblue;
 
       &:hover {
@@ -144,7 +145,6 @@ header {
       color: $darkblue;
     }
 
-    .box8,
     .box12 {
       background: $offblue;
 

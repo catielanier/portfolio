@@ -258,9 +258,11 @@ header {
     header .header-grid .skills-link,
     header .header-grid .contact-link {
       color: #b3cde0; }
-    header .header-grid .box6 {
+    header .header-grid .box6,
+    header .header-grid .box8 {
       background: #b3cde0; }
-      header .header-grid .box6:hover {
+      header .header-grid .box6:hover,
+      header .header-grid .box8:hover {
         z-index: 10;
         -webkit-transform: scale(1.1);
                 transform: scale(1.1);
@@ -270,10 +272,8 @@ header {
     header .header-grid .portfolio-link,
     header .header-grid .blog-link {
       color: #011F4B; }
-    header .header-grid .box8,
     header .header-grid .box12 {
       background: #325C7B; }
-      header .header-grid .box8 p,
       header .header-grid .box12 p {
         color: #b3cde0; }
     header .header-grid .box10 {
