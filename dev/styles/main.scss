@@ -182,6 +182,13 @@ header {
         margin-top: 5px;
         list-style-type: none;
         @include fontStyle(30, $opensans);
+        &.ja {
+          @include fontStyle(23, $opensans);
+
+          &:first-of-type {
+            @include fontStyle(40, $opensans);
+          }
+        }
 
         &:first-of-type {
           color: $skyblue;

@@ -307,6 +307,14 @@ header {
         font-size: 30px;
         font-size: 3rem;
         font-family: "Open Sans", sans-serif; }
+        .nav-wrapper nav ul li.ja {
+          font-size: 23px;
+          font-size: 2.3rem;
+          font-family: "Open Sans", sans-serif; }
+          .nav-wrapper nav ul li.ja:first-of-type {
+            font-size: 40px;
+            font-size: 4rem;
+            font-family: "Open Sans", sans-serif; }
         .nav-wrapper nav ul li:first-of-type {
           color: #b3cde0;
           font-size: 48px;
