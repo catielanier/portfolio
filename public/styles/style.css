@@ -598,15 +598,15 @@ section {
             font-size: 1.4rem; }
           .portfolio-section__grid-new__box a .button:hover {
             background: #325C7B; }
-    .portfolio-section__grid-new__box1, .portfolio-section__grid-new__box4, .portfolio-section__grid-new__box5 {
+    .portfolio-section__grid-new__box1, .portfolio-section__grid-new__box4, .portfolio-section__grid-new__box5, .portfolio-section__grid-new__box8 {
       background: #011F4B;
       color: #b3cde0; }
-      .portfolio-section__grid-new__box1 a, .portfolio-section__grid-new__box4 a, .portfolio-section__grid-new__box5 a {
+      .portfolio-section__grid-new__box1 a, .portfolio-section__grid-new__box4 a, .portfolio-section__grid-new__box5 a, .portfolio-section__grid-new__box8 a {
         color: #011F4B; }
-        .portfolio-section__grid-new__box1 a .button, .portfolio-section__grid-new__box4 a .button, .portfolio-section__grid-new__box5 a .button {
+        .portfolio-section__grid-new__box1 a .button, .portfolio-section__grid-new__box4 a .button, .portfolio-section__grid-new__box5 a .button, .portfolio-section__grid-new__box8 a .button {
           background: #b3cde0;
           border: 1px solid #b3cde0; }
-          .portfolio-section__grid-new__box1 a .button:hover, .portfolio-section__grid-new__box4 a .button:hover, .portfolio-section__grid-new__box5 a .button:hover {
+          .portfolio-section__grid-new__box1 a .button:hover, .portfolio-section__grid-new__box4 a .button:hover, .portfolio-section__grid-new__box5 a .button:hover, .portfolio-section__grid-new__box8 a .button:hover {
             background: #011F4B;
             color: #b3cde0; }
     .portfolio-section__grid-new__box2, .portfolio-section__grid-new__box3, .portfolio-section__grid-new__box6, .portfolio-section__grid-new__box7 {
