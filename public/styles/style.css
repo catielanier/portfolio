@@ -740,13 +740,15 @@ section {
     padding-top: 10px; }
   .contact-section form input,
   .contact-section form textarea {
-    background: #ccc;
-    border: none;
+    background: #EAEAEA;
+    border: 1px solid #03396c;
     color: #03396c;
     font-size: 14px;
     font-size: 1.4rem;
     font-family: "Open Sans", sans-serif;
-    padding-left: 10px; }
+    padding-left: 10px;
+    -webkit-transition: 0.5s all ease-in-out;
+    transition: 0.5s all ease-in-out; }
     .contact-section form input::-webkit-input-placeholder,
     .contact-section form textarea::-webkit-input-placeholder {
       color: #222; }
@@ -759,6 +761,9 @@ section {
     .contact-section form input::placeholder,
     .contact-section form textarea::placeholder {
       color: #222; }
+    .contact-section form input:focus,
+    .contact-section form textarea:focus {
+      border: 1px solid #b3cde0; }
   .contact-section form input[type="submit"] {
     width: 570px;
     height: 90px;

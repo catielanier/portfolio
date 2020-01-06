@@ -769,14 +769,18 @@ section {
 
     input,
     textarea {
-      background: #ccc;
-      border: none;
+      background: $white;
+      border: 1px solid $mediumblue;
       color: $mediumblue;
       @include fontStyle(14, $opensans);
       padding-left: 10px;
+      transition: 0.5s all ease-in-out;
 
       &::placeholder {
         color: #222;
+      }
+      &:focus {
+        border: 1px solid $skyblue;
       }
     }
 
