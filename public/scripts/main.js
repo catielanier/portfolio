@@ -24,11 +24,12 @@ app.init = function () {
   app.konamiCodeActivator();
   app.chooseCity();
   app.disableForm();
+  app.getIpAddress();
   AOS.init();
 };
 
 app.konamiCodeActivator = function () {
-  document.addEventListener('keydown', function (e) {
+  document.addEventListener("keydown", function (e) {
     var key = allowedKeys[e.keyCode];
     var requiredKey = konamiCode[konamiCodePosition];
 
@@ -58,7 +59,7 @@ app.changeLanguage = function () {
 };
 
 app.activateEasterEgg = function () {
-  var audio = new Audio('../../media/easteregg.mp3');
+  var audio = new Audio("../../media/easteregg.mp3");
   audio.play();
 };
 
@@ -79,9 +80,9 @@ app.displayTopButton = function () {
   if (windowWidth > 414) {
     var scrollFunction = function scrollFunction() {
       if (document.body.scrollTop > 400 || document.documentElement.scrollTop > 400) {
-        $(".top-link").css('display', 'block').css('position', 'fixed').css('bottom', '75px').css('right', '10%');
+        $(".top-link").css("display", "block").css("position", "fixed").css("bottom", "75px").css("right", "10%");
       } else {
-        $(".top-link").css('display', 'none');
+        $(".top-link").css("display", "none");
       }
     };
 
@@ -99,15 +100,15 @@ app.smoothScroll = function () {
   // Remove links that don't actually link to anything
   .not('[href="#"]').not('[href="#0"]').click(function (event) {
     // On-page links
-    if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
+    if (location.pathname.replace(/^\//, "") == this.pathname.replace(/^\//, "") && location.hostname == this.hostname) {
       // Figure out element to scroll to
       var target = $(this.hash);
-      target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+      target = target.length ? target : $("[name=" + this.hash.slice(1) + "]");
       // Does a scroll target exist?
       if (target.length) {
         // Only prevent default if animation is actually gonna happen
         event.preventDefault();
-        $('html, body').animate({
+        $("html, body").animate({
           scrollTop: target.offset().top
         }, 1000, function () {
           // Callback after animation
@@ -118,9 +119,9 @@ app.smoothScroll = function () {
             // Checking if the target was focused
             return false;
           } else {
-            $target.attr('tabindex', '-1'); // Adding tabindex for elements not focusable
+            $target.attr("tabindex", "-1"); // Adding tabindex for elements not focusable
             $target.focus(); // Set focus again
-          };
+          }
         });
       }
     }
@@ -131,10 +132,24 @@ app.smoothScroll = function () {
 
 app.disableForm = function () {
   var re = /^[A-Za-z]+$/;
-  $("#fullName").on('change', function (e) {
+  $("#fullName").on("change", function (e) {
     if (!re.test($("#fullName").val())) {
-      $("input[type=submit]").prop('disabled');
+      $("input[type=submit]").prop("disabled");
     }
+  });
+};
+
+app.getIpAddress = function () {
+  var $form = $("form");
+  $.get("https://api.ipify.org?format=json").then(function (res) {
+    var ip = res.ip;
+
+    $("<input>").attr({
+      type: "hidden",
+      id: "ip-address",
+      name: "ip",
+      value: ip
+    }).appendTo($form);
   });
 };
 
