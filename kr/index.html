@@ -1,668 +1,956 @@
 <!DOCTYPE html>
 <html lang="ko">
-	<head>
-		<meta charset="UTF-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0 user-scalable=no">
-		<meta http-equiv="X-UA-Compatible" content="ie=edge">
-		<title>코리 라녜이 [창조적인 웹 개발]</title>
-		<link rel="apple-touch-icon" sizes="57x57" href="../apple-icon-57x57.png">
-		<link rel="apple-touch-icon" sizes="60x60" href="../apple-icon-60x60.png">
-		<link rel="apple-touch-icon" sizes="72x72" href="../apple-icon-72x72.png">
-		<link rel="apple-touch-icon" sizes="76x76" href="../apple-icon-76x76.png">
-		<link rel="apple-touch-icon" sizes="114x114" href="../apple-icon-114x114.png">
-		<link rel="apple-touch-icon" sizes="120x120" href="../apple-icon-120x120.png">
-		<link rel="apple-touch-icon" sizes="144x144" href="../apple-icon-144x144.png">
-		<link rel="apple-touch-icon" sizes="152x152" href="../apple-icon-152x152.png">
-		<link rel="apple-touch-icon" sizes="180x180" href="../apple-icon-180x180.png">
-		<link rel="icon" type="image/png" sizes="192x192" href="../android-icon-192x192.png">
-		<link rel="icon" type="image/png" sizes="32x32" href="../favicon-32x32.png">
-		<link rel="icon" type="image/png" sizes="96x96" href="../favicon-96x96.png">
-		<link rel="icon" type="image/png" sizes="16x16" href="../favicon-16x16.png">
-		<meta name="msapplication-TileColor" content="#ffffff">
-		<meta name="msapplication-TileImage" content="../ms-icon-144x144.png">
-		<meta name="theme-color" content="#ffffff">
-		<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
-		<link rel="stylesheet" href="../public/styles/style.css">
-		<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-		<script defer src='https://use.fontawesome.com/releases/v5.0.6/js/all.js'></script>
-	</head>
-	<body>
-		<!-- Header background courtesy: Rick Harris (source: https://flic.kr/p/vBwV3q, use under CC BY-SA 2.0 license: https://creativecommons.org/licenses/by-sa/2.0/) -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0 user-scalable=no"
+    />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>코리 라녜이 [창조적인 웹 개발]</title>
+    <link rel="apple-touch-icon" sizes="57x57" href="../apple-icon-57x57.png" />
+    <link rel="apple-touch-icon" sizes="60x60" href="../apple-icon-60x60.png" />
+    <link rel="apple-touch-icon" sizes="72x72" href="../apple-icon-72x72.png" />
+    <link rel="apple-touch-icon" sizes="76x76" href="../apple-icon-76x76.png" />
+    <link
+      rel="apple-touch-icon"
+      sizes="114x114"
+      href="../apple-icon-114x114.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="120x120"
+      href="../apple-icon-120x120.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="144x144"
+      href="../apple-icon-144x144.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="152x152"
+      href="../apple-icon-152x152.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="../apple-icon-180x180.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="192x192"
+      href="../android-icon-192x192.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="../favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="96x96"
+      href="../favicon-96x96.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="../favicon-16x16.png"
+    />
+    <meta name="msapplication-TileColor" content="#ffffff" />
+    <meta name="msapplication-TileImage" content="../ms-icon-144x144.png" />
+    <meta name="theme-color" content="#ffffff" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Open+Sans"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../public/styles/style.css" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <script
+      defer
+      src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"
+    ></script>
+  </head>
+  <body>
+    <!-- Header background courtesy: Rick Harris (source: https://flic.kr/p/vBwV3q, use under CC BY-SA 2.0 license: https://creativecommons.org/licenses/by-sa/2.0/) -->
 
-		<a href="#main-content" id="jumpTo"><div class="jumpTo"></div></a>
+    <a href="#main-content" id="jumpTo"><div class="jumpTo"></div></a>
 
-		<header id="top">
-			<div class="language-select">
-				<select name="language" id="language">
-					<option value="kr">한국어</option>
-					<option value="en">English</option>
-					<option value="zh-cn">中文（简体）</option>
-					<option value="zh-tw">中文（繁體）</option>
-					<option value="ja">日本語</option>
-					<option value="eo">Esperanto</option>
-				</select>
-			</div>
-			<div class="wrapper">
-				<div class="box logo-box" data-aos="zoom-in-down" data-aos-duration="1000">
-					<img src="../img/ltian.png" alt="l天">
-				</div>
-				<div class="header-grid" data-aos="zoom-in" data-aos-duration="1000">
-					<div class="box box0">
-						<img src="../img/ltian.png" alt="l天">
-					</div>
-					<div class="box box1">
-						<h1>코리 라녜이</h1>
-						<p>웹 개발자</p>
-					</div>
-					<a href="#about" class="header-link about-link">
-						<div class="box box2">
-							<img src="../img/about.svg" class="icon" alt="About">
-							<p>대해서</p>
-						</div>
-					</a>
-					<div class="box box3">
-						<img src="../img/laptop.jpg" alt="Laptop">
-					</div>
-					<div class="box box4"><img src="../img/smartphone.jpg" alt="Smartphone"></div>
-					<a href="#skills" class="header-link skills-link">
-						<div class="box box5">
-							<img src="../img/skills.svg" alt="Skills" class="icon">
-							<p>기술</p>
-						</div>
-					</a>
-					<a href="https://blog.coreylanier.com" target="_blank" class="header-link blog-link">
-						<div class="box box8">
-							<img src="../img/blog.svg" alt="Blog" class="icon">
-							<p>블로그</p>
-						</div>
-					</a>
-					<div class="box box7">
-						<img src="../img/code.jpg" alt="Code">
-					</div>
-					<a href="#portfolio" class="header-link portfolio-link">
-						<div class="box box6">
-							<img src="../img/portfolio.svg" alt="Portfolio" class="icon">
-							<p>포트폴리오</p>
-						</div>
-					</a>
-					<div class="box box9">
-						<img src="../img/joystick.jpg" alt="Joystick">
-					</div>
-					<div class="box box10"></div>
-					<div class="box box11">
-						<img src="../img/design.jpg" alt="Design">
-					</div>
-					<div class="box box12">
-						<img src="../img/inspire.png" alt="Inspire" class="icon">
-						<p>고무하다</p>
-					</div>
-					<a href="#contact" class="header-link contact-link">
-						<div class="box box13">
-							<img src="../img/contact.svg" alt="Contact" class="icon">
-							<p>연락하다</p>
-						</div>
-					</a>
-					<div class="box box14"></div>
-				</div>
-			</div>
-		</header>
-		<div class="nav-wrapper" id="main-content">
-			<nav>
-				<ul>
-					<li class="title">[코리 라녜이]</li>
-					<li class="menu">
-						<a href="#about">
-							<div>
-								<img src="../img/about.svg" alt="About"> 
-							</div>
-							<div>
-								<span>대해서</span>
-							</div>
-						</a>
-					</li>
-					<li class="menu">
-						<a href="#skills">
-							<div>
-								<img src="../img/skills.svg" alt="Skills"> 
-							</div>
-							<div>
-								<span>기술</span>
-							</div>
-						</a>
-					</li>
-					<li class="menu">
-						<a href="#portfolio">
-							<div>
-								<img src="../img/portfolio-light.svg" alt="Portfolio"> 
-							</div>
-							<div>
-								<span>포트폴리오</span>
-							</div>
-						</a>
-					</li>
-					<li class="menu">
-						<a href="https://blog.coreylanier.com/" target="_blank">
-							<div>
-								<img src="../img/blog-light.svg" alt="Blog"> 
-							</div>
-							<div>
-								<span>블로그</span>
-							</div>
-						</a>
-					</li>
-					<li class="menu">
-						<a href="#contact">
-							<div>
-								<img src="../img/contact.svg" alt="Contact"> 
-							</div>
-							<div>
-								<span>연락하다</span>
-							</div>
-						</a>
-					</li>
-				</ul>
-			</nav>
-		</div>
-		<main>
-			<a href="#top">
-				<div class="top-link">
-					<img src="../img/top.png" alt="">
-					<p>[상단]</p>
-				</div>
-			</a>
-			<div class="destination" id="about"></div>
-			<section class="about-section">
-				<div class="about-section__container">
-					<div class="about-section__image" data-aos="flip-up">
-						<img src="../img/corey.jpg" alt="Corey Lanier">
-					</div>
-					<div class="about-section__description" data-aos="flip-down">
-						<h2><img src="../img/about.png" alt="About"> 저에 대해서</h2>
-						<p>여러분 안녕하세요! 제 이름은 코리 라녜이입니다. 저는 캐나다 토론토에 거주하는 다국어 (영어, 중국어, 한국어, 일본어, 에스페란토) 웹 개발자입니다. 저는 해커유의 몰입 형 웹 개발 졸업생입니다. 경쟁 게임, 음식 및 글쓰기에 대한 열정이 있습니다.</p>
-						<p>기술 분야에서 경력을 시작하기 전에 저는 중국과 한국에서 5년 동안 영어를 가르쳤습니다. 지식과 기술과 함께, 나는 호기심, 열정, 그리고 내가하는 모든 일에 많은 관심을 가지고 있습니다.</p>
-					</div>
-				</div>
-			</section>
-			<div class="destination" id="skills"></div>
-			<section class="skills-section">
-				<div class="skills-section__container">
-					<h2 data-aos="zoom-in-right"><img src="../img/skills.png" alt="Skills"> 제 기술들</h2>
-					<div class="skills-section__grid">
-						<div class="skills-section__grid__box skills-section__grid__box1" data-aos="zoom-in-up">
-							<div>
-								<img src="../img/html5.png" alt="HTML 5">
-							</div>
-							<div>
-								<p class="skill-title">HTML 5</p>
-							</div>
-						</div>
-						<div class="skills-section__grid__box skills-section__grid__box2" data-aos="zoom-in-up">
-							<div>
-								<img src="../img/css3.png" alt="CSS 3">
-							</div>
-							<div>
-								<p class="skill-title">CSS 3</p>
-							</div>
-						</div>
-						<div class="skills-section__grid__box skills-section__grid__box3" data-aos="zoom-in-up">
-							<div>
-								<img src="../img/javascript.png" alt="Javascript">
-							</div>
-							<div>
-								<p class="skill-title">자바스크립트 ES6</p>
-							</div>
-						</div>
-						<div class="skills-section__grid__box skills-section__grid__box4" data-aos="zoom-in-up">
-							<div>
-								<img src="../img/jquery.png" alt="jQuery">
-							</div>
-							<div>
-								<p class="skill-title">jQuery</p>
-							</div>
-						</div>
-						<div class="skills-section__grid__box skills-section__grid__box5" data-aos="zoom-in-up">
-							<div>
-								<img src="../img/react.png" alt="React">
-							</div>
-							<div>
-								<p class="skill-title">React</p>
-							</div>
-						</div>
-						<div class="skills-section__grid__box skills-section__grid__box6" data-aos="zoom-in-up">
-							<div>
-								<img src="../img/gulp.png" alt="Gulp" class="gulp-image">
-							</div>
-							<div>
-								<p class="skill-title">걸프</p>
-							</div>
-						</div>
-						<div class="skills-section__grid__box skills-section__grid__box7" data-aos="zoom-in-up">
-							<div>
-								<img src="../img/sass.png" alt="Sass" class="sass-image">
-							</div>
-							<div>
-								<p class="skill-title">Sass</p>
-							</div>
-						</div>
-						<div class="skills-section__grid__box skills-section__grid__box8" data-aos="zoom-in-up">
-							<div>
-								<img src="../img/firebase.png" alt="Firebase" class="firebase-image">
-							</div>
-							<div>
-								<p class="skill-title">파이어베이스</p>
-							</div>
-						</div>
-						<div class="skills-section__grid__box skills-section__grid__box9" data-aos="zoom-in-up">
-							<div>
-								<img src="../img/git.png" alt="Git/Github">
-							</div>
-							<div>
-								<p class="skill-title">깃/깃허브</p>
-							</div>
-						</div>
-						<div class="skills-section__grid__box skills-section__grid__box10" data-aos="zoom-in-up">
-							<div>
-								<img src="../img/windows.png" alt="Windows">
-							</div>
-							<div>
-								<p class="skill-title">Windows</p>
-							</div>
-						</div>
-						<div class="skills-section__grid__box skills-section__grid__box11" data-aos="zoom-in-up">
-							<div>
-								<img src="../img/apple.png" alt="Apple" class="osx-image">
-							</div>
-							<div>
-								<p class="skill-title">OSX</p>
-							</div>
-						</div>
-						<div class="skills-section__grid__box skills-section__grid__box12" data-aos="zoom-in-up">
-							<div>
-								<img src="../img/linux.png" alt="Linux" class="linux-image">
-							</div>
-							<div>
-								<p class="skill-title">리눅스</p>
-							</div>
-						</div>
-						<div class="skills-section__grid__box skills-section__grid__box13" data-aos="zoom-in-up">
-							<div>
-								<img src="../img/bootstrap.png" alt="Bootstrap">
-							</div>
-							<div>
-								<p class="skill-title">부트스트랩</p>
-							</div>
-						</div>
-						<div class="skills-section__grid__box skills-section__grid__box14" data-aos="zoom-in-up">
-							<div>
-								<img src="../img/node.png" alt="Node.js">
-							</div>
-							<div>
-								<p class="skill-title">Node.js</p>
-							</div>
-						</div>
-						<div class="skills-section__grid__box skills-section__grid__box15" data-aos="zoom-in-up">
-							<div>
-								<img src="../img/mongo.png" alt="MongoDB">
-							</div>
-							<div>
-								<p class="skill-title">몽고DB</p>
-							</div>
-						</div>
-						<div class="skills-section__grid__box skills-section__grid__box16" data-aos="zoom-in-up">
-							<div>
-								<img src="../img/express.png" alt="Express">
-							</div>
-							<div>
-								<p class="skill-title">Express</p>
-							</div>
-						</div>
-						<div class="skills-section__grid__box skills-section__grid__box17" data-aos="zoom-in-up">
-							<div>
-								<img src="../img/angular.png" alt="Angular">
-							</div>
-							<div>
-								<p class="skill-title">Angular</p>
-							</div>
-						</div>
-						<div class="skills-section__grid__box skills-section__grid__box18" data-aos="zoom-in-up">
-							<div>
-								<img src="../img/redux.png" alt="Redux">
-							</div>
-							<div>
-								<p class="skill-title">Redux</p>
-							</div>
-						</div>
-						<div class="skills-section__grid__box skills-section__grid__box19" data-aos="zoom-in-up">
-							<div>
-								<img src="../img/graphql.png" alt="GraphQL">
-							</div>
-							<div>
-								<p class="skill-title">그래프QL</p>
-							</div>
-						</div>
-						<div class="skills-section__grid__box skills-section__grid__box20" data-aos="zoom-in-up">
-							<div>
-								<img src="../img/less.png" alt="LESS">
-							</div>
-							<div>
-								<p class="skill-title">LESS</p>
-							</div>
-						</div>
-						<div class="skills-section__grid__box skills-section__grid__box21" data-aos="zoom-in-up">
-							<div>
-								<img src="../img/vue.png" alt="Vue">
-							</div>
-							<div>
-								<p class="skill-title">Vue</p>
-							</div>
-						</div>
-						<div class="skills-section__grid__box skills-section__grid__box22" data-aos="zoom-in-up">
-							<div>
-								<img src="../img/mysql.png" alt="MySQL">
-							</div>
-							<div>
-								<p class="skill-title">MySQL</p>
-							</div>
-						</div>
-						<div class="skills-section__grid__box skills-section__grid__box23" data-aos="zoom-in-up">
-							<div>
-								<img src="../img/wordpress.png" alt="Wordpress">
-							</div>
-							<div>
-								<p class="skill-title">워드프레스</p>
-							</div>
-						</div>
-						<div class="skills-section__grid__box skills-section__grid__box24" data-aos="zoom-in-up">
-							<div>
-								<img src="../img/apollo.png" alt="Apollo">
-							</div>
-							<div>
-								<p class="skill-title">Apollo</p>
-							</div>
-						</div>
-						<div class="skills-section__grid__box skills-section__grid__box25" data-aos="zoom-in-up">
-							<div>
-								<img src="../img/typescript.png" alt="Typescript">
-							</div>
-							<div>
-								<p class="skill-title">타입스크립트</p>
-							</div>
-						</div>
-					</div>
-				</div>
-			</section>
-			<div class="destination" id="portfolio"></div>
-			<section class="portfolio-section">
-				<div class="portfolio-section__container">
-					<h2 data-aos="zoom-in-right"><img src="../img/portfolio.png" alt="Portfolio"> 제 포트폴리오</h2>
-				</div>
-				<div class="portfolio-section__grid-new">
-						<div class="portfolio-section__grid-new__box portfolio-section__grid-new__box1" data-aos="fade-right">
-							<div class="portfolio-section__grid-new__box--image">
-								<img src="../img/notez.png" alt="NoteZ">
-							</div>
-							<div class="portfolio-section__grid-new__box--description">
-								<h3>노트Z</h3>
-								<h4>React / Sass / Firebase</h4>
-								<p>이 노트 앱은 경쟁 게임 내에서의 대전과 같은 특정 시나리오를위한 노트 저장 및 검색 용으로 설계되었습니다. 또한 특정 데이터를 기반으로 노트를 더 필터링하여 읽기 쉽게 만들 수 있습니다.</p>
-								<div class="link-container">
-									<a href="https://notez-beta.coreylanier.com/" target="_blank">
-										<div class="button">
-											<h4><i class="fas fa-eye"></i></h4>
-											<p>시사하다</p>
-										</div>
-									</a>
-									<a href="http://github.com/MissingPersonFGC/notez-react" target="_blank">
-										<div class="button">
-											<h4><i class="fab fa-github"></i></h4>
-											<p>소스 코드</p>
-										</div>
-									</a>
-								</div>
-							</div>
-						</div>
-						<div class="portfolio-section__grid-new__box portfolio-section__grid-new__box2" data-aos="fade-left">
-							<div class="portfolio-section__grid-new__box--image">
-								<img src="../img/vueblog.png" alt="maxshop">
-							</div>
-							<div class="portfolio-section__grid-new__box--description">
-								<h3>Vue 블로그</h3>
-								<h4>Vue / Node.js / Express / 몽고DB</h4>
-								<p>간단한 컨텐츠 관리 시스템과 블로그 프런트 엔드를 만들기 위해 Vue 풀 스택 애플리케이션을 구축했습니다.</p>
-								<p>이 응용 프로그램을 사용하면 새로운 사용자를 만들 수 있으며 사용자 관리자는 여러 작성자를 작성하고 게시하고 댓글을 달 수 있습니다.</p>
-								<div class="link-container">
-									<a href="https://blog.coreylanier.com/" target="_blank">
-										<div class="button">
-											<h4>
-												<i class="fas fa-eye"></i>
-											</h4>
-											<p>시사하다</p>
-										</div>
-									</a>
-									<a href="https://github.com/MissingPersonFGC/vue-blog" target="_blank">
-										<div class="button">
-											<h4>
-												<i class="fab fa-github"></i>
-											</h4>
-											<p>소스 코드</p>
-										</div>
-									</a>
-								</div>
-							</div>
-						</div>
-						<div class="portfolio-section__grid-new__box portfolio-section__grid-new__box3" data-aos="fade-right">
-							<div class="portfolio-section__grid-new__box--image">
-								<img src="../img/namechanger.png" alt="maxshop">
-							</div>
-							<div class="portfolio-section__grid-new__box--description">
-								<h3>타이틀 체인저</h3>
-								<h4>React / Node.js / Express / API / CSS</h4>
-								<p>iCademy Middle East 용으로 만든 웹 응용 프로그램으로 Canvas LMS API를 사용하여 교사가 대부분 코스 내용의 이름을 바꿀 수 있습니다.</p>
-								<p>이 앱에는 Canvas API 데이터 업데이트, 이름 길이 제어, CSV 템플릿 파일 생성 및 업로드 된 CSV 파일에서 새 이름 읽기를 처리하는 Node.js 프록시 서버가 있습니다.</p>
-								<div class="link-container">
-									<a href="https://name-changer.coreylanier.com/" target="_blank">
-										<div class="button">
-											<h4>
-												<i class="fas fa-eye"></i>
-											</h4>
-											<p>시사하다</p>
-										</div>
-									</a>
-									<a href="https://github.com/MissingPersonFGC/name-changer" target="_blank">
-										<div class="button">
-											<h4>
-												<i class="fab fa-github"></i>
-											</h4>
-											<p>소스 코드</p>
-										</div>
-									</a>
-								</div>
-							</div>
-						</div>
-						<div class="portfolio-section__grid-new__box portfolio-section__grid-new__box4" data-aos="fade-left">
-							<div class="portfolio-section__grid-new__box--image">
-								<img src="../img/bikeshare.png" alt="Bikeshare">
-							</div>
-							<div class="portfolio-section__grid-new__box--description">
-								<h3>바이크셰어</h3>
-								<h4>HTML / CSS / Javascript / jQuery / API</h4>
-								<p>이 바이크셰어 앱은 모바일 사용법을 염두에두고 맞춤 설정되었으며 사용 가능한 자전거와 빈 슬롯을 검색하여 대여 한 자전거를 도킹합니다. 또한 가장 가까운 위치에서 독을 찾아 실시간 길 찾기를 제공합니다.</p>
-								<div class="link-container">
-									<a href="https://coreylanier.com/bikeshare" target="_blank">
-										<div class="button">
-											<h4>
-												<i class="fas fa-eye"></i>
-											</h4>
-											<p>시사하다</p>
-										</div>
-									</a>
-									<a href="https://github.com/MissingPersonFGC/citybikes_app_corey_alan_project4" target="_blank">
-										<div class="button">
-											<h4>
-												<i class="fab fa-github"></i>
-											</h4>
-											<p>소스 코드</p>
-										</div>
-									</a>
-								</div>
-							</div>
-						</div>
-						<div class="portfolio-section__grid-new__box portfolio-section__grid-new__box5" data-aos="fade-right">
-							<div class="portfolio-section__grid-new__box--image">
-								<img src="../img/streamthis.png" alt="Stream This!">
-							</div>
-							<div class="portfolio-section__grid-new__box--description">
-								<h3>이것을보세요!</h3>
-								<h4>React / Sass / API</h4>
-								<p>이 앱은 Twitch 서비스에서 사용 가능한 라이브 스트림을 찾아 가장 인기있는 페이지 목록에 표시하고 스트림을 클릭 할 수있게 해줍니다.</p>
-								<p>이 앱은 Twitch API 내에서 작동하며 Twitch에서 잠금을 방지하기 위해 분당 API 호출의 양을 최소화합니다.</p>
-								<div class="link-container">
-									<a href="http://coreylanier.com/twitchfinder" target="_blank">
-										<div class="button">
-											<h4>
-												<i class="fas fa-eye"></i>
-											</h4>
-											<p>시사하다</p>
-										</div>
-									</a>
-									<a href="https://github.com/MissingPersonFGC/twitch_app_project5" target="_blank">
-										<div class="button">
-											<h4>
-												<i class="fab fa-github"></i>
-											</h4>
-											<p>소스 코드</p>
-										</div>
-									</a>
-								</div>
-							</div>
-						</div>
-						<div class="portfolio-section__grid-new__box portfolio-section__grid-new__box6" data-aos="fade-left">
-							<div class="portfolio-section__grid-new__box--image">
-								<img src="../img/draftlottery.png" alt="Draft Lottery">
-							</div>
-							<div class="portfolio-section__grid-new__box--description">
-								<h3>초안 추첨</h3>
-								<h4>HTML / CSS / Javascript / jQuery</h4>
-								<p>이 응용 프로그램은 사람들이 자신의 팀 기반 경쟁을 위해 임의로 팀을 초안 수 있습니다. 플레이어를 추가하고 플레이어 풀을 비우기 전까지 플레이어를 드래프트하기 전에 팀의 크기를 설정할 수 있습니다.</p>
-								<div class="link-container">
-									<a href="http://draftlottery.coreylanier.com/" target="_blank">
-										<div class="button">
-											<h4>
-												<i class="fas fa-eye"></i>
-											</h4>
-											<p>시사하다</p>
-										</div>
-									</a>
-									<a href="https://github.com/MissingPersonFGC/draft-lottery" target="_blank">
-										<div class="button">
-											<h4>
-												<i class="fab fa-github"></i>
-											</h4>
-											<p>소스 코드</p>
-										</div>
-									</a>
-								</div>
-							</div>
-						</div>
-						<div class="portfolio-section__grid-new__box portfolio-section__grid-new__box7" data-aos="fade-right">
-							<div class="portfolio-section__grid-new__box--image">
-								<img src="../img/fgcelo.png" alt="FGC ELO">
-							</div>
-							<div class="portfolio-section__grid-new__box--description">
-								<h3>FGC ELO</h3>
-								<h4>React / Sass / Bootstrap / Firebase</h4>
-								<p>이 응용 프로그램은 게임 일치의 결과 및 상대적인 ELO 포인트를 기반으로 각 플레이어의 등급을 수집 할 수 있습니다. 또한 사용 된 캐릭터의 추적 및 플레이어의 위치를 허용합니다.</p>
-								<div class="link-container">
-									<a href="http://smsrank.coreylanier.com/" target="_blank">
-										<div class="button">
-											<h4>
-												<i class="fas fa-eye"></i>
-											</h4>
-											<p>시사하다</p>
-										</div>
-									</a>
-									<a href="https://github.com/MissingPersonFGC/fgc-elo" target="_blank">
-										<div class="button">
-											<h4>
-												<i class="fab fa-github"></i>
-											</h4>
-											<p>소스 코드</p>
-										</div>
-									</a>
-								</div>
-							</div>
-						</div>
-						<div class="portfolio-section__grid-new__box portfolio-section__grid-new__box8" data-aos="fade-left">
-							<div class="portfolio-section__grid-new__box--image">
-								<img src="../img/maxshop.png" alt="maxshop">
-							</div>
-							<div class="portfolio-section__grid-new__box--description">
-								<h3>맥스쇼프</h3>
-								<h4>HTML / Sass / jQuery</h4>
-								<p>이거슨 부트캠프에서 간단한 PSD 와어프레임 변환을 만들었읍니다. 흘렉스복스와 CSS 그리드를 사용하여 여러 기기에서 설계를 신속하게 처리 할 수 있습니다.</p>
-								<div class="link-container">
-									<a href="http://maxshop.coreylanier.com/" target="_blank">
-										<div class="button">
-											<h4>
-												<i class="fas fa-eye"></i>
-											</h4>
-											<p>시사하다</p>
-										</div>
-									</a>
-									<a href="https://github.com/MissingPersonFGC/corey_lanier_project2" target="_blank">
-										<div class="button">
-											<h4>
-												<i class="fab fa-github"></i>
-											</h4>
-											<p>소스 코드</p>
-										</div>
-									</a>
-								</div>
-							</div>
-						</div>
-					</div>
-			</section>
-			<div class="destination" id="contact"></div>
-			<section class="contact-section">
-				<div class="contact-section__container">
-					<h2 data-aos="zoom-in-right"><img src="../img/contact.png" alt="Contact"> 저에게 연락하다</h2>
-					<p data-aos="zoom-in-right">함께 인터넷 걸작을 만들어 봅시다! 일을 위해 나를 고용하거나 위임하고 싶다면, 아래의 방법 중 하나를 통해 저에게 연락하십시오.</p>
-					<div class="contact-section-wrapper">
-						<div class="contact-section__info" data-aos="flip-left">
-							<p>이메일: iam@coreylanier.com</p>
-							<p>카카오톡: brawndo84</p>
-							<a href="http://facebook.com/missingpersonfgc" target="_blank"><img src="../img/facebook.svg" alt="Facebook"></a>
-							<a href="http://twitter.com/JTMMissingPersn" target="_blank"><img src="../img/twitter.png" alt="Twitter"></a>
-							<a href="http://instagram.com/missingpersonfgc" target="_blank"><img src="../img/instagram.png" alt="Instagram"></a>
-							<a href="https://www.linkedin.com/in/corey-lanier-74906689/" target="_blank"><img src="../img/linkedin.png" alt="Linkedin"></a>
-							<a href="http://github.com/MissingPersonFGC"><img src="../img/github.png" alt="Github"></a>
-						</div>
-						<div class="contact-section__send-email" data-aos="flip-right">
-							<div class="contact-section__send-email__form">
-								<form action="https://formspree.io/iam@coreylanier.com" method="POST">
-									<input type="text" name="Full Name" id="fullName" placeholder="당신 이름" required>
-									<input type="email" name="email" id="email" placeholder="이메일 주소" required>
-									<textarea name="comments" id="comments" cols="30" rows="10" placeholder="메세지" required></textarea>
-									<input type="submit" value="이메일을 보내다">
-								</form>
-							</div>
-						</div>
-					</div>
-				</div>
-			</section>
-		</main>
-		<footer>
-			<div class="footer-wrapper">
-				<div class="footer-copyright">
-					<p>© 2018 코리 라녜이, 판권 소유.</p>
-				</div>
-				<div class="footer-logo">
-					<img src="../img/ltianbottom.png" alt="l天">
-				</div>
-			</div>
-		</footer>
-		<script src='https://code.jquery.com/jquery-3.2.1.min.js' integrity='sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4='crossorigin='anonymous'></script>
-		<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-		<script src="../public/scripts/main.js"></script>
-	</body>
+    <header id="top">
+      <div class="language-select">
+        <select name="language" id="language">
+          <option value="kr">한국어</option>
+          <option value="en">English</option>
+          <option value="zh-cn">中文（简体）</option>
+          <option value="zh-tw">中文（繁體）</option>
+          <option value="ja">日本語</option>
+          <option value="eo">Esperanto</option>
+        </select>
+      </div>
+      <div class="wrapper">
+        <div
+          class="box logo-box"
+          data-aos="zoom-in-down"
+          data-aos-duration="1000"
+        >
+          <img src="../img/ltian.png" alt="l天" />
+        </div>
+        <div class="header-grid" data-aos="zoom-in" data-aos-duration="1000">
+          <div class="box box0">
+            <img src="../img/ltian.png" alt="l天" />
+          </div>
+          <div class="box box1">
+            <h1>코리 라녜이</h1>
+            <p>웹 개발자</p>
+          </div>
+          <a href="#about" class="header-link about-link">
+            <div class="box box2">
+              <img src="../img/about.svg" class="icon" alt="About" />
+              <p>대해서</p>
+            </div>
+          </a>
+          <div class="box box3">
+            <img src="../img/laptop.jpg" alt="Laptop" />
+          </div>
+          <div class="box box4">
+            <img src="../img/smartphone.jpg" alt="Smartphone" />
+          </div>
+          <a href="#skills" class="header-link skills-link">
+            <div class="box box5">
+              <img src="../img/skills.svg" alt="Skills" class="icon" />
+              <p>기술</p>
+            </div>
+          </a>
+          <a
+            href="https://blog.coreylanier.com"
+            target="_blank"
+            class="header-link blog-link"
+          >
+            <div class="box box8">
+              <img src="../img/blog.svg" alt="Blog" class="icon" />
+              <p>블로그</p>
+            </div>
+          </a>
+          <div class="box box7">
+            <img src="../img/code.jpg" alt="Code" />
+          </div>
+          <a href="#portfolio" class="header-link portfolio-link">
+            <div class="box box6">
+              <img src="../img/portfolio.svg" alt="Portfolio" class="icon" />
+              <p>포트폴리오</p>
+            </div>
+          </a>
+          <div class="box box9">
+            <img src="../img/joystick.jpg" alt="Joystick" />
+          </div>
+          <div class="box box10"></div>
+          <div class="box box11">
+            <img src="../img/design.jpg" alt="Design" />
+          </div>
+          <div class="box box12">
+            <img src="../img/inspire.png" alt="Inspire" class="icon" />
+            <p>고무하다</p>
+          </div>
+          <a href="#contact" class="header-link contact-link">
+            <div class="box box13">
+              <img src="../img/contact.svg" alt="Contact" class="icon" />
+              <p>연락하다</p>
+            </div>
+          </a>
+          <div class="box box14"></div>
+        </div>
+      </div>
+    </header>
+    <div class="nav-wrapper" id="main-content">
+      <nav>
+        <ul>
+          <li class="title">[코리 라녜이]</li>
+          <li class="menu">
+            <a href="#about">
+              <div>
+                <img src="../img/about.svg" alt="About" />
+              </div>
+              <div>
+                <span>대해서</span>
+              </div>
+            </a>
+          </li>
+          <li class="menu">
+            <a href="#skills">
+              <div>
+                <img src="../img/skills.svg" alt="Skills" />
+              </div>
+              <div>
+                <span>기술</span>
+              </div>
+            </a>
+          </li>
+          <li class="menu">
+            <a href="#portfolio">
+              <div>
+                <img src="../img/portfolio-light.svg" alt="Portfolio" />
+              </div>
+              <div>
+                <span>포트폴리오</span>
+              </div>
+            </a>
+          </li>
+          <li class="menu">
+            <a href="https://blog.coreylanier.com/" target="_blank">
+              <div>
+                <img src="../img/blog-light.svg" alt="Blog" />
+              </div>
+              <div>
+                <span>블로그</span>
+              </div>
+            </a>
+          </li>
+          <li class="menu">
+            <a href="#contact">
+              <div>
+                <img src="../img/contact.svg" alt="Contact" />
+              </div>
+              <div>
+                <span>연락하다</span>
+              </div>
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+    <main>
+      <a href="#top">
+        <div class="top-link">
+          <img src="../img/top.png" alt="" />
+          <p>[상단]</p>
+        </div>
+      </a>
+      <div class="destination" id="about"></div>
+      <section class="about-section">
+        <div class="about-section__container">
+          <div class="about-section__image" data-aos="flip-up">
+            <img src="../img/corey.jpg" alt="Corey Lanier" />
+          </div>
+          <div class="about-section__description" data-aos="flip-down">
+            <h2><img src="../img/about.png" alt="About" /> 저에 대해서</h2>
+            <p>
+              여러분 안녕하세요! 제 이름은 코리 라녜이입니다. 저는 캐나다
+              토론토에 거주하는 다국어 (영어, 중국어, 한국어, 일본어,
+              에스페란토) 웹 개발자입니다. 저는 해커유의 몰입 형 웹 개발
+              졸업생입니다. 경쟁 게임, 음식 및 글쓰기에 대한 열정이 있습니다.
+            </p>
+            <p>
+              기술 분야에서 경력을 시작하기 전에 저는 중국과 한국에서 5년 동안
+              영어를 가르쳤습니다. 지식과 기술과 함께, 나는 호기심, 열정, 그리고
+              내가하는 모든 일에 많은 관심을 가지고 있습니다.
+            </p>
+          </div>
+        </div>
+      </section>
+      <div class="destination" id="skills"></div>
+      <section class="skills-section">
+        <div class="skills-section__container">
+          <h2 data-aos="zoom-in-right">
+            <img src="../img/skills.png" alt="Skills" /> 제 기술들
+          </h2>
+          <div class="skills-section__grid">
+            <div
+              class="skills-section__grid__box skills-section__grid__box1"
+              data-aos="zoom-in-up"
+            >
+              <div>
+                <img src="../img/html5.png" alt="HTML 5" />
+              </div>
+              <div>
+                <p class="skill-title">HTML 5</p>
+              </div>
+            </div>
+            <div
+              class="skills-section__grid__box skills-section__grid__box2"
+              data-aos="zoom-in-up"
+            >
+              <div>
+                <img src="../img/css3.png" alt="CSS 3" />
+              </div>
+              <div>
+                <p class="skill-title">CSS 3</p>
+              </div>
+            </div>
+            <div
+              class="skills-section__grid__box skills-section__grid__box3"
+              data-aos="zoom-in-up"
+            >
+              <div>
+                <img src="../img/javascript.png" alt="Javascript" />
+              </div>
+              <div>
+                <p class="skill-title">자바스크립트 ES6</p>
+              </div>
+            </div>
+            <div
+              class="skills-section__grid__box skills-section__grid__box4"
+              data-aos="zoom-in-up"
+            >
+              <div>
+                <img src="../img/jquery.png" alt="jQuery" />
+              </div>
+              <div>
+                <p class="skill-title">jQuery</p>
+              </div>
+            </div>
+            <div
+              class="skills-section__grid__box skills-section__grid__box5"
+              data-aos="zoom-in-up"
+            >
+              <div>
+                <img src="../img/react.png" alt="React" />
+              </div>
+              <div>
+                <p class="skill-title">React</p>
+              </div>
+            </div>
+            <div
+              class="skills-section__grid__box skills-section__grid__box6"
+              data-aos="zoom-in-up"
+            >
+              <div>
+                <img src="../img/gulp.png" alt="Gulp" class="gulp-image" />
+              </div>
+              <div>
+                <p class="skill-title">걸프</p>
+              </div>
+            </div>
+            <div
+              class="skills-section__grid__box skills-section__grid__box7"
+              data-aos="zoom-in-up"
+            >
+              <div>
+                <img src="../img/sass.png" alt="Sass" class="sass-image" />
+              </div>
+              <div>
+                <p class="skill-title">Sass</p>
+              </div>
+            </div>
+            <div
+              class="skills-section__grid__box skills-section__grid__box8"
+              data-aos="zoom-in-up"
+            >
+              <div>
+                <img
+                  src="../img/firebase.png"
+                  alt="Firebase"
+                  class="firebase-image"
+                />
+              </div>
+              <div>
+                <p class="skill-title">파이어베이스</p>
+              </div>
+            </div>
+            <div
+              class="skills-section__grid__box skills-section__grid__box9"
+              data-aos="zoom-in-up"
+            >
+              <div>
+                <img src="../img/git.png" alt="Git/Github" />
+              </div>
+              <div>
+                <p class="skill-title">깃/깃허브</p>
+              </div>
+            </div>
+            <div
+              class="skills-section__grid__box skills-section__grid__box10"
+              data-aos="zoom-in-up"
+            >
+              <div>
+                <img src="../img/windows.png" alt="Windows" />
+              </div>
+              <div>
+                <p class="skill-title">Windows</p>
+              </div>
+            </div>
+            <div
+              class="skills-section__grid__box skills-section__grid__box11"
+              data-aos="zoom-in-up"
+            >
+              <div>
+                <img src="../img/apple.png" alt="Apple" class="osx-image" />
+              </div>
+              <div>
+                <p class="skill-title">OSX</p>
+              </div>
+            </div>
+            <div
+              class="skills-section__grid__box skills-section__grid__box12"
+              data-aos="zoom-in-up"
+            >
+              <div>
+                <img src="../img/linux.png" alt="Linux" class="linux-image" />
+              </div>
+              <div>
+                <p class="skill-title">리눅스</p>
+              </div>
+            </div>
+            <div
+              class="skills-section__grid__box skills-section__grid__box13"
+              data-aos="zoom-in-up"
+            >
+              <div>
+                <img src="../img/bootstrap.png" alt="Bootstrap" />
+              </div>
+              <div>
+                <p class="skill-title">부트스트랩</p>
+              </div>
+            </div>
+            <div
+              class="skills-section__grid__box skills-section__grid__box14"
+              data-aos="zoom-in-up"
+            >
+              <div>
+                <img src="../img/node.png" alt="Node.js" />
+              </div>
+              <div>
+                <p class="skill-title">Node.js</p>
+              </div>
+            </div>
+            <div
+              class="skills-section__grid__box skills-section__grid__box15"
+              data-aos="zoom-in-up"
+            >
+              <div>
+                <img src="../img/mongo.png" alt="MongoDB" />
+              </div>
+              <div>
+                <p class="skill-title">몽고DB</p>
+              </div>
+            </div>
+            <div
+              class="skills-section__grid__box skills-section__grid__box16"
+              data-aos="zoom-in-up"
+            >
+              <div>
+                <img src="../img/express.png" alt="Express" />
+              </div>
+              <div>
+                <p class="skill-title">Express</p>
+              </div>
+            </div>
+            <div
+              class="skills-section__grid__box skills-section__grid__box17"
+              data-aos="zoom-in-up"
+            >
+              <div>
+                <img src="../img/angular.png" alt="Angular" />
+              </div>
+              <div>
+                <p class="skill-title">Angular</p>
+              </div>
+            </div>
+            <div
+              class="skills-section__grid__box skills-section__grid__box18"
+              data-aos="zoom-in-up"
+            >
+              <div>
+                <img src="../img/redux.png" alt="Redux" />
+              </div>
+              <div>
+                <p class="skill-title">Redux</p>
+              </div>
+            </div>
+            <div
+              class="skills-section__grid__box skills-section__grid__box19"
+              data-aos="zoom-in-up"
+            >
+              <div>
+                <img src="../img/graphql.png" alt="GraphQL" />
+              </div>
+              <div>
+                <p class="skill-title">그래프QL</p>
+              </div>
+            </div>
+            <div
+              class="skills-section__grid__box skills-section__grid__box20"
+              data-aos="zoom-in-up"
+            >
+              <div>
+                <img src="../img/less.png" alt="LESS" />
+              </div>
+              <div>
+                <p class="skill-title">LESS</p>
+              </div>
+            </div>
+            <div
+              class="skills-section__grid__box skills-section__grid__box21"
+              data-aos="zoom-in-up"
+            >
+              <div>
+                <img src="../img/vue.png" alt="Vue" />
+              </div>
+              <div>
+                <p class="skill-title">Vue</p>
+              </div>
+            </div>
+            <div
+              class="skills-section__grid__box skills-section__grid__box22"
+              data-aos="zoom-in-up"
+            >
+              <div>
+                <img src="../img/mysql.png" alt="MySQL" />
+              </div>
+              <div>
+                <p class="skill-title">MySQL</p>
+              </div>
+            </div>
+            <div
+              class="skills-section__grid__box skills-section__grid__box23"
+              data-aos="zoom-in-up"
+            >
+              <div>
+                <img src="../img/wordpress.png" alt="Wordpress" />
+              </div>
+              <div>
+                <p class="skill-title">워드프레스</p>
+              </div>
+            </div>
+            <div
+              class="skills-section__grid__box skills-section__grid__box24"
+              data-aos="zoom-in-up"
+            >
+              <div>
+                <img src="../img/apollo.png" alt="Apollo" />
+              </div>
+              <div>
+                <p class="skill-title">Apollo</p>
+              </div>
+            </div>
+            <div
+              class="skills-section__grid__box skills-section__grid__box25"
+              data-aos="zoom-in-up"
+            >
+              <div>
+                <img src="../img/typescript.png" alt="Typescript" />
+              </div>
+              <div>
+                <p class="skill-title">타입스크립트</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <div class="destination" id="portfolio"></div>
+      <section class="portfolio-section">
+        <div class="portfolio-section__container">
+          <h2 data-aos="zoom-in-right">
+            <img src="../img/portfolio.png" alt="Portfolio" /> 제 포트폴리오
+          </h2>
+        </div>
+        <div class="portfolio-section__grid-new">
+          <div
+            class="portfolio-section__grid-new__box portfolio-section__grid-new__box1"
+            data-aos="fade-right"
+          >
+            <div class="portfolio-section__grid-new__box--image">
+              <img src="../img/notez.png" alt="NoteZ" />
+            </div>
+            <div class="portfolio-section__grid-new__box--description">
+              <h3>노트Z</h3>
+              <h4>
+                React / Material UI / Hooks / i18n / Node.js / Express / MongoDB
+              </h4>
+              <p>
+                이 노트 앱은 경쟁 게임 내에서의 대전과 같은 특정 시나리오를위한
+                노트 저장 및 검색 용으로 설계되었습니다. 또한 특정 데이터를
+                기반으로 노트를 더 필터링하여 읽기 쉽게 만들 수 있습니다.
+              </p>
+              <div class="link-container">
+                <a href="https://checkthenotez.com/" target="_blank">
+                  <div class="button">
+                    <h4><i class="fas fa-eye"></i></h4>
+                    <p>시사하다</p>
+                  </div>
+                </a>
+                <a
+                  href="http://github.com/MissingPersonFGC/notez"
+                  target="_blank"
+                >
+                  <div class="button">
+                    <h4><i class="fab fa-github"></i></h4>
+                    <p>소스 코드</p>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div
+            class="portfolio-section__grid-new__box portfolio-section__grid-new__box2"
+            data-aos="fade-left"
+          >
+            <div class="portfolio-section__grid-new__box--image">
+              <img src="../img/vueblog.png" alt="maxshop" />
+            </div>
+            <div class="portfolio-section__grid-new__box--description">
+              <h3>Vue 블로그</h3>
+              <h4>Vue / Node.js / Express / 몽고DB</h4>
+              <p>
+                간단한 컨텐츠 관리 시스템과 블로그 프런트 엔드를 만들기 위해 Vue
+                풀 스택 애플리케이션을 구축했습니다.
+              </p>
+              <p>
+                이 응용 프로그램을 사용하면 새로운 사용자를 만들 수 있으며
+                사용자 관리자는 여러 작성자를 작성하고 게시하고 댓글을 달 수
+                있습니다.
+              </p>
+              <div class="link-container">
+                <a href="https://blog.coreylanier.com/" target="_blank">
+                  <div class="button">
+                    <h4>
+                      <i class="fas fa-eye"></i>
+                    </h4>
+                    <p>시사하다</p>
+                  </div>
+                </a>
+                <a
+                  href="https://github.com/MissingPersonFGC/vue-blog"
+                  target="_blank"
+                >
+                  <div class="button">
+                    <h4>
+                      <i class="fab fa-github"></i>
+                    </h4>
+                    <p>소스 코드</p>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div
+            class="portfolio-section__grid-new__box portfolio-section__grid-new__box3"
+            data-aos="fade-right"
+          >
+            <div class="portfolio-section__grid-new__box--image">
+              <img src="../img/namechanger.png" alt="maxshop" />
+            </div>
+            <div class="portfolio-section__grid-new__box--description">
+              <h3>타이틀 체인저</h3>
+              <h4>React / Firebase / Node.js / Express / API / CSS</h4>
+              <p>
+                iCademy Middle East 용으로 만든 웹 응용 프로그램으로 Canvas LMS
+                API를 사용하여 교사가 대부분 코스 내용의 이름을 바꿀 수
+                있습니다.
+              </p>
+              <p>
+                이 앱에는 Canvas API 데이터 업데이트, 이름 길이 제어, CSV 템플릿
+                파일 생성 및 업로드 된 CSV 파일에서 새 이름 읽기를 처리하는
+                Node.js 프록시 서버가 있습니다.
+              </p>
+              <div class="link-container">
+                <a href="https://icad-name-changer.now.sh/" target="_blank">
+                  <div class="button">
+                    <h4>
+                      <i class="fas fa-eye"></i>
+                    </h4>
+                    <p>시사하다</p>
+                  </div>
+                </a>
+                <a
+                  href="https://github.com/MissingPersonFGC/name-changer"
+                  target="_blank"
+                >
+                  <div class="button">
+                    <h4>
+                      <i class="fab fa-github"></i>
+                    </h4>
+                    <p>소스 코드</p>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div
+            class="portfolio-section__grid-new__box portfolio-section__grid-new__box4"
+            data-aos="fade-left"
+          >
+            <div class="portfolio-section__grid-new__box--image">
+              <img src="../img/bikeshare.png" alt="Bikeshare" />
+            </div>
+            <div class="portfolio-section__grid-new__box--description">
+              <h3>바이크셰어</h3>
+              <h4>HTML / CSS / Javascript / jQuery / API</h4>
+              <p>
+                이 바이크셰어 앱은 모바일 사용법을 염두에두고 맞춤 설정되었으며
+                사용 가능한 자전거와 빈 슬롯을 검색하여 대여 한 자전거를
+                도킹합니다. 또한 가장 가까운 위치에서 독을 찾아 실시간 길 찾기를
+                제공합니다.
+              </p>
+              <div class="link-container">
+                <a href="https://coreylanier.com/bikeshare" target="_blank">
+                  <div class="button">
+                    <h4>
+                      <i class="fas fa-eye"></i>
+                    </h4>
+                    <p>시사하다</p>
+                  </div>
+                </a>
+                <a
+                  href="https://github.com/MissingPersonFGC/citybikes_app_corey_alan_project4"
+                  target="_blank"
+                >
+                  <div class="button">
+                    <h4>
+                      <i class="fab fa-github"></i>
+                    </h4>
+                    <p>소스 코드</p>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div
+            class="portfolio-section__grid-new__box portfolio-section__grid-new__box5"
+            data-aos="fade-right"
+          >
+            <div class="portfolio-section__grid-new__box--image">
+              <img src="../img/streamthis.png" alt="Stream This!" />
+            </div>
+            <div class="portfolio-section__grid-new__box--description">
+              <h3>이것을보세요!</h3>
+              <h4>React / Sass / API</h4>
+              <p>
+                이 앱은 Twitch 서비스에서 사용 가능한 라이브 스트림을 찾아 가장
+                인기있는 페이지 목록에 표시하고 스트림을 클릭 할 수있게
+                해줍니다.
+              </p>
+              <p>
+                이 앱은 Twitch API 내에서 작동하며 Twitch에서 잠금을 방지하기
+                위해 분당 API 호출의 양을 최소화합니다.
+              </p>
+              <div class="link-container">
+                <a href="http://coreylanier.com/twitchfinder" target="_blank">
+                  <div class="button">
+                    <h4>
+                      <i class="fas fa-eye"></i>
+                    </h4>
+                    <p>시사하다</p>
+                  </div>
+                </a>
+                <a
+                  href="https://github.com/MissingPersonFGC/twitch_app_project5"
+                  target="_blank"
+                >
+                  <div class="button">
+                    <h4>
+                      <i class="fab fa-github"></i>
+                    </h4>
+                    <p>소스 코드</p>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div
+            class="portfolio-section__grid-new__box portfolio-section__grid-new__box6"
+            data-aos="fade-left"
+          >
+            <div class="portfolio-section__grid-new__box--image">
+              <img src="../img/draftlottery.png" alt="Draft Lottery" />
+            </div>
+            <div class="portfolio-section__grid-new__box--description">
+              <h3>초안 추첨</h3>
+              <h4>HTML / CSS / Javascript / jQuery</h4>
+              <p>
+                이 응용 프로그램은 사람들이 자신의 팀 기반 경쟁을 위해 임의로
+                팀을 초안 수 있습니다. 플레이어를 추가하고 플레이어 풀을 비우기
+                전까지 플레이어를 드래프트하기 전에 팀의 크기를 설정할 수
+                있습니다.
+              </p>
+              <div class="link-container">
+                <a href="http://draftlottery.coreylanier.com/" target="_blank">
+                  <div class="button">
+                    <h4>
+                      <i class="fas fa-eye"></i>
+                    </h4>
+                    <p>시사하다</p>
+                  </div>
+                </a>
+                <a
+                  href="https://github.com/MissingPersonFGC/draft-lottery"
+                  target="_blank"
+                >
+                  <div class="button">
+                    <h4>
+                      <i class="fab fa-github"></i>
+                    </h4>
+                    <p>소스 코드</p>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div
+            class="portfolio-section__grid-new__box portfolio-section__grid-new__box7"
+            data-aos="fade-right"
+          >
+            <div class="portfolio-section__grid-new__box--image">
+              <img src="../img/fgcelo.png" alt="FGC ELO" />
+            </div>
+            <div class="portfolio-section__grid-new__box--description">
+              <h3>FGC ELO</h3>
+              <h4>React / Sass / Bootstrap / Firebase</h4>
+              <p>
+                이 응용 프로그램은 게임 일치의 결과 및 상대적인 ELO 포인트를
+                기반으로 각 플레이어의 등급을 수집 할 수 있습니다. 또한 사용 된
+                캐릭터의 추적 및 플레이어의 위치를 허용합니다.
+              </p>
+              <div class="link-container">
+                <a href="http://smsrank.coreylanier.com/" target="_blank">
+                  <div class="button">
+                    <h4>
+                      <i class="fas fa-eye"></i>
+                    </h4>
+                    <p>시사하다</p>
+                  </div>
+                </a>
+                <a
+                  href="https://github.com/MissingPersonFGC/fgc-elo"
+                  target="_blank"
+                >
+                  <div class="button">
+                    <h4>
+                      <i class="fab fa-github"></i>
+                    </h4>
+                    <p>소스 코드</p>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div
+            class="portfolio-section__grid-new__box portfolio-section__grid-new__box8"
+            data-aos="fade-left"
+          >
+            <div class="portfolio-section__grid-new__box--image">
+              <img src="../img/maxshop.png" alt="maxshop" />
+            </div>
+            <div class="portfolio-section__grid-new__box--description">
+              <h3>맥스쇼프</h3>
+              <h4>HTML / Sass / jQuery</h4>
+              <p>
+                이거슨 부트캠프에서 간단한 PSD 와어프레임 변환을 만들었읍니다.
+                흘렉스복스와 CSS 그리드를 사용하여 여러 기기에서 설계를 신속하게
+                처리 할 수 있습니다.
+              </p>
+              <div class="link-container">
+                <a href="http://maxshop.coreylanier.com/" target="_blank">
+                  <div class="button">
+                    <h4>
+                      <i class="fas fa-eye"></i>
+                    </h4>
+                    <p>시사하다</p>
+                  </div>
+                </a>
+                <a
+                  href="https://github.com/MissingPersonFGC/corey_lanier_project2"
+                  target="_blank"
+                >
+                  <div class="button">
+                    <h4>
+                      <i class="fab fa-github"></i>
+                    </h4>
+                    <p>소스 코드</p>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <div class="destination" id="contact"></div>
+      <section class="contact-section">
+        <div class="contact-section__container">
+          <h2 data-aos="zoom-in-right">
+            <img src="../img/contact.png" alt="Contact" /> 저에게 연락하다
+          </h2>
+          <p data-aos="zoom-in-right">
+            함께 인터넷 걸작을 만들어 봅시다! 일을 위해 나를 고용하거나 위임하고
+            싶다면, 아래의 방법 중 하나를 통해 저에게 연락하십시오.
+          </p>
+          <div class="contact-section-wrapper">
+            <div class="contact-section__info" data-aos="flip-left">
+              <p>이메일: iam@coreylanier.com</p>
+              <p>카카오톡: brawndo84</p>
+              <a href="http://facebook.com/missingpersonfgc" target="_blank"
+                ><img src="../img/facebook.svg" alt="Facebook"
+              /></a>
+              <a href="http://twitter.com/JTMMissingPersn" target="_blank"
+                ><img src="../img/twitter.png" alt="Twitter"
+              /></a>
+              <a href="http://instagram.com/missingpersonfgc" target="_blank"
+                ><img src="../img/instagram.png" alt="Instagram"
+              /></a>
+              <a
+                href="https://www.linkedin.com/in/corey-lanier-74906689/"
+                target="_blank"
+                ><img src="../img/linkedin.png" alt="Linkedin"
+              /></a>
+              <a href="http://github.com/MissingPersonFGC"
+                ><img src="../img/github.png" alt="Github"
+              /></a>
+            </div>
+            <div class="contact-section__send-email" data-aos="flip-right">
+              <div class="contact-section__send-email__form">
+                <form
+                  action="https://formspree.io/iam@coreylanier.com"
+                  method="POST"
+                >
+                  <input
+                    type="text"
+                    name="Full Name"
+                    id="fullName"
+                    placeholder="당신 이름"
+                    required
+                  />
+                  <input
+                    type="email"
+                    name="email"
+                    id="email"
+                    placeholder="이메일 주소"
+                    required
+                  />
+                  <textarea
+                    name="comments"
+                    id="comments"
+                    cols="30"
+                    rows="10"
+                    placeholder="메세지"
+                    required
+                  ></textarea>
+                  <input type="submit" value="이메일을 보내다" />
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <div class="footer-wrapper">
+        <div class="footer-copyright">
+          <p>© 2018 코리 라녜이, 판권 소유.</p>
+        </div>
+        <div class="footer-logo">
+          <img src="../img/ltianbottom.png" alt="l天" />
+        </div>
+      </div>
+    </footer>
+    <script
+      src="https://code.jquery.com/jquery-3.2.1.min.js"
+      integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="../public/scripts/main.js"></script>
+  </body>
 </html>

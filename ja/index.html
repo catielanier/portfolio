@@ -1,669 +1,928 @@
 <!DOCTYPE html>
 <html lang="ja">
-	<head>
-		<meta charset="UTF-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0 user-scalable=no">
-		<meta http-equiv="X-UA-Compatible" content="ie=edge">
-		<title>コーリー・ラニェー 【クリエイティブウェブ開発】</title>
-		<link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png">
-		<link rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.png">
-		<link rel="apple-touch-icon" sizes="72x72" href="/apple-icon-72x72.png">
-		<link rel="apple-touch-icon" sizes="76x76" href="/apple-icon-76x76.png">
-		<link rel="apple-touch-icon" sizes="114x114" href="/apple-icon-114x114.png">
-		<link rel="apple-touch-icon" sizes="120x120" href="/apple-icon-120x120.png">
-		<link rel="apple-touch-icon" sizes="144x144" href="/apple-icon-144x144.png">
-		<link rel="apple-touch-icon" sizes="152x152" href="/apple-icon-152x152.png">
-		<link rel="apple-touch-icon" sizes="180x180" href="/apple-icon-180x180.png">
-		<link rel="icon" type="image/png" sizes="192x192" href="/android-icon-192x192.png">
-		<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-		<link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
-		<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-		<meta name="msapplication-TileColor" content="#ffffff">
-		<meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
-		<meta name="theme-color" content="#ffffff">
-		<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
-		<link rel="stylesheet" href="../public/styles/style.css">
-		<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-		<script defer src='https://use.fontawesome.com/releases/v5.0.6/js/all.js'></script>
-	</head>
-	<body>
-		<!-- Header background courtesy: Rick Harris (source: https://flic.kr/p/vBwV3q, use under CC BY-SA 2.0 license: https://creativecommons.org/licenses/by-sa/2.0/) -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0 user-scalable=no"
+    />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>コーリー・ラニェー 【クリエイティブウェブ開発】</title>
+    <link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png" />
+    <link rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.png" />
+    <link rel="apple-touch-icon" sizes="72x72" href="/apple-icon-72x72.png" />
+    <link rel="apple-touch-icon" sizes="76x76" href="/apple-icon-76x76.png" />
+    <link
+      rel="apple-touch-icon"
+      sizes="114x114"
+      href="/apple-icon-114x114.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="120x120"
+      href="/apple-icon-120x120.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="144x144"
+      href="/apple-icon-144x144.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="152x152"
+      href="/apple-icon-152x152.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="/apple-icon-180x180.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="192x192"
+      href="/android-icon-192x192.png"
+    />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <meta name="msapplication-TileColor" content="#ffffff" />
+    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png" />
+    <meta name="theme-color" content="#ffffff" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Open+Sans"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../public/styles/style.css" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <script
+      defer
+      src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"
+    ></script>
+  </head>
+  <body>
+    <!-- Header background courtesy: Rick Harris (source: https://flic.kr/p/vBwV3q, use under CC BY-SA 2.0 license: https://creativecommons.org/licenses/by-sa/2.0/) -->
 
-		<a href="#main-content" id="jumpTo"><div class="jumpTo"></div></a>
+    <a href="#main-content" id="jumpTo"><div class="jumpTo"></div></a>
 
-		<header id="top">
-			<div class="language-select">
-				<select name="language" id="language">
-					<option value="ja">日本語</option>
-					<option value="en">English</option>
-					<option value="zh-cn">中文（简体）</option>
-					<option value="zh-tw">中文（繁體）</option>
-					<option value="kr">한국어</option>
-					<option value="eo">Esperanto</option>
-				</select>
-			</div>
-			<div class="wrapper">
-				<div class="box logo-box" data-aos="zoom-in-down" data-aos-duration="1000">
-					<img src="../img/ltian.png" alt="l天">
-				</div>
-				<div class="header-grid" data-aos="zoom-in" data-aos-duration="1000">
-					<div class="box box0">
-						<img src="../img/ltian.png" alt="l天">
-					</div>
-					<div class="box box1">
-						<h1>コーリー・ラニェー</h1>
-						<p>ウエブ開発者</p>
-					</div>
-					<a href="#about" class="header-link about-link">
-						<div class="box box2">
-							<img src="../img/about.svg" class="icon" alt="About">
-							<p>私について</p>
-						</div>
-					</a>
-					<div class="box box3">
-						<img src="../img/laptop.jpg" alt="Laptop">
-					</div>
-					<div class="box box4"><img src="../img/smartphone.jpg" alt="Smartphone"></div>
-					<a href="#skills" class="header-link skills-link">
-						<div class="box box5">
-							<img src="../img/skills.svg" alt="Skills" class="icon">
-							<p>スキル</p>
-						</div>
-					</a>
-					<a href="https://blog.coreylanier.com" target="_blank" class="header-link blog-link">
-						<div class="box box8">
-							<img src="../img/blog.svg" alt="Blog" class="icon">
-							<p>ブログ</p>
-						</div>
-					</a>
-					<div class="box box7">
-						<img src="../img/code.jpg" alt="Code">
-					</div>
-					<a href="#portfolio" class="header-link portfolio-link">
-						<div class="box box6">
-							<img src="../img/portfolio.svg" alt="Portfolio" class="icon">
-							<p>ポートフォリオ</p>
-						</div>
-					</a>
-					<div class="box box9">
-						<img src="../img/joystick.jpg" alt="Joystick">
-					</div>
-					<div class="box box10"></div>
-					<div class="box box11">
-						<img src="../img/design.jpg" alt="Design">
-					</div>
-					<div class="box box12">
-						<img src="../img/inspire.png" alt="Inspire" class="icon">
-						<p>刺激</p>
-					</div>
-					<a href="#contact" class="header-link contact-link">
-						<div class="box box13">
-							<img src="../img/contact.svg" alt="Contact" class="icon">
-							<p>私に連絡して</p>
-						</div>
-					</a>
-					<div class="box box14"></div>
-				</div>
-			</div>
-		</header>
-		<div class="nav-wrapper" id="main-content">
-			<nav>
-				<ul>
-					<li class="title ja">[コーリー]</li>
-					<li class="menu ja">
-						<a href="#about">
-							<div>
-								<img src="../img/about.svg" alt="About"> 
-							</div>
-							<div>
-								<span>私について</span>
-							</div>
-						</a>
-					</li>
-					<li class="menu ja">
-						<a href="#skills">
-							<div>
-								<img src="../img/skills.svg" alt="Skills"> 
-							</div>
-							<div>
-								<span>スキル</span>
-							</div>
-						</a>
-					</li>
-					<li class="menu ja">
-						<a href="#portfolio">
-							<div>
-								<img src="../img/portfolio-light.svg" alt="Portfolio"> 
-							</div>
-							<div>
-								<span>ポートフォリオ</span>
-							</div>
-						</a>
-					</li>
-					<li class="menu ja">
-						<a href="https://blog.coreylanier.com/" target="_blank">
-							<div>
-								<img src="../img/blog-light.svg" alt="Blog"> 
-							</div>
-							<div>
-								<span>ブログ</span>
-							</div>
-						</a>
-					</li>
-					<li class="menu ja">
-						<a href="#contact">
-							<div>
-								<img src="../img/contact.svg" alt="Contact"> 
-							</div>
-							<div>
-								<span>私に連絡して</span>
-							</div>
-						</a>
-					</li>
-				</ul>
-			</nav>
-		</div>
-		<main>
-			<a href="#top">
-				<div class="top-link">
-					<img src="../img/top.png" alt="">
-					<p>[トップ]</p>
-				</div>
-			</a>
-			<div class="destination" id="about"></div>
-			<section class="about-section">
-				<div class="about-section__container">
-					<div class="about-section__image" data-aos="flip-up">
-						<img src="../img/corey.jpg" alt="Corey Lanier">
-					</div>
-					<div class="about-section__description" data-aos="flip-down">
-						<h2><img src="../img/about.png" alt="About"> 私について</h2>
-						<p>はじめまして、コーリー・ラニェーです。 私はカナダのトロントに拠点を置く多言語（英語、中国語、韓国語、日本語、エスペラント）ウエブ開発者です。私はHackerYouのWeb Development Immersiveを卒業し、競争的なゲーム、食べ物、そして執筆に情熱を注いでいます。</p>
-						<p>私はきれいなJavascriptを書くことに深い情熱を持っています、そしてReactは私のお気に入りのフレームワークの1つです。私はまた、私のデザインをより効率的で活気のあるものにするのに役立つ新しい技術やフレームワークについて学ぶことを楽しんでいます。</p>
-						<p>ハイテクでキャリアを始める前は、中国と韓国に5年間住んでいました。私は知識と技能と並んで、私がするすべてのことに好奇心、熱意、そして細心の注意を払います。</p>
-					</div>
-				</div>
-			</section>
-			<div class="destination" id="skills"></div>
-			<section class="skills-section">
-				<div class="skills-section__container">
-					<h2 data-aos="zoom-in-right"><img src="../img/skills.png" alt="Skills"> 自分のスキル</h2>
-					<div class="skills-section__grid">
-						<div class="skills-section__grid__box skills-section__grid__box1" data-aos="zoom-in-up">
-							<div>
-								<img src="../img/html5.png" alt="HTML 5">
-							</div>
-							<div>
-								<p class="skill-title">HTML 5</p>
-							</div>
-						</div>
-						<div class="skills-section__grid__box skills-section__grid__box2" data-aos="zoom-in-up">
-							<div>
-								<img src="../img/css3.png" alt="CSS 3">
-							</div>
-							<div>
-								<p class="skill-title">CSS 3</p>
-							</div>
-						</div>
-						<div class="skills-section__grid__box skills-section__grid__box3" data-aos="zoom-in-up">
-							<div>
-								<img src="../img/javascript.png" alt="Javascript">
-							</div>
-							<div>
-								<p class="skill-title">ジャバスクリプト ES6</p>
-							</div>
-						</div>
-						<div class="skills-section__grid__box skills-section__grid__box4" data-aos="zoom-in-up">
-							<div>
-								<img src="../img/jquery.png" alt="jQuery">
-							</div>
-							<div>
-								<p class="skill-title">ジェイクエリー</p>
-							</div>
-						</div>
-						<div class="skills-section__grid__box skills-section__grid__box5" data-aos="zoom-in-up">
-							<div>
-								<img src="../img/react.png" alt="React">
-							</div>
-							<div>
-								<p class="skill-title">リアクト</p>
-							</div>
-						</div>
-						<div class="skills-section__grid__box skills-section__grid__box6" data-aos="zoom-in-up">
-							<div>
-								<img src="../img/gulp.png" alt="Gulp" class="gulp-image">
-							</div>
-							<div>
-								<p class="skill-title">Gulp</p>
-							</div>
-						</div>
-						<div class="skills-section__grid__box skills-section__grid__box7" data-aos="zoom-in-up">
-							<div>
-								<img src="../img/sass.png" alt="Sass" class="sass-image">
-							</div>
-							<div>
-								<p class="skill-title">サース</p>
-							</div>
-						</div>
-						<div class="skills-section__grid__box skills-section__grid__box8" data-aos="zoom-in-up">
-							<div>
-								<img src="../img/firebase.png" alt="Firebase" class="firebase-image">
-							</div>
-							<div>
-								<p class="skill-title">Firebase</p>
-							</div>
-						</div>
-						<div class="skills-section__grid__box skills-section__grid__box9" data-aos="zoom-in-up">
-							<div>
-								<img src="../img/git.png" alt="Git/Github">
-							</div>
-							<div>
-								<p class="skill-title">ギット/ギットハブ</p>
-							</div>
-						</div>
-						<div class="skills-section__grid__box skills-section__grid__box10" data-aos="zoom-in-up">
-							<div>
-								<img src="../img/windows.png" alt="Windows">
-							</div>
-							<div>
-								<p class="skill-title">ウィンドウズ</p>
-							</div>
-						</div>
-						<div class="skills-section__grid__box skills-section__grid__box11" data-aos="zoom-in-up">
-							<div>
-								<img src="../img/apple.png" alt="Apple" class="osx-image">
-							</div>
-							<div>
-								<p class="skill-title">OSX</p>
-							</div>
-						</div>
-						<div class="skills-section__grid__box skills-section__grid__box12" data-aos="zoom-in-up">
-							<div>
-								<img src="../img/linux.png" alt="Linux" class="linux-image">
-							</div>
-							<div>
-								<p class="skill-title">リナックス</p>
-							</div>
-						</div>
-						<div class="skills-section__grid__box skills-section__grid__box13" data-aos="zoom-in-up">
-							<div>
-								<img src="../img/bootstrap.png" alt="Bootstrap">
-							</div>
-							<div>
-								<p class="skill-title">Bootstrap</p>
-							</div>
-						</div>
-						<div class="skills-section__grid__box skills-section__grid__box14" data-aos="zoom-in-up">
-							<div>
-								<img src="../img/node.png" alt="Node.js">
-							</div>
-							<div>
-								<p class="skill-title">Node.js</p>
-							</div>
-						</div>
-						<div class="skills-section__grid__box skills-section__grid__box15" data-aos="zoom-in-up">
-							<div>
-								<img src="../img/mongo.png" alt="MongoDB">
-							</div>
-							<div>
-								<p class="skill-title">MongoDB</p>
-							</div>
-						</div>
-						<div class="skills-section__grid__box skills-section__grid__box16" data-aos="zoom-in-up">
-							<div>
-								<img src="../img/express.png" alt="Express">
-							</div>
-							<div>
-								<p class="skill-title">Express</p>
-							</div>
-						</div>
-						<div class="skills-section__grid__box skills-section__grid__box17" data-aos="zoom-in-up">
-							<div>
-								<img src="../img/angular.png" alt="Angular">
-							</div>
-							<div>
-								<p class="skill-title">アンギュラー</p>
-							</div>
-						</div>
-						<div class="skills-section__grid__box skills-section__grid__box18" data-aos="zoom-in-up">
-							<div>
-								<img src="../img/redux.png" alt="Redux">
-							</div>
-							<div>
-								<p class="skill-title">Redux</p>
-							</div>
-						</div>
-						<div class="skills-section__grid__box skills-section__grid__box19" data-aos="zoom-in-up">
-							<div>
-								<img src="../img/graphql.png" alt="GraphQL">
-							</div>
-							<div>
-								<p class="skill-title">GraphQL</p>
-							</div>
-						</div>
-						<div class="skills-section__grid__box skills-section__grid__box20" data-aos="zoom-in-up">
-							<div>
-								<img src="../img/less.png" alt="LESS">
-							</div>
-							<div>
-								<p class="skill-title">LESS</p>
-							</div>
-						</div>
-						<div class="skills-section__grid__box skills-section__grid__box21" data-aos="zoom-in-up">
-							<div>
-								<img src="../img/vue.png" alt="Vue">
-							</div>
-							<div>
-								<p class="skill-title">Vue</p>
-							</div>
-						</div>
-						<div class="skills-section__grid__box skills-section__grid__box22" data-aos="zoom-in-up">
-							<div>
-								<img src="../img/mysql.png" alt="MySQL">
-							</div>
-							<div>
-								<p class="skill-title">MySQL</p>
-							</div>
-						</div>
-						<div class="skills-section__grid__box skills-section__grid__box23" data-aos="zoom-in-up">
-							<div>
-								<img src="../img/wordpress.png" alt="Wordpress">
-							</div>
-							<div>
-								<p class="skill-title">Wordpress</p>
-							</div>
-						</div>
-						<div class="skills-section__grid__box skills-section__grid__box24" data-aos="zoom-in-up">
-							<div>
-								<img src="../img/apollo.png" alt="Apollo">
-							</div>
-							<div>
-								<p class="skill-title">Apollo</p>
-							</div>
-						</div>
-						<div class="skills-section__grid__box skills-section__grid__box25" data-aos="zoom-in-up">
-							<div>
-								<img src="../img/typescript.png" alt="Typescript">
-							</div>
-							<div>
-								<p class="skill-title">タイップスクリプト</p>
-							</div>
-						</div>
-					</div>
-				</div>
-			</section>
-			<div class="destination" id="portfolio"></div>
-			<section class="portfolio-section">
-				<div class="portfolio-section__container">
-					<h2 data-aos="zoom-in-right"><img src="../img/portfolio.png" alt="Portfolio"> 私のポートフォリオ</h2>
-				</div>
-				<div class="portfolio-section__grid-new">
-					<div class="portfolio-section__grid-new__box portfolio-section__grid-new__box1" data-aos="fade-right">
-						<div class="portfolio-section__grid-new__box--image">
-							<img src="../img/notez.png" alt="NoteZ">
-						</div>
-						<div class="portfolio-section__grid-new__box--description">
-							<h3>ノートZ</h3>
-							<h4>React / Sass / Firebase</h4>
-							<p>このノートアプリは、競合ゲーム内での対戦など、特定のシナリオを対象としたノートの保存と取得を目的として設計されています。 また、読みやすくするために、指定したデータに基づいてメモをさらに絞り込むこともできます。</p>
-							<div class="link-container">
-								<a href="https://notez-beta.coreylanier.com/" target="_blank">
-									<div class="button">
-										<h4><i class="fas fa-eye"></i></h4>
-										<p>プレビュー</p>
-									</div>
-								</a>
-								<a href="http://github.com/MissingPersonFGC/notez-react" target="_blank">
-									<div class="button">
-										<h4><i class="fab fa-github"></i></h4>
-										<p>ソースコード</p>
-									</div>
-								</a>
-							</div>
-						</div>
-					</div>
-					<div class="portfolio-section__grid-new__box portfolio-section__grid-new__box2" data-aos="fade-left">
-						<div class="portfolio-section__grid-new__box--image">
-							<img src="../img/vueblog.png" alt="maxshop">
-						</div>
-						<div class="portfolio-section__grid-new__box--description">
-							<h3>Vue ブログ</h3>
-							<h4>Vue / Node.js / Express / MongoDB</h4>
-							<p>シンプルなコンテンツ管理システムとブログのフロントエンドを作成するためにVueのプールスタックアプリケーションを構築しました。</p>
-							<p>このアプリケーションを使用すると、新しいユーザーを作成することができ、ユーザーの管理者は、複数の作成者を作成し、公開してコメントを付けることができます。</p>
-							<div class="link-container">
-								<a href="https://blog.coreylanier.com/" target="_blank">
-									<div class="button">
-										<h4>
-											<i class="fas fa-eye"></i>
-										</h4>
-										<p>プレビュー</p>
-									</div>
-								</a>
-								<a href="https://github.com/MissingPersonFGC/vue-blog" target="_blank">
-									<div class="button">
-										<h4>
-											<i class="fab fa-github"></i>
-										</h4>
-										<p>ソースコード</p>
-									</div>
-								</a>
-							</div>
-						</div>
-					</div>
-					<div class="portfolio-section__grid-new__box portfolio-section__grid-new__box3" data-aos="fade-right">
-						<div class="portfolio-section__grid-new__box--image">
-							<img src="../img/namechanger.png" alt="maxshop">
-						</div>
-						<div class="portfolio-section__grid-new__box--description">
-							<h3>タイトルチェンジャー</h3>
-							<h4>React / Node.js / Express / API / CSS</h4>
-							<p>iCademy Middle East用に作成したWebアプリケーション。CanvasLMS APIを使用して、教師がコースコンテンツの大部分を変更できるようにします。</p>
-							<p>このアプリには、Canvas APIデータの更新、名前の長さの制御、CSVテンプレートファイルの生成、アップロードされたCSVファイルからの新しい名前の読み取りを処理するNode.jsプロキシサーバーがあります。</p>
-							<div class="link-container">
-								<a href="https://name-changer.coreylanier.com/" target="_blank">
-									<div class="button">
-										<h4>
-											<i class="fas fa-eye"></i>
-										</h4>
-										<p>プレビュー</p>
-									</div>
-								</a>
-								<a href="https://github.com/MissingPersonFGC/name-changer" target="_blank">
-									<div class="button">
-										<h4>
-											<i class="fab fa-github"></i>
-										</h4>
-										<p>ソースコード</p>
-									</div>
-								</a>
-							</div>
-						</div>
-					</div>
-					<div class="portfolio-section__grid-new__box portfolio-section__grid-new__box4" data-aos="fade-left">
-						<div class="portfolio-section__grid-new__box--image">
-							<img src="../img/bikeshare.png" alt="Bikeshare">
-						</div>
-						<div class="portfolio-section__grid-new__box--description">
-							<h3>バイクシェア</h3>
-							<h4>HTML / CSS / Javascript / jQuery / API</h4>
-							<p>このバイクシェアは、モバイルの使い方を念頭に置いて調整され、レンタル自転車をドッキングするための空いているスロットだけでなく利用可能な自転車も検索します。</p>
-							<div class="link-container">
-								<a href="https://coreylanier.com/bikeshare" target="_blank">
-									<div class="button">
-										<h4>
-											<i class="fas fa-eye"></i>
-										</h4>
-										<p>プレビュー</p>
-									</div>
-								</a>
-								<a href="https://github.com/MissingPersonFGC/citybikes_app_corey_alan_project4" target="_blank">
-									<div class="button">
-										<h4>
-											<i class="fab fa-github"></i>
-										</h4>
-										<p>ソースコード</p>
-									</div>
-								</a>
-							</div>
-						</div>
-					</div>
-					<div class="portfolio-section__grid-new__box portfolio-section__grid-new__box5" data-aos="fade-right">
-						<div class="portfolio-section__grid-new__box--image">
-							<img src="../img/streamthis.png" alt="Stream This!">
-						</div>
-						<div class="portfolio-section__grid-new__box--description">
-							<h3>これをストリーミング！</h3>
-							<h4>React / Sass / API</h4>
-							<p>このアプリは、Twitchサービスで利用可能なライブストリームを見つけて、最も人気のあるものによってあなたのページにそれらをリストすることができ、そしてあなたがストリームをクリックスルーすることを可能にします。</p>
-							<p>このアプリはTwitch API内で動作し、Twitchからのロックアウトを防ぐために1分あたりのAPI呼び出しの量を最小限に抑えます。</p>
-							<div class="link-container">
-								<a href="http://coreylanier.com/twitchfinder" target="_blank">
-									<div class="button">
-										<h4>
-											<i class="fas fa-eye"></i>
-										</h4>
-										<p>プレビュー</p>
-									</div>
-								</a>
-								<a href="https://github.com/MissingPersonFGC/twitch_app_project5" target="_blank">
-									<div class="button">
-										<h4>
-											<i class="fab fa-github"></i>
-										</h4>
-										<p>ソースコード</p>
-									</div>
-								</a>
-							</div>
-						</div>
-					</div>
-					<div class="portfolio-section__grid-new__box portfolio-section__grid-new__box6" data-aos="fade-left">
-						<div class="portfolio-section__grid-new__box--image">
-							<img src="../img/draftlottery.png" alt="Draft Lottery">
-						</div>
-						<div class="portfolio-section__grid-new__box--description">
-							<h3>抽選ドラフト</h3>
-							<h4>HTML / CSS / Javascript / jQuery</h4>
-							<p>このアプリは、人々が自分のチームベースの大会のためにランダムにチームを起草することを可能にします。 あなたはあなたのプレーヤーを追加し、プレーヤープールが空になるまでプレーヤーを起草する前にチームのサイズを設定することができます。</p>
-							<div class="link-container">
-								<a href="http://draftlottery.coreylanier.com/" target="_blank">
-									<div class="button">
-										<h4>
-											<i class="fas fa-eye"></i>
-										</h4>
-										<p>プレビュー</p>
-									</div>
-								</a>
-								<a href="https://github.com/MissingPersonFGC/draft-lottery" target="_blank">
-									<div class="button">
-										<h4>
-											<i class="fab fa-github"></i>
-										</h4>
-										<p>ソースコード</p>
-									</div>
-								</a>
-							</div>
-						</div>
-					</div>
-					<div class="portfolio-section__grid-new__box portfolio-section__grid-new__box7" data-aos="fade-right">
-						<div class="portfolio-section__grid-new__box--image">
-							<img src="../img/fgcelo.png" alt="FGC ELO">
-						</div>
-						<div class="portfolio-section__grid-new__box--description">
-							<h3>格闘ゲームのランク</h3>
-							<h4>React / Sass / Bootstrap / Firebase</h4>
-							<p>このアプリは、ゲームの試合からの結果の収集、および相対ELOポイントに基づく各プレーヤーの評価を可能にします。 それはまた使用されたキャラクターとプレイヤーの位置の追跡も可能にします。</p>
-							<div class="link-container">
-								<a href="http://smsrank.coreylanier.com/" target="_blank">
-									<div class="button">
-										<h4>
-											<i class="fas fa-eye"></i>
-										</h4>
-										<p>プレビュー</p>
-									</div>
-								</a>
-								<a href="https://github.com/MissingPersonFGC/fgc-elo" target="_blank">
-									<div class="button">
-										<h4>
-											<i class="fab fa-github"></i>
-										</h4>
-										<p>ソースコード</p>
-									</div>
-								</a>
-							</div>
-						</div>
-					</div>
-					<div class="portfolio-section__grid-new__box portfolio-section__grid-new__box8" data-aos="fade-left">
-						<div class="portfolio-section__grid-new__box--image">
-							<img src="../img/maxshop.png" alt="maxshop">
-						</div>
-						<div class="portfolio-section__grid-new__box--description">
-							<h3>マクスショップ</h3>
-							<h4>HTML / Sass / jQuery</h4>
-							<p>これは私がブートキャンプ中に行った簡単なPSDワイヤフレーム変換です。 これは、レスポンシブデザインでの視認性を維持するのに役立つFlexboxとCSS Gridの優れた使用法を示しています。</p>
-							<div class="link-container">
-								<a href="http://maxshop.coreylanier.com/" target="_blank">
-									<div class="button">
-										<h4>
-											<i class="fas fa-eye"></i>
-										</h4>
-										<p>プレビュー</p>
-									</div>
-								</a>
-								<a href="https://github.com/MissingPersonFGC/corey_lanier_project2" target="_blank">
-									<div class="button">
-										<h4>
-											<i class="fab fa-github"></i>
-										</h4>
-										<p>ソースコード</p>
-									</div>
-								</a>
-							</div>
-						</div>
-					</div>
-				</div>
-			</section>
-			<div class="destination" id="contact"></div>
-			<section class="contact-section">
-				<div class="contact-section__container">
-					<h2 data-aos="zoom-in-right"><img src="../img/contact.png" alt="Contact"> 私に連絡して</h2>
-					<p data-aos="zoom-in-right">一緒にインターネットの傑作を作りましょう！仕事のために私を雇うか、任命したいならば、以下の1つの方法で私に連絡してください。</p>
-					<div class="contact-section-wrapper">
-						<div class="contact-section__info" data-aos="flip-left">
-							<p>Eメール: iam@coreylanier.com</p>
-							<p>LINE: brawndo84</p>
-							<a href="http://facebook.com/missingpersonfgc" target="_blank"><img src="../img/facebook.svg" alt="Facebook"></a>
-							<a href="http://twitter.com/JTMMissingPersn" target="_blank"><img src="../img/twitter.png" alt="Twitter"></a>
-							<a href="http://instagram.com/missingpersonfgc" target="_blank"><img src="../img/instagram.png" alt="Instagram"></a>
-							<a href="https://www.linkedin.com/in/corey-lanier-74906689/" target="_blank"><img src="../img/linkedin.png" alt="Linkedin"></a>
-							<a href="http://github.com/MissingPersonFGC"><img src="../img/github.png" alt="Github"></a>
-						</div>
-						<div class="contact-section__send-email" data-aos="flip-right">
-							<div class="contact-section__send-email__form">
-								<form action="https://formspree.io/iam@coreylanier.com" method="POST">
-									<input type="text" name="Full Name" id="fullName" placeholder="あなたの名前" required>
-									<input type="email" name="email" id="email" placeholder="Eメール" required>
-									<textarea name="comments" id="comments" cols="30" rows="10" placeholder="メッセージ" required></textarea>
-									<input type="submit" value="メールを送ってください">
-								</form>
-							</div>
-						</div>
-					</div>
-				</div>
-			</section>
-		</main>
-		<footer>
-			<div class="footer-wrapper">
-				<div class="footer-copyright">
-					<p>© 2018 コーリー・ラニーア、全著作権所有。</p>
-				</div>
-				<div class="footer-logo">
-					<img src="../img/ltianbottom.png" alt="l天">
-				</div>
-			</div>
-		</footer>
-		<script src='https://code.jquery.com/jquery-3.2.1.min.js' integrity='sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4='crossorigin='anonymous'></script>
-		<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-		<script src="../public/scripts/main.js"></script>
-	</body>
+    <header id="top">
+      <div class="language-select">
+        <select name="language" id="language">
+          <option value="ja">日本語</option>
+          <option value="en">English</option>
+          <option value="zh-cn">中文（简体）</option>
+          <option value="zh-tw">中文（繁體）</option>
+          <option value="kr">한국어</option>
+          <option value="eo">Esperanto</option>
+        </select>
+      </div>
+      <div class="wrapper">
+        <div
+          class="box logo-box"
+          data-aos="zoom-in-down"
+          data-aos-duration="1000"
+        >
+          <img src="../img/ltian.png" alt="l天" />
+        </div>
+        <div class="header-grid" data-aos="zoom-in" data-aos-duration="1000">
+          <div class="box box0">
+            <img src="../img/ltian.png" alt="l天" />
+          </div>
+          <div class="box box1">
+            <h1>コーリー・ラニェー</h1>
+            <p>ウエブ開発者</p>
+          </div>
+          <a href="#about" class="header-link about-link">
+            <div class="box box2">
+              <img src="../img/about.svg" class="icon" alt="About" />
+              <p>私について</p>
+            </div>
+          </a>
+          <div class="box box3">
+            <img src="../img/laptop.jpg" alt="Laptop" />
+          </div>
+          <div class="box box4">
+            <img src="../img/smartphone.jpg" alt="Smartphone" />
+          </div>
+          <a href="#skills" class="header-link skills-link">
+            <div class="box box5">
+              <img src="../img/skills.svg" alt="Skills" class="icon" />
+              <p>スキル</p>
+            </div>
+          </a>
+          <a
+            href="https://blog.coreylanier.com"
+            target="_blank"
+            class="header-link blog-link"
+          >
+            <div class="box box8">
+              <img src="../img/blog.svg" alt="Blog" class="icon" />
+              <p>ブログ</p>
+            </div>
+          </a>
+          <div class="box box7">
+            <img src="../img/code.jpg" alt="Code" />
+          </div>
+          <a href="#portfolio" class="header-link portfolio-link">
+            <div class="box box6">
+              <img src="../img/portfolio.svg" alt="Portfolio" class="icon" />
+              <p>ポートフォリオ</p>
+            </div>
+          </a>
+          <div class="box box9">
+            <img src="../img/joystick.jpg" alt="Joystick" />
+          </div>
+          <div class="box box10"></div>
+          <div class="box box11">
+            <img src="../img/design.jpg" alt="Design" />
+          </div>
+          <div class="box box12">
+            <img src="../img/inspire.png" alt="Inspire" class="icon" />
+            <p>刺激</p>
+          </div>
+          <a href="#contact" class="header-link contact-link">
+            <div class="box box13">
+              <img src="../img/contact.svg" alt="Contact" class="icon" />
+              <p>私に連絡して</p>
+            </div>
+          </a>
+          <div class="box box14"></div>
+        </div>
+      </div>
+    </header>
+    <div class="nav-wrapper" id="main-content">
+      <nav>
+        <ul>
+          <li class="title ja">[コーリー]</li>
+          <li class="menu ja">
+            <a href="#about">
+              <div>
+                <img src="../img/about.svg" alt="About" />
+              </div>
+              <div>
+                <span>私について</span>
+              </div>
+            </a>
+          </li>
+          <li class="menu ja">
+            <a href="#skills">
+              <div>
+                <img src="../img/skills.svg" alt="Skills" />
+              </div>
+              <div>
+                <span>スキル</span>
+              </div>
+            </a>
+          </li>
+          <li class="menu ja">
+            <a href="#portfolio">
+              <div>
+                <img src="../img/portfolio-light.svg" alt="Portfolio" />
+              </div>
+              <div>
+                <span>ポートフォリオ</span>
+              </div>
+            </a>
+          </li>
+          <li class="menu ja">
+            <a href="https://blog.coreylanier.com/" target="_blank">
+              <div>
+                <img src="../img/blog-light.svg" alt="Blog" />
+              </div>
+              <div>
+                <span>ブログ</span>
+              </div>
+            </a>
+          </li>
+          <li class="menu ja">
+            <a href="#contact">
+              <div>
+                <img src="../img/contact.svg" alt="Contact" />
+              </div>
+              <div>
+                <span>私に連絡して</span>
+              </div>
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+    <main>
+      <a href="#top">
+        <div class="top-link">
+          <img src="../img/top.png" alt="" />
+          <p>[トップ]</p>
+        </div>
+      </a>
+      <div class="destination" id="about"></div>
+      <section class="about-section">
+        <div class="about-section__container">
+          <div class="about-section__image" data-aos="flip-up">
+            <img src="../img/corey.jpg" alt="Corey Lanier" />
+          </div>
+          <div class="about-section__description" data-aos="flip-down">
+            <h2><img src="../img/about.png" alt="About" /> 私について</h2>
+            <p>
+              はじめまして、コーリー・ラニェーです。
+              私はカナダのトロントに拠点を置く多言語（英語、中国語、韓国語、日本語、エスペラント）ウエブ開発者です。私はHackerYouのWeb
+              Development
+              Immersiveを卒業し、競争的なゲーム、食べ物、そして執筆に情熱を注いでいます。
+            </p>
+            <p>
+              私はきれいなJavascriptを書くことに深い情熱を持っています、そしてReactは私のお気に入りのフレームワークの1つです。私はまた、私のデザインをより効率的で活気のあるものにするのに役立つ新しい技術やフレームワークについて学ぶことを楽しんでいます。
+            </p>
+            <p>
+              ハイテクでキャリアを始める前は、中国と韓国に5年間住んでいました。私は知識と技能と並んで、私がするすべてのことに好奇心、熱意、そして細心の注意を払います。
+            </p>
+          </div>
+        </div>
+      </section>
+      <div class="destination" id="skills"></div>
+      <section class="skills-section">
+        <div class="skills-section__container">
+          <h2 data-aos="zoom-in-right">
+            <img src="../img/skills.png" alt="Skills" /> 自分のスキル
+          </h2>
+          <div class="skills-section__grid">
+            <div
+              class="skills-section__grid__box skills-section__grid__box1"
+              data-aos="zoom-in-up"
+            >
+              <div>
+                <img src="../img/html5.png" alt="HTML 5" />
+              </div>
+              <div>
+                <p class="skill-title">HTML 5</p>
+              </div>
+            </div>
+            <div
+              class="skills-section__grid__box skills-section__grid__box2"
+              data-aos="zoom-in-up"
+            >
+              <div>
+                <img src="../img/css3.png" alt="CSS 3" />
+              </div>
+              <div>
+                <p class="skill-title">CSS 3</p>
+              </div>
+            </div>
+            <div
+              class="skills-section__grid__box skills-section__grid__box3"
+              data-aos="zoom-in-up"
+            >
+              <div>
+                <img src="../img/javascript.png" alt="Javascript" />
+              </div>
+              <div>
+                <p class="skill-title">ジャバスクリプト ES6</p>
+              </div>
+            </div>
+            <div
+              class="skills-section__grid__box skills-section__grid__box4"
+              data-aos="zoom-in-up"
+            >
+              <div>
+                <img src="../img/jquery.png" alt="jQuery" />
+              </div>
+              <div>
+                <p class="skill-title">ジェイクエリー</p>
+              </div>
+            </div>
+            <div
+              class="skills-section__grid__box skills-section__grid__box5"
+              data-aos="zoom-in-up"
+            >
+              <div>
+                <img src="../img/react.png" alt="React" />
+              </div>
+              <div>
+                <p class="skill-title">リアクト</p>
+              </div>
+            </div>
+            <div
+              class="skills-section__grid__box skills-section__grid__box6"
+              data-aos="zoom-in-up"
+            >
+              <div>
+                <img src="../img/gulp.png" alt="Gulp" class="gulp-image" />
+              </div>
+              <div>
+                <p class="skill-title">Gulp</p>
+              </div>
+            </div>
+            <div
+              class="skills-section__grid__box skills-section__grid__box7"
+              data-aos="zoom-in-up"
+            >
+              <div>
+                <img src="../img/sass.png" alt="Sass" class="sass-image" />
+              </div>
+              <div>
+                <p class="skill-title">サース</p>
+              </div>
+            </div>
+            <div
+              class="skills-section__grid__box skills-section__grid__box8"
+              data-aos="zoom-in-up"
+            >
+              <div>
+                <img
+                  src="../img/firebase.png"
+                  alt="Firebase"
+                  class="firebase-image"
+                />
+              </div>
+              <div>
+                <p class="skill-title">Firebase</p>
+              </div>
+            </div>
+            <div
+              class="skills-section__grid__box skills-section__grid__box9"
+              data-aos="zoom-in-up"
+            >
+              <div>
+                <img src="../img/git.png" alt="Git/Github" />
+              </div>
+              <div>
+                <p class="skill-title">ギット/ギットハブ</p>
+              </div>
+            </div>
+            <div
+              class="skills-section__grid__box skills-section__grid__box10"
+              data-aos="zoom-in-up"
+            >
+              <div>
+                <img src="../img/windows.png" alt="Windows" />
+              </div>
+              <div>
+                <p class="skill-title">ウィンドウズ</p>
+              </div>
+            </div>
+            <div
+              class="skills-section__grid__box skills-section__grid__box11"
+              data-aos="zoom-in-up"
+            >
+              <div>
+                <img src="../img/apple.png" alt="Apple" class="osx-image" />
+              </div>
+              <div>
+                <p class="skill-title">OSX</p>
+              </div>
+            </div>
+            <div
+              class="skills-section__grid__box skills-section__grid__box12"
+              data-aos="zoom-in-up"
+            >
+              <div>
+                <img src="../img/linux.png" alt="Linux" class="linux-image" />
+              </div>
+              <div>
+                <p class="skill-title">リナックス</p>
+              </div>
+            </div>
+            <div
+              class="skills-section__grid__box skills-section__grid__box13"
+              data-aos="zoom-in-up"
+            >
+              <div>
+                <img src="../img/bootstrap.png" alt="Bootstrap" />
+              </div>
+              <div>
+                <p class="skill-title">Bootstrap</p>
+              </div>
+            </div>
+            <div
+              class="skills-section__grid__box skills-section__grid__box14"
+              data-aos="zoom-in-up"
+            >
+              <div>
+                <img src="../img/node.png" alt="Node.js" />
+              </div>
+              <div>
+                <p class="skill-title">Node.js</p>
+              </div>
+            </div>
+            <div
+              class="skills-section__grid__box skills-section__grid__box15"
+              data-aos="zoom-in-up"
+            >
+              <div>
+                <img src="../img/mongo.png" alt="MongoDB" />
+              </div>
+              <div>
+                <p class="skill-title">MongoDB</p>
+              </div>
+            </div>
+            <div
+              class="skills-section__grid__box skills-section__grid__box16"
+              data-aos="zoom-in-up"
+            >
+              <div>
+                <img src="../img/express.png" alt="Express" />
+              </div>
+              <div>
+                <p class="skill-title">Express</p>
+              </div>
+            </div>
+            <div
+              class="skills-section__grid__box skills-section__grid__box17"
+              data-aos="zoom-in-up"
+            >
+              <div>
+                <img src="../img/angular.png" alt="Angular" />
+              </div>
+              <div>
+                <p class="skill-title">アンギュラー</p>
+              </div>
+            </div>
+            <div
+              class="skills-section__grid__box skills-section__grid__box18"
+              data-aos="zoom-in-up"
+            >
+              <div>
+                <img src="../img/redux.png" alt="Redux" />
+              </div>
+              <div>
+                <p class="skill-title">Redux</p>
+              </div>
+            </div>
+            <div
+              class="skills-section__grid__box skills-section__grid__box19"
+              data-aos="zoom-in-up"
+            >
+              <div>
+                <img src="../img/graphql.png" alt="GraphQL" />
+              </div>
+              <div>
+                <p class="skill-title">GraphQL</p>
+              </div>
+            </div>
+            <div
+              class="skills-section__grid__box skills-section__grid__box20"
+              data-aos="zoom-in-up"
+            >
+              <div>
+                <img src="../img/less.png" alt="LESS" />
+              </div>
+              <div>
+                <p class="skill-title">LESS</p>
+              </div>
+            </div>
+            <div
+              class="skills-section__grid__box skills-section__grid__box21"
+              data-aos="zoom-in-up"
+            >
+              <div>
+                <img src="../img/vue.png" alt="Vue" />
+              </div>
+              <div>
+                <p class="skill-title">Vue</p>
+              </div>
+            </div>
+            <div
+              class="skills-section__grid__box skills-section__grid__box22"
+              data-aos="zoom-in-up"
+            >
+              <div>
+                <img src="../img/mysql.png" alt="MySQL" />
+              </div>
+              <div>
+                <p class="skill-title">MySQL</p>
+              </div>
+            </div>
+            <div
+              class="skills-section__grid__box skills-section__grid__box23"
+              data-aos="zoom-in-up"
+            >
+              <div>
+                <img src="../img/wordpress.png" alt="Wordpress" />
+              </div>
+              <div>
+                <p class="skill-title">Wordpress</p>
+              </div>
+            </div>
+            <div
+              class="skills-section__grid__box skills-section__grid__box24"
+              data-aos="zoom-in-up"
+            >
+              <div>
+                <img src="../img/apollo.png" alt="Apollo" />
+              </div>
+              <div>
+                <p class="skill-title">Apollo</p>
+              </div>
+            </div>
+            <div
+              class="skills-section__grid__box skills-section__grid__box25"
+              data-aos="zoom-in-up"
+            >
+              <div>
+                <img src="../img/typescript.png" alt="Typescript" />
+              </div>
+              <div>
+                <p class="skill-title">タイップスクリプト</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <div class="destination" id="portfolio"></div>
+      <section class="portfolio-section">
+        <div class="portfolio-section__container">
+          <h2 data-aos="zoom-in-right">
+            <img src="../img/portfolio.png" alt="Portfolio" />
+            私のポートフォリオ
+          </h2>
+        </div>
+        <div class="portfolio-section__grid-new">
+          <div
+            class="portfolio-section__grid-new__box portfolio-section__grid-new__box1"
+            data-aos="fade-right"
+          >
+            <div class="portfolio-section__grid-new__box--image">
+              <img src="../img/notez.png" alt="NoteZ" />
+            </div>
+            <div class="portfolio-section__grid-new__box--description">
+              <h3>ノートZ</h3>
+              <h4>
+                React / Material UI / Hooks / i18n / Node.js / Express / MongoDB
+              </h4>
+              <p>
+                このノートアプリは、競合ゲーム内での対戦など、特定のシナリオを対象としたノートの保存と取得を目的として設計されています。
+                また、読みやすくするために、指定したデータに基づいてメモをさらに絞り込むこともできます。
+              </p>
+              <div class="link-container">
+                <a href="https://checkthenotez.com/" target="_blank">
+                  <div class="button">
+                    <h4><i class="fas fa-eye"></i></h4>
+                    <p>プレビュー</p>
+                  </div>
+                </a>
+                <a
+                  href="http://github.com/MissingPersonFGC/notez"
+                  target="_blank"
+                >
+                  <div class="button">
+                    <h4><i class="fab fa-github"></i></h4>
+                    <p>ソースコード</p>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div
+            class="portfolio-section__grid-new__box portfolio-section__grid-new__box2"
+            data-aos="fade-left"
+          >
+            <div class="portfolio-section__grid-new__box--image">
+              <img src="../img/vueblog.png" alt="maxshop" />
+            </div>
+            <div class="portfolio-section__grid-new__box--description">
+              <h3>Vue ブログ</h3>
+              <h4>Vue / Node.js / Express / MongoDB</h4>
+              <p>
+                シンプルなコンテンツ管理システムとブログのフロントエンドを作成するためにVueのプールスタックアプリケーションを構築しました。
+              </p>
+              <p>
+                このアプリケーションを使用すると、新しいユーザーを作成することができ、ユーザーの管理者は、複数の作成者を作成し、公開してコメントを付けることができます。
+              </p>
+              <div class="link-container">
+                <a href="https://blog.coreylanier.com/" target="_blank">
+                  <div class="button">
+                    <h4>
+                      <i class="fas fa-eye"></i>
+                    </h4>
+                    <p>プレビュー</p>
+                  </div>
+                </a>
+                <a
+                  href="https://github.com/MissingPersonFGC/vue-blog"
+                  target="_blank"
+                >
+                  <div class="button">
+                    <h4>
+                      <i class="fab fa-github"></i>
+                    </h4>
+                    <p>ソースコード</p>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div
+            class="portfolio-section__grid-new__box portfolio-section__grid-new__box3"
+            data-aos="fade-right"
+          >
+            <div class="portfolio-section__grid-new__box--image">
+              <img src="../img/namechanger.png" alt="maxshop" />
+            </div>
+            <div class="portfolio-section__grid-new__box--description">
+              <h3>タイトルチェンジャー</h3>
+              <h4>React / Firebase / Node.js / Express / API / CSS</h4>
+              <p>
+                iCademy Middle East用に作成したWebアプリケーション。CanvasLMS
+                APIを使用して、教師がコースコンテンツの大部分を変更できるようにします。
+              </p>
+              <p>
+                このアプリには、Canvas
+                APIデータの更新、名前の長さの制御、CSVテンプレートファイルの生成、アップロードされたCSVファイルからの新しい名前の読み取りを処理するNode.jsプロキシサーバーがあります。
+              </p>
+              <div class="link-container">
+                <a href="https://icad-name-changer.now.sh/" target="_blank">
+                  <div class="button">
+                    <h4>
+                      <i class="fas fa-eye"></i>
+                    </h4>
+                    <p>プレビュー</p>
+                  </div>
+                </a>
+                <a
+                  href="https://github.com/MissingPersonFGC/name-changer"
+                  target="_blank"
+                >
+                  <div class="button">
+                    <h4>
+                      <i class="fab fa-github"></i>
+                    </h4>
+                    <p>ソースコード</p>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div
+            class="portfolio-section__grid-new__box portfolio-section__grid-new__box4"
+            data-aos="fade-left"
+          >
+            <div class="portfolio-section__grid-new__box--image">
+              <img src="../img/bikeshare.png" alt="Bikeshare" />
+            </div>
+            <div class="portfolio-section__grid-new__box--description">
+              <h3>バイクシェア</h3>
+              <h4>HTML / CSS / Javascript / jQuery / API</h4>
+              <p>
+                このバイクシェアは、モバイルの使い方を念頭に置いて調整され、レンタル自転車をドッキングするための空いているスロットだけでなく利用可能な自転車も検索します。
+              </p>
+              <div class="link-container">
+                <a href="https://coreylanier.com/bikeshare" target="_blank">
+                  <div class="button">
+                    <h4>
+                      <i class="fas fa-eye"></i>
+                    </h4>
+                    <p>プレビュー</p>
+                  </div>
+                </a>
+                <a
+                  href="https://github.com/MissingPersonFGC/citybikes_app_corey_alan_project4"
+                  target="_blank"
+                >
+                  <div class="button">
+                    <h4>
+                      <i class="fab fa-github"></i>
+                    </h4>
+                    <p>ソースコード</p>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div
+            class="portfolio-section__grid-new__box portfolio-section__grid-new__box5"
+            data-aos="fade-right"
+          >
+            <div class="portfolio-section__grid-new__box--image">
+              <img src="../img/streamthis.png" alt="Stream This!" />
+            </div>
+            <div class="portfolio-section__grid-new__box--description">
+              <h3>これをストリーミング！</h3>
+              <h4>React / Sass / API</h4>
+              <p>
+                このアプリは、Twitchサービスで利用可能なライブストリームを見つけて、最も人気のあるものによってあなたのページにそれらをリストすることができ、そしてあなたがストリームをクリックスルーすることを可能にします。
+              </p>
+              <p>
+                このアプリはTwitch
+                API内で動作し、Twitchからのロックアウトを防ぐために1分あたりのAPI呼び出しの量を最小限に抑えます。
+              </p>
+              <div class="link-container">
+                <a href="http://coreylanier.com/twitchfinder" target="_blank">
+                  <div class="button">
+                    <h4>
+                      <i class="fas fa-eye"></i>
+                    </h4>
+                    <p>プレビュー</p>
+                  </div>
+                </a>
+                <a
+                  href="https://github.com/MissingPersonFGC/twitch_app_project5"
+                  target="_blank"
+                >
+                  <div class="button">
+                    <h4>
+                      <i class="fab fa-github"></i>
+                    </h4>
+                    <p>ソースコード</p>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div
+            class="portfolio-section__grid-new__box portfolio-section__grid-new__box6"
+            data-aos="fade-left"
+          >
+            <div class="portfolio-section__grid-new__box--image">
+              <img src="../img/draftlottery.png" alt="Draft Lottery" />
+            </div>
+            <div class="portfolio-section__grid-new__box--description">
+              <h3>抽選ドラフト</h3>
+              <h4>HTML / CSS / Javascript / jQuery</h4>
+              <p>
+                このアプリは、人々が自分のチームベースの大会のためにランダムにチームを起草することを可能にします。
+                あなたはあなたのプレーヤーを追加し、プレーヤープールが空になるまでプレーヤーを起草する前にチームのサイズを設定することができます。
+              </p>
+              <div class="link-container">
+                <a href="http://draftlottery.coreylanier.com/" target="_blank">
+                  <div class="button">
+                    <h4>
+                      <i class="fas fa-eye"></i>
+                    </h4>
+                    <p>プレビュー</p>
+                  </div>
+                </a>
+                <a
+                  href="https://github.com/MissingPersonFGC/draft-lottery"
+                  target="_blank"
+                >
+                  <div class="button">
+                    <h4>
+                      <i class="fab fa-github"></i>
+                    </h4>
+                    <p>ソースコード</p>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div
+            class="portfolio-section__grid-new__box portfolio-section__grid-new__box7"
+            data-aos="fade-right"
+          >
+            <div class="portfolio-section__grid-new__box--image">
+              <img src="../img/fgcelo.png" alt="FGC ELO" />
+            </div>
+            <div class="portfolio-section__grid-new__box--description">
+              <h3>格闘ゲームのランク</h3>
+              <h4>React / Sass / Bootstrap / Firebase</h4>
+              <p>
+                このアプリは、ゲームの試合からの結果の収集、および相対ELOポイントに基づく各プレーヤーの評価を可能にします。
+                それはまた使用されたキャラクターとプレイヤーの位置の追跡も可能にします。
+              </p>
+              <div class="link-container">
+                <a href="http://smsrank.coreylanier.com/" target="_blank">
+                  <div class="button">
+                    <h4>
+                      <i class="fas fa-eye"></i>
+                    </h4>
+                    <p>プレビュー</p>
+                  </div>
+                </a>
+                <a
+                  href="https://github.com/MissingPersonFGC/fgc-elo"
+                  target="_blank"
+                >
+                  <div class="button">
+                    <h4>
+                      <i class="fab fa-github"></i>
+                    </h4>
+                    <p>ソースコード</p>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div
+            class="portfolio-section__grid-new__box portfolio-section__grid-new__box8"
+            data-aos="fade-left"
+          >
+            <div class="portfolio-section__grid-new__box--image">
+              <img src="../img/maxshop.png" alt="maxshop" />
+            </div>
+            <div class="portfolio-section__grid-new__box--description">
+              <h3>マクスショップ</h3>
+              <h4>HTML / Sass / jQuery</h4>
+              <p>
+                これは私がブートキャンプ中に行った簡単なPSDワイヤフレーム変換です。
+                これは、レスポンシブデザインでの視認性を維持するのに役立つFlexboxとCSS
+                Gridの優れた使用法を示しています。
+              </p>
+              <div class="link-container">
+                <a href="http://maxshop.coreylanier.com/" target="_blank">
+                  <div class="button">
+                    <h4>
+                      <i class="fas fa-eye"></i>
+                    </h4>
+                    <p>プレビュー</p>
+                  </div>
+                </a>
+                <a
+                  href="https://github.com/MissingPersonFGC/corey_lanier_project2"
+                  target="_blank"
+                >
+                  <div class="button">
+                    <h4>
+                      <i class="fab fa-github"></i>
+                    </h4>
+                    <p>ソースコード</p>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <div class="destination" id="contact"></div>
+      <section class="contact-section">
+        <div class="contact-section__container">
+          <h2 data-aos="zoom-in-right">
+            <img src="../img/contact.png" alt="Contact" /> 私に連絡して
+          </h2>
+          <p data-aos="zoom-in-right">
+            一緒にインターネットの傑作を作りましょう！仕事のために私を雇うか、任命したいならば、以下の1つの方法で私に連絡してください。
+          </p>
+          <div class="contact-section-wrapper">
+            <div class="contact-section__info" data-aos="flip-left">
+              <p>Eメール: iam@coreylanier.com</p>
+              <p>LINE: brawndo84</p>
+              <a href="http://facebook.com/missingpersonfgc" target="_blank"
+                ><img src="../img/facebook.svg" alt="Facebook"
+              /></a>
+              <a href="http://twitter.com/JTMMissingPersn" target="_blank"
+                ><img src="../img/twitter.png" alt="Twitter"
+              /></a>
+              <a href="http://instagram.com/missingpersonfgc" target="_blank"
+                ><img src="../img/instagram.png" alt="Instagram"
+              /></a>
+              <a
+                href="https://www.linkedin.com/in/corey-lanier-74906689/"
+                target="_blank"
+                ><img src="../img/linkedin.png" alt="Linkedin"
+              /></a>
+              <a href="http://github.com/MissingPersonFGC"
+                ><img src="../img/github.png" alt="Github"
+              /></a>
+            </div>
+            <div class="contact-section__send-email" data-aos="flip-right">
+              <div class="contact-section__send-email__form">
+                <form
+                  action="https://formspree.io/iam@coreylanier.com"
+                  method="POST"
+                >
+                  <input
+                    type="text"
+                    name="Full Name"
+                    id="fullName"
+                    placeholder="あなたの名前"
+                    required
+                  />
+                  <input
+                    type="email"
+                    name="email"
+                    id="email"
+                    placeholder="Eメール"
+                    required
+                  />
+                  <textarea
+                    name="comments"
+                    id="comments"
+                    cols="30"
+                    rows="10"
+                    placeholder="メッセージ"
+                    required
+                  ></textarea>
+                  <input type="submit" value="メールを送ってください" />
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <div class="footer-wrapper">
+        <div class="footer-copyright">
+          <p>© 2018 コーリー・ラニーア、全著作権所有。</p>
+        </div>
+        <div class="footer-logo">
+          <img src="../img/ltianbottom.png" alt="l天" />
+        </div>
+      </div>
+    </footer>
+    <script
+      src="https://code.jquery.com/jquery-3.2.1.min.js"
+      integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="../public/scripts/main.js"></script>
+  </body>
 </html>

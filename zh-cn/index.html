@@ -1,668 +1,936 @@
 <!DOCTYPE html>
 <html lang="zh-Hans">
-	<head>
-		<meta charset="UTF-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0 user-scalable=no">
-		<meta http-equiv="X-UA-Compatible" content="ie=edge">
-		<title>蓝天【创作的前端开发】</title>
-		<link rel="apple-touch-icon" sizes="57x57" href="../apple-icon-57x57.png">
-		<link rel="apple-touch-icon" sizes="60x60" href="../apple-icon-60x60.png">
-		<link rel="apple-touch-icon" sizes="72x72" href="../apple-icon-72x72.png">
-		<link rel="apple-touch-icon" sizes="76x76" href="../apple-icon-76x76.png">
-		<link rel="apple-touch-icon" sizes="114x114" href="../apple-icon-114x114.png">
-		<link rel="apple-touch-icon" sizes="120x120" href="../apple-icon-120x120.png">
-		<link rel="apple-touch-icon" sizes="144x144" href="../apple-icon-144x144.png">
-		<link rel="apple-touch-icon" sizes="152x152" href="../apple-icon-152x152.png">
-		<link rel="apple-touch-icon" sizes="180x180" href="../apple-icon-180x180.png">
-		<link rel="icon" type="image/png" sizes="192x192" href="../android-icon-192x192.png">
-		<link rel="icon" type="image/png" sizes="32x32" href="../favicon-32x32.png">
-		<link rel="icon" type="image/png" sizes="96x96" href="../favicon-96x96.png">
-		<link rel="icon" type="image/png" sizes="16x16" href="../favicon-16x16.png">
-		<meta name="msapplication-TileColor" content="#ffffff">
-		<meta name="msapplication-TileImage" content="../ms-icon-144x144.png">
-		<meta name="theme-color" content="#ffffff">
-		<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
-		<link rel="stylesheet" href="../public/styles/style.css">
-		<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-		<script defer src='https://use.fontawesome.com/releases/v5.0.6/js/all.js'></script>
-	</head>
-	<body>
-		<!-- Header background courtesy: Rick Harris (source: https://flic.kr/p/vBwV3q, use under CC BY-SA 2.0 license: https://creativecommons.org/licenses/by-sa/2.0/) -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0 user-scalable=no"
+    />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>蓝天【创作的前端开发】</title>
+    <link rel="apple-touch-icon" sizes="57x57" href="../apple-icon-57x57.png" />
+    <link rel="apple-touch-icon" sizes="60x60" href="../apple-icon-60x60.png" />
+    <link rel="apple-touch-icon" sizes="72x72" href="../apple-icon-72x72.png" />
+    <link rel="apple-touch-icon" sizes="76x76" href="../apple-icon-76x76.png" />
+    <link
+      rel="apple-touch-icon"
+      sizes="114x114"
+      href="../apple-icon-114x114.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="120x120"
+      href="../apple-icon-120x120.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="144x144"
+      href="../apple-icon-144x144.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="152x152"
+      href="../apple-icon-152x152.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="../apple-icon-180x180.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="192x192"
+      href="../android-icon-192x192.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="../favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="96x96"
+      href="../favicon-96x96.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="../favicon-16x16.png"
+    />
+    <meta name="msapplication-TileColor" content="#ffffff" />
+    <meta name="msapplication-TileImage" content="../ms-icon-144x144.png" />
+    <meta name="theme-color" content="#ffffff" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Open+Sans"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../public/styles/style.css" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <script
+      defer
+      src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"
+    ></script>
+  </head>
+  <body>
+    <!-- Header background courtesy: Rick Harris (source: https://flic.kr/p/vBwV3q, use under CC BY-SA 2.0 license: https://creativecommons.org/licenses/by-sa/2.0/) -->
 
-		<a href="#main-content" id="jumpTo"><div class="jumpTo"></div></a>
+    <a href="#main-content" id="jumpTo"><div class="jumpTo"></div></a>
 
-		<header id="top">
-			<div class="language-select">
-				<select name="language" id="language">
-					<option value="zh-cn">中文（简体）</option>
-					<option value="zh-tw">中文（繁體）</option>
-					<option value="en">English</option>
-					<option value="ja">日本語</option>
-					<option value="kr">한국어</option>
-					<option value="eo">Esperanto</option>
-				</select>
-			</div>
-			<div class="wrapper">
-				<div class="box logo-box" data-aos="zoom-in-down" data-aos-duration="1000">
-					<img src="../img/ltian.png" alt="l天">
-				</div>
-				<div class="header-grid" data-aos="zoom-in" data-aos-duration="1000">
-					<div class="box box0">
-						<img src="../img/ltian.png" alt="l天">
-					</div>
-					<div class="box box1">
-						<h1>蓝天</h1>
-						<p>前端开发人员</p>
-					</div>
-					<a href="#about" class="header-link about-link">
-						<div class="box box2">
-							<img src="../img/about.svg" class="icon" alt="About">
-							<p>关于我</p>
-						</div>
-					</a>
-					<div class="box box3">
-						<img src="../img/laptop.jpg" alt="Laptop">
-					</div>
-					<div class="box box4"><img src="../img/smartphone.jpg" alt="Smartphone"></div>
-					<a href="#skills" class="header-link skills-link">
-						<div class="box box5">
-							<img src="../img/skills.svg" alt="Skills" class="icon">
-							<p>我的技能</p>
-						</div>
-					</a>
-					<a href="https://blog.coreylanier.com" target="_blank" class="header-link blog-link">
-						<div class="box box8">
-							<img src="../img/blog.svg" alt="Blog" class="icon">
-							<p>博客</p>
-						</div>
-					</a>
-					<div class="box box7">
-						<img src="../img/code.jpg" alt="Code">
-					</div>
-					<a href="#portfolio" class="header-link portfolio-link">
-						<div class="box box6">
-							<img src="../img/portfolio.svg" alt="Portfolio" class="icon">
-							<p>工作实例</p>
-						</div>
-					</a>
-					<div class="box box9">
-						<img src="../img/joystick.jpg" alt="Joystick">
-					</div>
-					<div class="box box10"></div>
-					<div class="box box11">
-						<img src="../img/design.jpg" alt="Design">
-					</div>
-					<div class="box box12">
-						<img src="../img/inspire.png" alt="Inspire" class="icon">
-						<p>鼓舞的建立</p>
-					</div>
-					<a href="#contact" class="header-link contact-link">
-						<div class="box box13">
-							<img src="../img/contact.svg" alt="Contact" class="icon">
-							<p>联系我</p>
-						</div>
-					</a>
-					<div class="box box14"></div>
-				</div>
-			</div>
-		</header>
-		<div class="nav-wrapper" id="main-content">
-			<nav>
-				<ul>
-					<li class="title">[蓝天]</li>
-					<li class="menu">
-						<a href="#about">
-							<div>
-								<img src="../img/about.svg" alt="About"> 
-							</div>
-							<div>
-								<span>关于我</span>
-							</div>
-						</a>
-					</li>
-					<li class="menu">
-						<a href="#skills">
-							<div>
-								<img src="../img/skills.svg" alt="Skills"> 
-							</div>
-							<div>
-								<span>我的技能</span>
-							</div>
-						</a>
-					</li>
-					<li class="menu">
-						<a href="#portfolio">
-							<div>
-								<img src="../img/portfolio-light.svg" alt="Portfolio"> 
-							</div>
-							<div>
-								<span>工作实例</span>
-							</div>
-						</a>
-					</li>
-					<li class="menu">
-						<a href="https://blog.coreylanier.com/" target="_blank">
-							<div>
-								<img src="../img/blog-light.svg" alt="Blog"> 
-							</div>
-							<div>
-								<span>博客</span>
-							</div>
-						</a>
-					</li>
-					<li class="menu">
-						<a href="#contact">
-							<div>
-								<img src="../img/contact.svg" alt="Contact"> 
-							</div>
-							<div>
-								<span>联系我</span>
-							</div>
-						</a>
-					</li>
-				</ul>
-			</nav>
-		</div>
-		<main>
-			<a href="#top">
-				<div class="top-link">
-					<img src="../img/top.png" alt="">
-					<p>[Top]</p>
-				</div>
-			</a>
-			<div class="destination" id="about"></div>
-			<section class="about-section">
-				<div class="about-section__container">
-					<div class="about-section__image" data-aos="flip-up">
-						<img src="../img/corey.jpg" alt="Corey Lanier">
-					</div>
-					<div class="about-section__description" data-aos="flip-down">
-						<h2><img src="../img/about.png" alt="About"> 关于我</h2>
-						<p>大家好，我的名字是蓝天（英语：Corey Lanier）， 和我是美国的三语（英语，中文，日语，韩语，世界语）前端开发人员在加拿大多伦多。我毕业于HackerYou的前端开发沉浸式和有强烈的享受竞争性游戏，餐饮，和写作。</p>
-						<p>在我开始我的技术职业生涯之前，我在中国和韩国担任了五年的英语老师。除了知识和技能，我还会为我所做的一切带来好奇心，热情和全程的关怀。</p>
-					</div>
-				</div>
-			</section>
-			<div class="destination" id="skills"></div>
-			<section class="skills-section">
-				<div class="skills-section__container">
-					<h2 data-aos="zoom-in-right"><img src="../img/skills.png" alt="Skills"> 我的技能</h2>
-					<div class="skills-section__grid">
-						<div class="skills-section__grid__box skills-section__grid__box1" data-aos="zoom-in-up">
-							<div>
-								<img src="../img/html5.png" alt="HTML 5">
-							</div>
-							<div>
-								<p class="skill-title">HTML 5</p>
-							</div>
-						</div>
-						<div class="skills-section__grid__box skills-section__grid__box2" data-aos="zoom-in-up">
-							<div>
-								<img src="../img/css3.png" alt="CSS 3">
-							</div>
-							<div>
-								<p class="skill-title">CSS 3</p>
-							</div>
-						</div>
-						<div class="skills-section__grid__box skills-section__grid__box3" data-aos="zoom-in-up">
-							<div>
-								<img src="../img/javascript.png" alt="Javascript">
-							</div>
-							<div>
-								<p class="skill-title">Javascript ES6</p>
-							</div>
-						</div>
-						<div class="skills-section__grid__box skills-section__grid__box4" data-aos="zoom-in-up">
-							<div>
-								<img src="../img/jquery.png" alt="jQuery">
-							</div>
-							<div>
-								<p class="skill-title">jQuery</p>
-							</div>
-						</div>
-						<div class="skills-section__grid__box skills-section__grid__box5" data-aos="zoom-in-up">
-							<div>
-								<img src="../img/react.png" alt="React">
-							</div>
-							<div>
-								<p class="skill-title">React</p>
-							</div>
-						</div>
-						<div class="skills-section__grid__box skills-section__grid__box6" data-aos="zoom-in-up">
-							<div>
-								<img src="../img/gulp.png" alt="Gulp" class="gulp-image">
-							</div>
-							<div>
-								<p class="skill-title">Gulp</p>
-							</div>
-						</div>
-						<div class="skills-section__grid__box skills-section__grid__box7" data-aos="zoom-in-up">
-							<div>
-								<img src="../img/sass.png" alt="Sass" class="sass-image">
-							</div>
-							<div>
-								<p class="skill-title">Sass</p>
-							</div>
-						</div>
-						<div class="skills-section__grid__box skills-section__grid__box8" data-aos="zoom-in-up">
-							<div>
-								<img src="../img/firebase.png" alt="Firebase" class="firebase-image">
-							</div>
-							<div>
-								<p class="skill-title">Firebase</p>
-							</div>
-						</div>
-						<div class="skills-section__grid__box skills-section__grid__box9" data-aos="zoom-in-up">
-							<div>
-								<img src="../img/git.png" alt="Git/Github">
-							</div>
-							<div>
-								<p class="skill-title">Git/Github</p>
-							</div>
-						</div>
-						<div class="skills-section__grid__box skills-section__grid__box10" data-aos="zoom-in-up">
-							<div>
-								<img src="../img/windows.png" alt="Windows">
-							</div>
-							<div>
-								<p class="skill-title">Windows</p>
-							</div>
-						</div>
-						<div class="skills-section__grid__box skills-section__grid__box11" data-aos="zoom-in-up">
-							<div>
-								<img src="../img/apple.png" alt="Apple" class="osx-image">
-							</div>
-							<div>
-								<p class="skill-title">OSX</p>
-							</div>
-						</div>
-						<div class="skills-section__grid__box skills-section__grid__box12" data-aos="zoom-in-up">
-							<div>
-								<img src="../img/linux.png" alt="Linux" class="linux-image">
-							</div>
-							<div>
-								<p class="skill-title">Linux</p>
-							</div>
-						</div>
-						<div class="skills-section__grid__box skills-section__grid__box13" data-aos="zoom-in-up">
-							<div>
-								<img src="../img/bootstrap.png" alt="Bootstrap">
-							</div>
-							<div>
-								<p class="skill-title">Bootstrap</p>
-							</div>
-						</div>
-						<div class="skills-section__grid__box skills-section__grid__box14" data-aos="zoom-in-up">
-							<div>
-								<img src="../img/node.png" alt="Node.js">
-							</div>
-							<div>
-								<p class="skill-title">Node.js</p>
-							</div>
-						</div>
-						<div class="skills-section__grid__box skills-section__grid__box15" data-aos="zoom-in-up">
-							<div>
-								<img src="../img/mongo.png" alt="MongoDB">
-							</div>
-							<div>
-								<p class="skill-title">MongoDB</p>
-							</div>
-						</div>
-						<div class="skills-section__grid__box skills-section__grid__box16" data-aos="zoom-in-up">
-							<div>
-								<img src="../img/express.png" alt="Express">
-							</div>
-							<div>
-								<p class="skill-title">Express</p>
-							</div>
-						</div>
-						<div class="skills-section__grid__box skills-section__grid__box17" data-aos="zoom-in-up">
-							<div>
-								<img src="../img/angular.png" alt="Angular">
-							</div>
-							<div>
-								<p class="skill-title">Angular</p>
-							</div>
-						</div>
-						<div class="skills-section__grid__box skills-section__grid__box18" data-aos="zoom-in-up">
-							<div>
-								<img src="../img/redux.png" alt="Redux">
-							</div>
-							<div>
-								<p class="skill-title">Redux</p>
-							</div>
-						</div>
-						<div class="skills-section__grid__box skills-section__grid__box19" data-aos="zoom-in-up">
-							<div>
-								<img src="../img/graphql.png" alt="GraphQL">
-							</div>
-							<div>
-								<p class="skill-title">GraphQL</p>
-							</div>
-						</div>
-						<div class="skills-section__grid__box skills-section__grid__box20" data-aos="zoom-in-up">
-							<div>
-								<img src="../img/less.png" alt="LESS">
-							</div>
-							<div>
-								<p class="skill-title">LESS</p>
-							</div>
-						</div>
-						<div class="skills-section__grid__box skills-section__grid__box21" data-aos="zoom-in-up">
-							<div>
-								<img src="../img/vue.png" alt="Vue">
-							</div>
-							<div>
-								<p class="skill-title">Vue</p>
-							</div>
-						</div>
-						<div class="skills-section__grid__box skills-section__grid__box22" data-aos="zoom-in-up">
-							<div>
-								<img src="../img/mysql.png" alt="MySQL">
-							</div>
-							<div>
-								<p class="skill-title">MySQL</p>
-							</div>
-						</div>
-						<div class="skills-section__grid__box skills-section__grid__box23" data-aos="zoom-in-up">
-							<div>
-								<img src="../img/wordpress.png" alt="Wordpress">
-							</div>
-							<div>
-								<p class="skill-title">Wordpress</p>
-							</div>
-						</div>
-						<div class="skills-section__grid__box skills-section__grid__box24" data-aos="zoom-in-up">
-							<div>
-								<img src="../img/apollo.png" alt="Apollo">
-							</div>
-							<div>
-								<p class="skill-title">Apollo</p>
-							</div>
-						</div>
-						<div class="skills-section__grid__box skills-section__grid__box25" data-aos="zoom-in-up">
-							<div>
-								<img src="../img/typescript.png" alt="Typescript">
-							</div>
-							<div>
-								<p class="skill-title">Typescript</p>
-							</div>
-						</div>
-					</div>
-				</div>
-			</section>
-			<div class="destination" id="portfolio"></div>
-			<section class="portfolio-section">
-					<div class="portfolio-section__container">
-							<h2 data-aos="zoom-in-right"><img src="../img/portfolio.png" alt="Portfolio"> 我的工作实例</h2>
-						</div>
-						<div class="portfolio-section__grid-new">
-							<div class="portfolio-section__grid-new__box portfolio-section__grid-new__box1" data-aos="fade-right">
-								<div class="portfolio-section__grid-new__box--image">
-									<img src="../img/notez.png" alt="NoteZ">
-								</div>
-								<div class="portfolio-section__grid-new__box--description">
-									<h3>天书</h3>
-									<h4>React / Sass / Firebase</h4>
-									<p>此笔记应用程序专为存储和检索适用于特定场景的笔记而设计，例如竞争游戏中的比赛。您还可以根据指定的数据进一步过滤注释，以便更容易阅读。</p>
-									<div class="link-container">
-										<a href="https://notez-beta.coreylanier.com/" target="_blank">
-											<div class="button">
-												<h4><i class="fas fa-eye"></i></h4>
-												<p>实时预览</p>
-											</div>
-										</a>
-										<a href="http://github.com/MissingPersonFGC/notez-react" target="_blank">
-											<div class="button">
-												<h4><i class="fab fa-github"></i></h4>
-												<p>源代码</p>
-											</div>
-										</a>
-									</div>
-								</div>
-							</div>
-							<div class="portfolio-section__grid-new__box portfolio-section__grid-new__box2" data-aos="fade-left">
-								<div class="portfolio-section__grid-new__box--image">
-									<img src="../img/vueblog.png" alt="maxshop">
-								</div>
-								<div class="portfolio-section__grid-new__box--description">
-									<h3>Vue博客</h3>
-									<h4>Vue / Node.js / Express / MongoDB</h4>
-									<p>我构建了一个Vue全栈应用程序，以创建简单的内容管理系统和博客的前端。</p>
-									<p>这个程序允许新用户创建，用户管理员创建多个作者，发布和评论。</p>
-									<div class="link-container">
-										<a href="https://blog.coreylanier.com/" target="_blank">
-											<div class="button">
-												<h4>
-													<i class="fas fa-eye"></i>
-												</h4>
-												<p>实时预览</p>
-											</div>
-										</a>
-										<a href="https://github.com/MissingPersonFGC/vue-blog" target="_blank">
-											<div class="button">
-												<h4>
-													<i class="fab fa-github"></i>
-												</h4>
-												<p>源代码</p>
-											</div>
-										</a>
-									</div>
-								</div>
-							</div>
-							<div class="portfolio-section__grid-new__box portfolio-section__grid-new__box3" data-aos="fade-right">
-								<div class="portfolio-section__grid-new__box--image">
-									<img src="../img/namechanger.png" alt="maxshop">
-								</div>
-								<div class="portfolio-section__grid-new__box--description">
-									<h3>换标题</h3>
-									<h4>React / Node.js / Express / API / CSS</h4>
-									<p>我为中东iCademy创建的Web应用程序使用Canvas LMS API允许教师在大多数情况下重命名其课程内容。</p>
-									<p>该应用程序具有Node.js代理服务器，用于处理Canvas API数据的更新，名称长度控制，生成CSV模板文件以及从上传的CSV文件读取新名称。</p>
-									<div class="link-container">
-										<a href="https://name-changer.coreylanier.com/" target="_blank">
-											<div class="button">
-												<h4>
-													<i class="fas fa-eye"></i>
-												</h4>
-												<p>实时预览</p>
-											</div>
-										</a>
-										<a href="https://github.com/MissingPersonFGC/name-changer" target="_blank">
-											<div class="button">
-												<h4>
-													<i class="fab fa-github"></i>
-												</h4>
-												<p>源代码</p>
-											</div>
-										</a>
-									</div>
-								</div>
-							</div>
-							<div class="portfolio-section__grid-new__box portfolio-section__grid-new__box4" data-aos="fade-left">
-								<div class="portfolio-section__grid-new__box--image">
-									<img src="../img/bikeshare.png" alt="Bikeshare">
-								</div>
-								<div class="portfolio-section__grid-new__box--description">
-									<h3>公共自行车应用</h3>
-									<h4>HTML / CSS / Javascript / jQuery / API</h4>
-									<p>这个公共自行车应用程序是在考虑手机使用的情况下创建的，并且搜索可用的自行车以及用于停靠租用自行车的空槽。它还可以找到离您所在位置最近的码头并提供实时指示。</p>
-									<div class="link-container">
-										<a href="https://coreylanier.com/bikeshare" target="_blank">
-											<div class="button">
-												<h4>
-													<i class="fas fa-eye"></i>
-												</h4>
-												<p>实时预览</p>
-											</div>
-										</a>
-										<a href="https://github.com/MissingPersonFGC/citybikes_app_corey_alan_project4" target="_blank">
-											<div class="button">
-												<h4>
-													<i class="fab fa-github"></i>
-												</h4>
-												<p>源代码</p>
-											</div>
-										</a>
-									</div>
-								</div>
-							</div>
-							<div class="portfolio-section__grid-new__box portfolio-section__grid-new__box5" data-aos="fade-right">
-								<div class="portfolio-section__grid-new__box--image">
-									<img src="../img/streamthis.png" alt="Stream This!">
-								</div>
-								<div class="portfolio-section__grid-new__box--description">
-									<h3>Twitch现场直播搜索</h3>
-									<h4>React / Sass / API</h4>
-									<p>这个应用程序能够在Twitch服务上找到可用的实时流，并在大多数流行的流媒体页面上列出它们。如果您单击任何流，它将在应用程序中实时提取其流。这是显示社交媒体服务的实时信息的一个很好的例子。</p>
-									<p>它是使用React和CSS创建的。 它还利用了Twitch API和Oauth，并解决了Twitch对每分钟API调用的限制。</p>
-									<div class="link-container">
-										<a href="http://coreylanier.com/twitchfinder" target="_blank">
-											<div class="button">
-												<h4>
-													<i class="fas fa-eye"></i>
-												</h4>
-												<p>实时预览</p>
-											</div>
-										</a>
-										<a href="https://github.com/MissingPersonFGC/twitch_app_project5" target="_blank">
-											<div class="button">
-												<h4>
-													<i class="fab fa-github"></i>
-												</h4>
-												<p>源代码</p>
-											</div>
-										</a>
-									</div>
-								</div>
-							</div>
-							<div class="portfolio-section__grid-new__box portfolio-section__grid-new__box6" data-aos="fade-left">
-								<div class="portfolio-section__grid-new__box--image">
-									<img src="../img/draftlottery.png" alt="Draft Lottery">
-								</div>
-								<div class="portfolio-section__grid-new__box--description">
-									<h3>团队彩票</h3>
-									<h4>HTML / CSS / Javascript / jQuery</h4>
-									<p>这个应用程序允许人们随机选择团队为自己的团队竞赛。 您可以添加您的玩家，并在起草玩家之前设置团队的大小，直到玩家游泳池为空。</p>
-									<div class="link-container">
-										<a href="http://draftlottery.coreylanier.com/" target="_blank">
-											<div class="button">
-												<h4>
-													<i class="fas fa-eye"></i>
-												</h4>
-												<p>实时预览</p>
-											</div>
-										</a>
-										<a href="https://github.com/MissingPersonFGC/draft-lottery" target="_blank">
-											<div class="button">
-												<h4>
-													<i class="fab fa-github"></i>
-												</h4>
-												<p>源代码</p>
-											</div>
-										</a>
-									</div>
-								</div>
-							</div>
-							<div class="portfolio-section__grid-new__box portfolio-section__grid-new__box7" data-aos="fade-right">
-								<div class="portfolio-section__grid-new__box--image">
-									<img src="../img/fgcelo.png" alt="FGC ELO">
-								</div>
-								<div class="portfolio-section__grid-new__box--description">
-									<h3>FGC ELO</h3>
-									<h4>React / Sass / Bootstrap / Firebase</h4>
-									<p>此应用程序允许从游戏比赛中收集结果，以及基于相对ELO点数的每个玩家的评级。 它还允许跟踪使用的角色和玩家的位置。</p>
-									<div class="link-container">
-										<a href="http://smsrank.coreylanier.com/" target="_blank">
-											<div class="button">
-												<h4>
-													<i class="fas fa-eye"></i>
-												</h4>
-												<p>实时预览</p>
-											</div>
-										</a>
-										<a href="https://github.com/MissingPersonFGC/fgc-elo" target="_blank">
-											<div class="button">
-												<h4>
-													<i class="fab fa-github"></i>
-												</h4>
-												<p>源代码</p>
-											</div>
-										</a>
-									</div>
-								</div>
-							</div>
-							<div class="portfolio-section__grid-new__box portfolio-section__grid-new__box8" data-aos="fade-left">
-								<div class="portfolio-section__grid-new__box--image">
-									<img src="../img/maxshop.png" alt="maxshop">
-								</div>
-								<div class="portfolio-section__grid-new__box--description">
-									<h3>Maxshop</h3>
-									<h4>HTML / Sass / jQuery</h4>
-									<p>这是我在训练营期间进行的简单的PSD线框转换。 这显示了Flexbox和CSS Grid的大量使用，这有助于保持响应式设计的可见性。</p>
-									<div class="link-container">
-										<a href="http://maxshop.coreylanier.com/" target="_blank">
-											<div class="button">
-												<h4>
-													<i class="fas fa-eye"></i>
-												</h4>
-												<p>实时预览</p>
-											</div>
-										</a>
-										<a href="https://github.com/MissingPersonFGC/corey_lanier_project2" target="_blank">
-											<div class="button">
-												<h4>
-													<i class="fab fa-github"></i>
-												</h4>
-												<p>源代码</p>
-											</div>
-										</a>
-									</div>
-								</div>
-							</div>
-						</div>
-			</section>
-			<div class="destination" id="contact"></div>
-			<section class="contact-section">
-				<div class="contact-section__container">
-					<h2 data-aos="zoom-in-right"><img src="../img/contact.png" alt="Contact"> 联系我</h2>
-					<p data-aos="zoom-in-right">让我们一起创造互联网杰作吧！ 如果您想聘请或委托我工作，请通过以下方式之一与我联系。</p>
-					<div class="contact-section-wrapper">
-						<div class="contact-section__info" data-aos="flip-left">
-							<p>电邮：iam@coreylanier.com</p>
-							<p>微信：brawndo84</p>
-							<a href="http://facebook.com/missingpersonfgc" target="_blank"><img src="../img/facebook.svg" alt="Facebook"></a>
-							<a href="http://twitter.com/JTMMissingPersn" target="_blank"><img src="../img/twitter.png" alt="Twitter"></a>
-							<a href="http://instagram.com/missingpersonfgc" target="_blank"><img src="../img/instagram.png" alt="Instagram"></a>
-							<a href="https://www.linkedin.com/in/corey-lanier-74906689/" target="_blank"><img src="../img/linkedin.png" alt="Linkedin"></a>
-							<a href="http://github.com/MissingPersonFGC"><img src="../img/github.png" alt="Github"></a>
-						</div>
-						<div class="contact-section__send-email" data-aos="flip-right">
-							<div class="contact-section__send-email__form">
-								<form action="https://formspree.io/iam@coreylanier.com" method="POST">
-									<input type="text" name="Full Name" id="fullName" placeholder="你的名字" required>
-									<input type="email" name="email" id="email" placeholder="你的电邮" required>
-									<textarea name="comments" id="comments" cols="30" rows="10" placeholder="你的信息" required></textarea>
-									<input type="submit" value="发电子邮件">
-								</form>
-							</div>
-						</div>
-					</div>
-				</div>
-			</section>
-		</main>
-		<footer>
-			<div class="footer-wrapper">
-				<div class="footer-copyright">
-					<p>© 2018 蓝天，版权所有。</p>
-				</div>
-				<div class="footer-logo">
-					<img src="../img/ltianbottom.png" alt="l天">
-				</div>
-			</div>
-		</footer>
-		<script src='https://code.jquery.com/jquery-3.2.1.min.js' integrity='sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4='crossorigin='anonymous'></script>
-		<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-		<script src="../public/scripts/main.js"></script>
-	</body>
+    <header id="top">
+      <div class="language-select">
+        <select name="language" id="language">
+          <option value="zh-cn">中文（简体）</option>
+          <option value="zh-tw">中文（繁體）</option>
+          <option value="en">English</option>
+          <option value="ja">日本語</option>
+          <option value="kr">한국어</option>
+          <option value="eo">Esperanto</option>
+        </select>
+      </div>
+      <div class="wrapper">
+        <div
+          class="box logo-box"
+          data-aos="zoom-in-down"
+          data-aos-duration="1000"
+        >
+          <img src="../img/ltian.png" alt="l天" />
+        </div>
+        <div class="header-grid" data-aos="zoom-in" data-aos-duration="1000">
+          <div class="box box0">
+            <img src="../img/ltian.png" alt="l天" />
+          </div>
+          <div class="box box1">
+            <h1>蓝天</h1>
+            <p>前端开发人员</p>
+          </div>
+          <a href="#about" class="header-link about-link">
+            <div class="box box2">
+              <img src="../img/about.svg" class="icon" alt="About" />
+              <p>关于我</p>
+            </div>
+          </a>
+          <div class="box box3">
+            <img src="../img/laptop.jpg" alt="Laptop" />
+          </div>
+          <div class="box box4">
+            <img src="../img/smartphone.jpg" alt="Smartphone" />
+          </div>
+          <a href="#skills" class="header-link skills-link">
+            <div class="box box5">
+              <img src="../img/skills.svg" alt="Skills" class="icon" />
+              <p>我的技能</p>
+            </div>
+          </a>
+          <a
+            href="https://blog.coreylanier.com"
+            target="_blank"
+            class="header-link blog-link"
+          >
+            <div class="box box8">
+              <img src="../img/blog.svg" alt="Blog" class="icon" />
+              <p>博客</p>
+            </div>
+          </a>
+          <div class="box box7">
+            <img src="../img/code.jpg" alt="Code" />
+          </div>
+          <a href="#portfolio" class="header-link portfolio-link">
+            <div class="box box6">
+              <img src="../img/portfolio.svg" alt="Portfolio" class="icon" />
+              <p>工作实例</p>
+            </div>
+          </a>
+          <div class="box box9">
+            <img src="../img/joystick.jpg" alt="Joystick" />
+          </div>
+          <div class="box box10"></div>
+          <div class="box box11">
+            <img src="../img/design.jpg" alt="Design" />
+          </div>
+          <div class="box box12">
+            <img src="../img/inspire.png" alt="Inspire" class="icon" />
+            <p>鼓舞的建立</p>
+          </div>
+          <a href="#contact" class="header-link contact-link">
+            <div class="box box13">
+              <img src="../img/contact.svg" alt="Contact" class="icon" />
+              <p>联系我</p>
+            </div>
+          </a>
+          <div class="box box14"></div>
+        </div>
+      </div>
+    </header>
+    <div class="nav-wrapper" id="main-content">
+      <nav>
+        <ul>
+          <li class="title">[蓝天]</li>
+          <li class="menu">
+            <a href="#about">
+              <div>
+                <img src="../img/about.svg" alt="About" />
+              </div>
+              <div>
+                <span>关于我</span>
+              </div>
+            </a>
+          </li>
+          <li class="menu">
+            <a href="#skills">
+              <div>
+                <img src="../img/skills.svg" alt="Skills" />
+              </div>
+              <div>
+                <span>我的技能</span>
+              </div>
+            </a>
+          </li>
+          <li class="menu">
+            <a href="#portfolio">
+              <div>
+                <img src="../img/portfolio-light.svg" alt="Portfolio" />
+              </div>
+              <div>
+                <span>工作实例</span>
+              </div>
+            </a>
+          </li>
+          <li class="menu">
+            <a href="https://blog.coreylanier.com/" target="_blank">
+              <div>
+                <img src="../img/blog-light.svg" alt="Blog" />
+              </div>
+              <div>
+                <span>博客</span>
+              </div>
+            </a>
+          </li>
+          <li class="menu">
+            <a href="#contact">
+              <div>
+                <img src="../img/contact.svg" alt="Contact" />
+              </div>
+              <div>
+                <span>联系我</span>
+              </div>
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+    <main>
+      <a href="#top">
+        <div class="top-link">
+          <img src="../img/top.png" alt="" />
+          <p>[Top]</p>
+        </div>
+      </a>
+      <div class="destination" id="about"></div>
+      <section class="about-section">
+        <div class="about-section__container">
+          <div class="about-section__image" data-aos="flip-up">
+            <img src="../img/corey.jpg" alt="Corey Lanier" />
+          </div>
+          <div class="about-section__description" data-aos="flip-down">
+            <h2><img src="../img/about.png" alt="About" /> 关于我</h2>
+            <p>
+              大家好，我的名字是蓝天（英语：Corey Lanier），
+              和我是美国的三语（英语，中文，日语，韩语，世界语）前端开发人员在加拿大多伦多。我毕业于HackerYou的前端开发沉浸式和有强烈的享受竞争性游戏，餐饮，和写作。
+            </p>
+            <p>
+              在我开始我的技术职业生涯之前，我在中国和韩国担任了五年的英语老师。除了知识和技能，我还会为我所做的一切带来好奇心，热情和全程的关怀。
+            </p>
+          </div>
+        </div>
+      </section>
+      <div class="destination" id="skills"></div>
+      <section class="skills-section">
+        <div class="skills-section__container">
+          <h2 data-aos="zoom-in-right">
+            <img src="../img/skills.png" alt="Skills" /> 我的技能
+          </h2>
+          <div class="skills-section__grid">
+            <div
+              class="skills-section__grid__box skills-section__grid__box1"
+              data-aos="zoom-in-up"
+            >
+              <div>
+                <img src="../img/html5.png" alt="HTML 5" />
+              </div>
+              <div>
+                <p class="skill-title">HTML 5</p>
+              </div>
+            </div>
+            <div
+              class="skills-section__grid__box skills-section__grid__box2"
+              data-aos="zoom-in-up"
+            >
+              <div>
+                <img src="../img/css3.png" alt="CSS 3" />
+              </div>
+              <div>
+                <p class="skill-title">CSS 3</p>
+              </div>
+            </div>
+            <div
+              class="skills-section__grid__box skills-section__grid__box3"
+              data-aos="zoom-in-up"
+            >
+              <div>
+                <img src="../img/javascript.png" alt="Javascript" />
+              </div>
+              <div>
+                <p class="skill-title">Javascript ES6</p>
+              </div>
+            </div>
+            <div
+              class="skills-section__grid__box skills-section__grid__box4"
+              data-aos="zoom-in-up"
+            >
+              <div>
+                <img src="../img/jquery.png" alt="jQuery" />
+              </div>
+              <div>
+                <p class="skill-title">jQuery</p>
+              </div>
+            </div>
+            <div
+              class="skills-section__grid__box skills-section__grid__box5"
+              data-aos="zoom-in-up"
+            >
+              <div>
+                <img src="../img/react.png" alt="React" />
+              </div>
+              <div>
+                <p class="skill-title">React</p>
+              </div>
+            </div>
+            <div
+              class="skills-section__grid__box skills-section__grid__box6"
+              data-aos="zoom-in-up"
+            >
+              <div>
+                <img src="../img/gulp.png" alt="Gulp" class="gulp-image" />
+              </div>
+              <div>
+                <p class="skill-title">Gulp</p>
+              </div>
+            </div>
+            <div
+              class="skills-section__grid__box skills-section__grid__box7"
+              data-aos="zoom-in-up"
+            >
+              <div>
+                <img src="../img/sass.png" alt="Sass" class="sass-image" />
+              </div>
+              <div>
+                <p class="skill-title">Sass</p>
+              </div>
+            </div>
+            <div
+              class="skills-section__grid__box skills-section__grid__box8"
+              data-aos="zoom-in-up"
+            >
+              <div>
+                <img
+                  src="../img/firebase.png"
+                  alt="Firebase"
+                  class="firebase-image"
+                />
+              </div>
+              <div>
+                <p class="skill-title">Firebase</p>
+              </div>
+            </div>
+            <div
+              class="skills-section__grid__box skills-section__grid__box9"
+              data-aos="zoom-in-up"
+            >
+              <div>
+                <img src="../img/git.png" alt="Git/Github" />
+              </div>
+              <div>
+                <p class="skill-title">Git/Github</p>
+              </div>
+            </div>
+            <div
+              class="skills-section__grid__box skills-section__grid__box10"
+              data-aos="zoom-in-up"
+            >
+              <div>
+                <img src="../img/windows.png" alt="Windows" />
+              </div>
+              <div>
+                <p class="skill-title">Windows</p>
+              </div>
+            </div>
+            <div
+              class="skills-section__grid__box skills-section__grid__box11"
+              data-aos="zoom-in-up"
+            >
+              <div>
+                <img src="../img/apple.png" alt="Apple" class="osx-image" />
+              </div>
+              <div>
+                <p class="skill-title">OSX</p>
+              </div>
+            </div>
+            <div
+              class="skills-section__grid__box skills-section__grid__box12"
+              data-aos="zoom-in-up"
+            >
+              <div>
+                <img src="../img/linux.png" alt="Linux" class="linux-image" />
+              </div>
+              <div>
+                <p class="skill-title">Linux</p>
+              </div>
+            </div>
+            <div
+              class="skills-section__grid__box skills-section__grid__box13"
+              data-aos="zoom-in-up"
+            >
+              <div>
+                <img src="../img/bootstrap.png" alt="Bootstrap" />
+              </div>
+              <div>
+                <p class="skill-title">Bootstrap</p>
+              </div>
+            </div>
+            <div
+              class="skills-section__grid__box skills-section__grid__box14"
+              data-aos="zoom-in-up"
+            >
+              <div>
+                <img src="../img/node.png" alt="Node.js" />
+              </div>
+              <div>
+                <p class="skill-title">Node.js</p>
+              </div>
+            </div>
+            <div
+              class="skills-section__grid__box skills-section__grid__box15"
+              data-aos="zoom-in-up"
+            >
+              <div>
+                <img src="../img/mongo.png" alt="MongoDB" />
+              </div>
+              <div>
+                <p class="skill-title">MongoDB</p>
+              </div>
+            </div>
+            <div
+              class="skills-section__grid__box skills-section__grid__box16"
+              data-aos="zoom-in-up"
+            >
+              <div>
+                <img src="../img/express.png" alt="Express" />
+              </div>
+              <div>
+                <p class="skill-title">Express</p>
+              </div>
+            </div>
+            <div
+              class="skills-section__grid__box skills-section__grid__box17"
+              data-aos="zoom-in-up"
+            >
+              <div>
+                <img src="../img/angular.png" alt="Angular" />
+              </div>
+              <div>
+                <p class="skill-title">Angular</p>
+              </div>
+            </div>
+            <div
+              class="skills-section__grid__box skills-section__grid__box18"
+              data-aos="zoom-in-up"
+            >
+              <div>
+                <img src="../img/redux.png" alt="Redux" />
+              </div>
+              <div>
+                <p class="skill-title">Redux</p>
+              </div>
+            </div>
+            <div
+              class="skills-section__grid__box skills-section__grid__box19"
+              data-aos="zoom-in-up"
+            >
+              <div>
+                <img src="../img/graphql.png" alt="GraphQL" />
+              </div>
+              <div>
+                <p class="skill-title">GraphQL</p>
+              </div>
+            </div>
+            <div
+              class="skills-section__grid__box skills-section__grid__box20"
+              data-aos="zoom-in-up"
+            >
+              <div>
+                <img src="../img/less.png" alt="LESS" />
+              </div>
+              <div>
+                <p class="skill-title">LESS</p>
+              </div>
+            </div>
+            <div
+              class="skills-section__grid__box skills-section__grid__box21"
+              data-aos="zoom-in-up"
+            >
+              <div>
+                <img src="../img/vue.png" alt="Vue" />
+              </div>
+              <div>
+                <p class="skill-title">Vue</p>
+              </div>
+            </div>
+            <div
+              class="skills-section__grid__box skills-section__grid__box22"
+              data-aos="zoom-in-up"
+            >
+              <div>
+                <img src="../img/mysql.png" alt="MySQL" />
+              </div>
+              <div>
+                <p class="skill-title">MySQL</p>
+              </div>
+            </div>
+            <div
+              class="skills-section__grid__box skills-section__grid__box23"
+              data-aos="zoom-in-up"
+            >
+              <div>
+                <img src="../img/wordpress.png" alt="Wordpress" />
+              </div>
+              <div>
+                <p class="skill-title">Wordpress</p>
+              </div>
+            </div>
+            <div
+              class="skills-section__grid__box skills-section__grid__box24"
+              data-aos="zoom-in-up"
+            >
+              <div>
+                <img src="../img/apollo.png" alt="Apollo" />
+              </div>
+              <div>
+                <p class="skill-title">Apollo</p>
+              </div>
+            </div>
+            <div
+              class="skills-section__grid__box skills-section__grid__box25"
+              data-aos="zoom-in-up"
+            >
+              <div>
+                <img src="../img/typescript.png" alt="Typescript" />
+              </div>
+              <div>
+                <p class="skill-title">Typescript</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <div class="destination" id="portfolio"></div>
+      <section class="portfolio-section">
+        <div class="portfolio-section__container">
+          <h2 data-aos="zoom-in-right">
+            <img src="../img/portfolio.png" alt="Portfolio" /> 我的工作实例
+          </h2>
+        </div>
+        <div class="portfolio-section__grid-new">
+          <div
+            class="portfolio-section__grid-new__box portfolio-section__grid-new__box1"
+            data-aos="fade-right"
+          >
+            <div class="portfolio-section__grid-new__box--image">
+              <img src="../img/notez.png" alt="NoteZ" />
+            </div>
+            <div class="portfolio-section__grid-new__box--description">
+              <h3>天书</h3>
+              <h4>
+                React / Material UI / Hooks / i18n / Node.js / Express / MongoDB
+              </h4>
+              <p>
+                此笔记应用程序专为存储和检索适用于特定场景的笔记而设计，例如竞争游戏中的比赛。您还可以根据指定的数据进一步过滤注释，以便更容易阅读。
+              </p>
+              <div class="link-container">
+                <a href="https://checkthenotez.com/" target="_blank">
+                  <div class="button">
+                    <h4><i class="fas fa-eye"></i></h4>
+                    <p>实时预览</p>
+                  </div>
+                </a>
+                <a
+                  href="http://github.com/MissingPersonFGC/notez"
+                  target="_blank"
+                >
+                  <div class="button">
+                    <h4><i class="fab fa-github"></i></h4>
+                    <p>源代码</p>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div
+            class="portfolio-section__grid-new__box portfolio-section__grid-new__box2"
+            data-aos="fade-left"
+          >
+            <div class="portfolio-section__grid-new__box--image">
+              <img src="../img/vueblog.png" alt="maxshop" />
+            </div>
+            <div class="portfolio-section__grid-new__box--description">
+              <h3>Vue博客</h3>
+              <h4>Vue / Node.js / Express / MongoDB</h4>
+              <p>
+                我构建了一个Vue全栈应用程序，以创建简单的内容管理系统和博客的前端。
+              </p>
+              <p>
+                这个程序允许新用户创建，用户管理员创建多个作者，发布和评论。
+              </p>
+              <div class="link-container">
+                <a href="https://blog.coreylanier.com/" target="_blank">
+                  <div class="button">
+                    <h4>
+                      <i class="fas fa-eye"></i>
+                    </h4>
+                    <p>实时预览</p>
+                  </div>
+                </a>
+                <a
+                  href="https://github.com/MissingPersonFGC/vue-blog"
+                  target="_blank"
+                >
+                  <div class="button">
+                    <h4>
+                      <i class="fab fa-github"></i>
+                    </h4>
+                    <p>源代码</p>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div
+            class="portfolio-section__grid-new__box portfolio-section__grid-new__box3"
+            data-aos="fade-right"
+          >
+            <div class="portfolio-section__grid-new__box--image">
+              <img src="../img/namechanger.png" alt="maxshop" />
+            </div>
+            <div class="portfolio-section__grid-new__box--description">
+              <h3>换标题</h3>
+              <h4>React / Firebase / Node.js / Express / API / CSS</h4>
+              <p>
+                我为中东iCademy创建的Web应用程序使用Canvas LMS
+                API允许教师在大多数情况下重命名其课程内容。
+              </p>
+              <p>
+                该应用程序具有Node.js代理服务器，用于处理Canvas
+                API数据的更新，名称长度控制，生成CSV模板文件以及从上传的CSV文件读取新名称。
+              </p>
+              <div class="link-container">
+                <a href="https://icad-name-changer.now.sh/" target="_blank">
+                  <div class="button">
+                    <h4>
+                      <i class="fas fa-eye"></i>
+                    </h4>
+                    <p>实时预览</p>
+                  </div>
+                </a>
+                <a
+                  href="https://github.com/MissingPersonFGC/name-changer"
+                  target="_blank"
+                >
+                  <div class="button">
+                    <h4>
+                      <i class="fab fa-github"></i>
+                    </h4>
+                    <p>源代码</p>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div
+            class="portfolio-section__grid-new__box portfolio-section__grid-new__box4"
+            data-aos="fade-left"
+          >
+            <div class="portfolio-section__grid-new__box--image">
+              <img src="../img/bikeshare.png" alt="Bikeshare" />
+            </div>
+            <div class="portfolio-section__grid-new__box--description">
+              <h3>公共自行车应用</h3>
+              <h4>HTML / CSS / Javascript / jQuery / API</h4>
+              <p>
+                这个公共自行车应用程序是在考虑手机使用的情况下创建的，并且搜索可用的自行车以及用于停靠租用自行车的空槽。它还可以找到离您所在位置最近的码头并提供实时指示。
+              </p>
+              <div class="link-container">
+                <a href="https://coreylanier.com/bikeshare" target="_blank">
+                  <div class="button">
+                    <h4>
+                      <i class="fas fa-eye"></i>
+                    </h4>
+                    <p>实时预览</p>
+                  </div>
+                </a>
+                <a
+                  href="https://github.com/MissingPersonFGC/citybikes_app_corey_alan_project4"
+                  target="_blank"
+                >
+                  <div class="button">
+                    <h4>
+                      <i class="fab fa-github"></i>
+                    </h4>
+                    <p>源代码</p>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div
+            class="portfolio-section__grid-new__box portfolio-section__grid-new__box5"
+            data-aos="fade-right"
+          >
+            <div class="portfolio-section__grid-new__box--image">
+              <img src="../img/streamthis.png" alt="Stream This!" />
+            </div>
+            <div class="portfolio-section__grid-new__box--description">
+              <h3>Twitch现场直播搜索</h3>
+              <h4>React / Sass / API</h4>
+              <p>
+                这个应用程序能够在Twitch服务上找到可用的实时流，并在大多数流行的流媒体页面上列出它们。如果您单击任何流，它将在应用程序中实时提取其流。这是显示社交媒体服务的实时信息的一个很好的例子。
+              </p>
+              <p>
+                它是使用React和CSS创建的。 它还利用了Twitch
+                API和Oauth，并解决了Twitch对每分钟API调用的限制。
+              </p>
+              <div class="link-container">
+                <a href="http://coreylanier.com/twitchfinder" target="_blank">
+                  <div class="button">
+                    <h4>
+                      <i class="fas fa-eye"></i>
+                    </h4>
+                    <p>实时预览</p>
+                  </div>
+                </a>
+                <a
+                  href="https://github.com/MissingPersonFGC/twitch_app_project5"
+                  target="_blank"
+                >
+                  <div class="button">
+                    <h4>
+                      <i class="fab fa-github"></i>
+                    </h4>
+                    <p>源代码</p>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div
+            class="portfolio-section__grid-new__box portfolio-section__grid-new__box6"
+            data-aos="fade-left"
+          >
+            <div class="portfolio-section__grid-new__box--image">
+              <img src="../img/draftlottery.png" alt="Draft Lottery" />
+            </div>
+            <div class="portfolio-section__grid-new__box--description">
+              <h3>团队彩票</h3>
+              <h4>HTML / CSS / Javascript / jQuery</h4>
+              <p>
+                这个应用程序允许人们随机选择团队为自己的团队竞赛。
+                您可以添加您的玩家，并在起草玩家之前设置团队的大小，直到玩家游泳池为空。
+              </p>
+              <div class="link-container">
+                <a href="http://draftlottery.coreylanier.com/" target="_blank">
+                  <div class="button">
+                    <h4>
+                      <i class="fas fa-eye"></i>
+                    </h4>
+                    <p>实时预览</p>
+                  </div>
+                </a>
+                <a
+                  href="https://github.com/MissingPersonFGC/draft-lottery"
+                  target="_blank"
+                >
+                  <div class="button">
+                    <h4>
+                      <i class="fab fa-github"></i>
+                    </h4>
+                    <p>源代码</p>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div
+            class="portfolio-section__grid-new__box portfolio-section__grid-new__box7"
+            data-aos="fade-right"
+          >
+            <div class="portfolio-section__grid-new__box--image">
+              <img src="../img/fgcelo.png" alt="FGC ELO" />
+            </div>
+            <div class="portfolio-section__grid-new__box--description">
+              <h3>FGC ELO</h3>
+              <h4>React / Sass / Bootstrap / Firebase</h4>
+              <p>
+                此应用程序允许从游戏比赛中收集结果，以及基于相对ELO点数的每个玩家的评级。
+                它还允许跟踪使用的角色和玩家的位置。
+              </p>
+              <div class="link-container">
+                <a href="http://smsrank.coreylanier.com/" target="_blank">
+                  <div class="button">
+                    <h4>
+                      <i class="fas fa-eye"></i>
+                    </h4>
+                    <p>实时预览</p>
+                  </div>
+                </a>
+                <a
+                  href="https://github.com/MissingPersonFGC/fgc-elo"
+                  target="_blank"
+                >
+                  <div class="button">
+                    <h4>
+                      <i class="fab fa-github"></i>
+                    </h4>
+                    <p>源代码</p>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div
+            class="portfolio-section__grid-new__box portfolio-section__grid-new__box8"
+            data-aos="fade-left"
+          >
+            <div class="portfolio-section__grid-new__box--image">
+              <img src="../img/maxshop.png" alt="maxshop" />
+            </div>
+            <div class="portfolio-section__grid-new__box--description">
+              <h3>Maxshop</h3>
+              <h4>HTML / Sass / jQuery</h4>
+              <p>
+                这是我在训练营期间进行的简单的PSD线框转换。 这显示了Flexbox和CSS
+                Grid的大量使用，这有助于保持响应式设计的可见性。
+              </p>
+              <div class="link-container">
+                <a href="http://maxshop.coreylanier.com/" target="_blank">
+                  <div class="button">
+                    <h4>
+                      <i class="fas fa-eye"></i>
+                    </h4>
+                    <p>实时预览</p>
+                  </div>
+                </a>
+                <a
+                  href="https://github.com/MissingPersonFGC/corey_lanier_project2"
+                  target="_blank"
+                >
+                  <div class="button">
+                    <h4>
+                      <i class="fab fa-github"></i>
+                    </h4>
+                    <p>源代码</p>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <div class="destination" id="contact"></div>
+      <section class="contact-section">
+        <div class="contact-section__container">
+          <h2 data-aos="zoom-in-right">
+            <img src="../img/contact.png" alt="Contact" /> 联系我
+          </h2>
+          <p data-aos="zoom-in-right">
+            让我们一起创造互联网杰作吧！
+            如果您想聘请或委托我工作，请通过以下方式之一与我联系。
+          </p>
+          <div class="contact-section-wrapper">
+            <div class="contact-section__info" data-aos="flip-left">
+              <p>电邮：iam@coreylanier.com</p>
+              <p>微信：brawndo84</p>
+              <a href="http://facebook.com/missingpersonfgc" target="_blank"
+                ><img src="../img/facebook.svg" alt="Facebook"
+              /></a>
+              <a href="http://twitter.com/JTMMissingPersn" target="_blank"
+                ><img src="../img/twitter.png" alt="Twitter"
+              /></a>
+              <a href="http://instagram.com/missingpersonfgc" target="_blank"
+                ><img src="../img/instagram.png" alt="Instagram"
+              /></a>
+              <a
+                href="https://www.linkedin.com/in/corey-lanier-74906689/"
+                target="_blank"
+                ><img src="../img/linkedin.png" alt="Linkedin"
+              /></a>
+              <a href="http://github.com/MissingPersonFGC"
+                ><img src="../img/github.png" alt="Github"
+              /></a>
+            </div>
+            <div class="contact-section__send-email" data-aos="flip-right">
+              <div class="contact-section__send-email__form">
+                <form
+                  action="https://formspree.io/iam@coreylanier.com"
+                  method="POST"
+                >
+                  <input
+                    type="text"
+                    name="Full Name"
+                    id="fullName"
+                    placeholder="你的名字"
+                    required
+                  />
+                  <input
+                    type="email"
+                    name="email"
+                    id="email"
+                    placeholder="你的电邮"
+                    required
+                  />
+                  <textarea
+                    name="comments"
+                    id="comments"
+                    cols="30"
+                    rows="10"
+                    placeholder="你的信息"
+                    required
+                  ></textarea>
+                  <input type="submit" value="发电子邮件" />
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <div class="footer-wrapper">
+        <div class="footer-copyright">
+          <p>© 2018 蓝天，版权所有。</p>
+        </div>
+        <div class="footer-logo">
+          <img src="../img/ltianbottom.png" alt="l天" />
+        </div>
+      </div>
+    </footer>
+    <script
+      src="https://code.jquery.com/jquery-3.2.1.min.js"
+      integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="../public/scripts/main.js"></script>
+  </body>
 </html>
